@@ -1,6 +1,6 @@
 DCT123C1 - Nhóm 21
 
--- Đề tài: web bán vợt --
+-- Đề tài: web bán dụng cụ thể thao--
 
 Ngô Gia Bảo - 3123411027
 Đặng Thành Đại - 3123411061
