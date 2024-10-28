@@ -571,14 +571,14 @@
                       type="submit"
                       value="Đăng nhập"
                     >
-                      Đăng nhập
+                      ĐĂNG NHẬP 
                     </button>
                   </div>
                   <div class="clearfix"></div>
                   <div class="text-login">
                     <p>
                       Bạn chưa có tài khoản. Đăng ký
-                      <a href="login.html"
+                      <a href="register.html"
                         >tại đây.</a
                       >
                     </p>
@@ -587,57 +587,6 @@
               </form>
             </div>
             <hr />
-            <div id="recover-password" class="form-signup">
-              <h1 class="title-head text-center">
-                <span>Đặt lại mật khẩu</span>
-              </h1>
-              <span class="block text-center">
-                Bạn quên mật khẩu? Nhập địa chỉ email để lấy lại mật khẩu qua
-                email.
-              </span>
-              <form
-                accept-charset="UTF-8"
-                action="/account/recover"
-                id="recover_customer_password"
-                method="post"
-                class="has-validation-callback"
-              >
-                <input
-                  name="FormType"
-                  type="hidden"
-                  value="recover_customer_password"
-                />
-                <input name="utf8" type="hidden" value="true" />
-                <div class="form-signup aaaaaaaa"></div>
-
-                <div class="form-signup clearfix margin-top-10">
-                  <fieldset class="form-group">
-                    <label>Email<span class="required">*</span></label>
-                    <input
-                      type="email"
-                      class="form-control form-control-lg"
-                      value=""
-                      name="Email"
-                      id="recover-email"
-                      placeholder="Email"
-                      data-validation="email"
-                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"
-                      data-validation-error-msg="Email sai định dạng"
-                    />
-                  </fieldset>
-                </div>
-                <div class="action_bottom">
-                  <button
-                    class="btn btn-style btn-blues"
-                    style="margin-top: 15px"
-                    type="submit"
-                    value="Lấy lại mật khẩu"
-                  >
-                    Lấy lại mật khẩu
-                  </button>
-                </div>
-              </form>
-            </div>
           </div>
         </div>
       </div>
