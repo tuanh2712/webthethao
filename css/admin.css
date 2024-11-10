@@ -129,7 +129,8 @@ ol {
 }
 
 .logo {
-    padding: 5px 0;
+    display: flex;
+    align-items: center;
 }
 
 body,
@@ -198,12 +199,10 @@ fieldset {
 }
 
 .search-forms {
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-top: 15px;
+    flex-grow: 1; /* Cho phép thanh tìm kiếm chiếm không gian còn lại */
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
 }
-
 .input-group {
     position: relative;
     display: table;
@@ -215,7 +214,10 @@ form {
 }
 
 .header-main {
-    padding: 7px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
 }
 
 .input-group .btn,
@@ -264,6 +266,32 @@ form {
     float: left;
 }
 
+.search-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_search {
+    width: 100%;
+    max-width: 500px; /* Đặt chiều rộng tối đa cho thanh tìm kiếm */
+}
+
+.account-sign {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Khoảng cách giữa biểu tượng người dùng và nút tìm kiếm */
+}
+
+.account-sign i {
+    margin-right: 5px; /* Khoảng cách giữa biểu tượng và chữ "Đăng nhập" */
+}
+
+.login-link {
+    text-decoration: none;
+    color: black;
+}
+
 .search-forms .search-header .header_search .input-group {
     margin: 0;
     display: flex;
@@ -275,9 +303,8 @@ form {
 }
 
 .search-forms {
-    display: flex;
-    align-items: center;
-    min-width: 423px;
+    flex-grow: 1; /* Cho phép phần tìm kiếm chiếm không gian còn lại */
+    padding-right: 20px;
 }
 
 .search-forms .search-header {
@@ -374,6 +401,14 @@ ol {
     margin-left: -33px;
 }
 
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 .hidden-sm .account-sign .Sub-1 .Sub-menu {
     display: none;
     position: absolute;
@@ -386,6 +421,10 @@ ol {
 
 .hidden-sm .account-sign .Sub-1 .Sub-menu :hover {
     color: #26aed4;
+    display: block;
+}
+
+.account-sign:hover .sub-menu {
     display: block;
 }
 
@@ -1002,9 +1041,12 @@ ul {
     color: black;
 }
 
-@media only screen and(max-width: 1150px) {
-    .selection-new-product .row .product-grid {
-        margin-bottom: 30px;
+@media only screen and (max-width: 768px) {
+    .header-main {
+        display: flex;
+        align-items: center; /* Đảm bảo các phần tử được căn giữa theo chiều dọc */
+        justify-content: space-between; /* Đảm bảo khoảng cách giữa logo và thanh tìm kiếm */
+        padding: 10px 20px;
     }
 }
 
@@ -4924,7 +4966,7 @@ input[type="submit"] {
 .text-centers .btn-blues {
     color: #fff;
     background: #26aed4;
-    border-color: ##26aed4;
+    border-color: #26aed4; /* Sửa lỗi: chỉ cần một dấu # */
     border-radius: 2px !important;
     text-transform: uppercase;
     position: relative;
@@ -4932,6 +4974,7 @@ input[type="submit"] {
     z-index: 1;
     left: -5px;
 }
+
 
 .address-group .address {
     color: #42495b;
@@ -5719,26 +5762,23 @@ button[type="submit"]:hover {
 
 .search-box {
     position: relative;
-    width: 300px;
-    margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
 }
 
-/* Style cho input của hộp tìm kiếm */
 .search-box input {
     width: 100%;
-    padding: 10px 40px 10px 15px;
-    /* Thêm padding phải để dành chỗ cho icon */
+    padding: 10px 15px;
     border-radius: 20px;
     border: 1px solid #ccc;
     font-size: 16px;
     outline: none;
 }
 
-/* Style cho icon tìm kiếm */
 .search-box i {
     position: absolute;
     top: 50%;
-    right: 15px;
+    right: 10px;
     transform: translateY(-50%);
     color: #888;
     font-size: 18px;
