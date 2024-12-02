@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Quản lý sản phẩm</title>
-    <link rel="stylesheet" type="text/css" href="./css/admin.css" />
+    <link rel="stylesheet" type="text/css" href=".././admin/admin.css" />
     <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/slick-theme.css" />
@@ -31,14 +31,15 @@
     <header>
       <div class="container">
         <div class="logo">
-          <img src="./img/logo.png" alt="Logo" />
+          <img src="../img/logo.png" alt="Logo" />
         </div>
         <nav>
           <ul>
-            <li><a href="#">TỔNG QUAN</a></li>
-            <li><a href="#">SẢN PHẨM</a></li>
-            <li><a href="#">DANH MỤC</a></li>
-            <li><a href="#">KHÁCH HÀNG</a></li>
+            
+            <li><a href="./admin.html">TỔNG QUAN</a></li>
+            <li><a href="./product-manage.html">SẢN PHẨM</a></li>
+            <li><a href="./manage-category.html">DANH MỤC</a></li>
+            <li><a href="./user-manage.html">KHÁCH HÀNG</a></li>
           </ul>
         </nav>
       </div>
@@ -181,7 +182,7 @@
         <div id="productList">
           <h2>Danh sách sản phẩm</h2>
           <div class="product">
-            <img src="img/WMNS+AIR+FORCE+1+'07.png" alt="Product Image" />
+            <img src=".././img/giay-co-cao-cho-nu-keen-jasper-mid-wp-xam-3_0062623_4811276f18a64dcc9273aa059583d1a8_1024x1024-removebg-preview.png" alt="Product Image" />
             <div class="product-info">
               <h3>Giày Nike Air Force 1 '07</h3>
               <p>Giá: 2.000.000₫</p>
@@ -232,6 +233,122 @@
           </div>
         </div>
       </div>
+      <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+  const productForm = document.getElementById("productForm");
+  const productNameInput = document.getElementById("productName");
+  const productPriceInput = document.getElementById("productPrice");
+  const productCategorySelect = document.getElementById("productCategory");
+  const productStatusSelect = document.getElementById("productStatus");
+  const productDiscountInput = document.getElementById("productDiscount");
+  const productImageInput = document.getElementById("productImage");
+  const productList = document.getElementById("productList");
+  const formTitle = productForm.querySelector("h2");
+
+  let isEditing = false; // Trạng thái sửa
+  let currentEditProduct = null; // Sản phẩm đang sửa
+
+  // Xử lý lưu sản phẩm
+  productForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const productName = productNameInput.value;
+    const productPrice = productPriceInput.value;
+    const productCategory = productCategorySelect.value;
+    const productStatus = productStatusSelect.value;
+    const productDiscount = productDiscountInput.value;
+    const productImage = productImageInput.files[0]
+      ? URL.createObjectURL(productImageInput.files[0])
+      : "img/default-product.png";
+
+    if (isEditing && currentEditProduct) {
+      // Chỉnh sửa sản phẩm
+      currentEditProduct.querySelector(".product-info h3").textContent =
+        productName;
+      currentEditProduct.querySelector(".product-info p:nth-child(2)").textContent =
+        `Giá: ${productPrice}₫`;
+      currentEditProduct.querySelector(".product-info p:nth-child(3)").textContent =
+        `Trạng thái: ${productStatus}`;
+      currentEditProduct.querySelector(".product-info p:nth-child(4)").textContent =
+        `Giảm giá: ${productDiscount}%`;
+      currentEditProduct.querySelector("img").src = productImage;
+
+      alert("Sản phẩm đã được sửa thành công!");
+    } else {
+      // Thêm sản phẩm mới
+      const productHTML = `
+        <div class="product">
+          <img src="${productImage}" alt="${productName}" />
+          <div class="product-info">
+            <h3>${productName}</h3>
+            <p>Giá: ${productPrice}₫</p>
+            <p>Trạng thái: ${productStatus}</p>
+            <p>Giảm giá: ${productDiscount}%</p>
+          </div>
+          <div class="product-actions">
+            <button class="edit-btn">Sửa</button>
+            <button class="delete-btn">Xóa</button>
+          </div>
+        </div>
+      `;
+      productList.insertAdjacentHTML("beforeend", productHTML);
+      alert("Sản phẩm đã được thêm thành công!");
+    }
+
+    resetForm();
+  });
+
+  // Xử lý sự kiện sửa
+  productList.addEventListener("click", function (e) {
+    if (e.target.classList.contains("edit-btn")) {
+      const product = e.target.closest(".product");
+      currentEditProduct = product;
+
+      const productName = product.querySelector(".product-info h3").textContent;
+      const productPrice = product
+        .querySelector(".product-info p:nth-child(2)")
+        .textContent.replace("Giá: ", "")
+        .replace("₫", "");
+      const productStatus = product
+        .querySelector(".product-info p:nth-child(3)")
+        .textContent.replace("Trạng thái: ", "");
+      const productDiscount = product
+        .querySelector(".product-info p:nth-child(4)")
+        .textContent.replace("Giảm giá: ", "")
+        .replace("%", "");
+
+      productNameInput.value = productName;
+      productPriceInput.value = productPrice;
+      productStatusSelect.value = productStatus;
+      productDiscountInput.value = productDiscount;
+
+      isEditing = true;
+      formTitle.textContent = "Sửa sản phẩm";
+    }
+  });
+
+  // Xử lý sự kiện xóa
+  productList.addEventListener("click", function (e) {
+    if (e.target.classList.contains("delete-btn")) {
+      const product = e.target.closest(".product");
+      const confirmDelete = confirm("Bạn có chắc chắn muốn xóa sản phẩm này?");
+      if (confirmDelete) {
+        product.remove();
+        alert("Sản phẩm đã được xóa!");
+      }
+    }
+  });
+
+  // Reset form
+  function resetForm() {
+    productForm.reset();
+    isEditing = false;
+    currentEditProduct = null;
+    formTitle.textContent = "Thêm/Sửa sản phẩm";
+  }
+});
+
+      </script>
     </footer>
 
     <!-- Footer  -->

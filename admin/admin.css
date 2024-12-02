@@ -1,3 +1,25 @@
+
+/* Tạo scroll bar cho body khi màn hình nhỏ */
+@media (max-width: 768px) {
+  body {
+    overflow-x: auto; /* Bật scrollbar ngang nếu nội dung tràn */
+    overflow-y: hidden; /* Chỉ cho phép scroll ngang */
+    white-space: nowrap; /* Ngăn nội dung tự động xuống dòng */
+  }
+
+  /* Các phần tử con cần thiết kế phù hợp */
+  .container {
+    width: 1200px; /* Hoặc độ rộng tối thiểu của nội dung */
+  }
+  .sider {
+    display: none;
+  }
+  .inner-manage {
+    width: unset !important;
+  }
+}
+
+
 .fa-caret-down {
   display: none !important;
 }

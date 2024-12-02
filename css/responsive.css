@@ -306,13 +306,15 @@
   }
 
   .search-forms {
-    display: flex;
-    align-items: center;
-    min-width: 423px;
-    position: relative;
-    top: 27px;
-    left: -322px;
-  }
+        display: flex;
+        align-items: center;
+        min-width: 423px;
+        position: absolute;
+        top: 43px;
+        left: 90px;
+        width: 80%;
+        min-width: unset !important;
+    }
 
   .container .header-main .row {
     max-width: 100%;
@@ -923,10 +925,11 @@
       display: none;
     }
 
-    .logo {
-      top: -5px !important;
-      left: -585px !important;
-    }
+            .logo {
+            top: -30px !important;
+            position: relative;
+            left: 11px;
+        }
 
     .search-forms .search-header .header_search {
       width: 100% !important;
@@ -937,19 +940,20 @@
       width: 100% !important;
     }
 
-    .search-forms {
-      width: 100% !important;
-      left: -19px !important;
-      top: auto !important;
-      padding-right: 0;
-      padding-top: 0;
-    }
+            .search-forms {
+            width: 100% !important;
+            left: 10% !important;
+            top: 50px !important;
+            padding-right: 0;
+            padding-top: 0;
+            width: 80% !important;
+            min-width: unset !important;
+        }
   }
 
   #trigger-mobile {
     z-index: 999;
     z-index: 999;
-    display: block !important;
     font-size: 40px;
     position: relative;
   }
@@ -1121,7 +1125,62 @@
   }
 }
 
+@media only screen and (min-width: 768px) { 
+.toggle-arrow {
+  display: none;
+}
+.aside-hidden-mobile {
+  display: block;
+}
+}
+
 @media only screen and (max-width: 768px) {
+.selection-new-product .row .product-grid .product-content .add-to-card a {
+    /* margin-left: 5px; */
+    /* display: block; */
+    /* color: #26aed4; */
+    /* font-weight: 600; */
+    /* font-size: 12px; */
+    /* opacity: 1; */
+    position: absolute;
+    left: 20px;
+    bottom: 40px;
+    transition: all 0.5s ease-out 0s;
+    text-decoration: none;
+}
+.aside-hidden-mobile {
+  display: none;
+ 
+}
+.cart-empty {
+  min-width: unset !important;
+}
+
+/* Mũi tên trong button sử dụng ::before */
+.toggle-arrow {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 10px;
+}
+
+/* Mũi tên sẽ được tạo bằng ::before */
+.toggle-arrow::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #333;
+  border-bottom: 2px solid #333;
+  transform: rotate(45deg); /* Tạo mũi tên */
+  transition: transform 0.3s ease;
+}
+
+/* Khi mũi tên thay đổi hướng (khi phần aside được hiển thị) */
+.toggle-arrow.active::before {
+  transform: rotate(-135deg); /* Quay mũi tên ngược lại */
+}
   #qty {
     position: relative;
     top: -30px;
@@ -1726,7 +1785,7 @@
   }
 }
 
-@media only screen and (max-width: 768px) and (min-width: 527px) {
+@media only screen and (max-width: 768px) {
   tab-content .tab-pane .product-grid .product-image {
     position: relative;
     padding-left: 15px;
@@ -2053,13 +2112,17 @@
   }
 
   .search-forms {
-    display: flex;
-    align-items: center;
-    position: relative;
-    top: -11px;
-    left: -15px !important;
-    width: 100%;
-    padding-bottom: 20px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 77px;
+        left: 10% !important;
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+        justify-content: center;
+       align-items: center;
+       min-width: unset;
   }
 
   .search-forms .search-header .header_search {
@@ -2363,7 +2426,6 @@
   }
 
   .details-product .form-product .form-group button {
-    background: rgb(151, 202, 81);
     font-size: 14px;
     outline: none;
     box-shadow: none;
@@ -2578,15 +2640,7 @@
     top: 10px;
   }
 
-  .search-forms {
-    display: flex;
-    align-items: center;
-    position: relative;
-    top: -13px;
-    left: -16px;
-    height: 63px;
-    min-width: 100%;
-  }
+  
 
   .topbar .container .row .hidden-xs {
     display: none !important;

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Quản lý nội dung trang</title>
-    <link rel="stylesheet" type="text/css" href="./css/admin.css" />
+    <title>Quản lý người dùng</title>
+    <link rel="stylesheet" type="text/css" href=".././admin/admin.css" />
     <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/slick-theme.css" />
@@ -31,14 +31,15 @@
     <header>
       <div class="container">
         <div class="logo">
-          <img src="./img/logo.png" alt="Logo" />
+          <img src="../img/logo.png" alt="Logo" />
         </div>
         <nav>
           <ul>
-            <li><a href="#">TỔNG QUAN</a></li>
-            <li><a href="#">SẢN PHẨM</a></li>
-            <li><a href="#">DANH MỤC</a></li>
-            <li><a href="#">KHÁCH HÀNG</a></li>
+            
+            <li><a href="./admin.html">TỔNG QUAN</a></li>
+            <li><a href="./product-manage.html">SẢN PHẨM</a></li>
+            <li><a href="./manage-category.html">DANH MỤC</a></li>
+            <li><a href="./user-manage.html">KHÁCH HÀNG</a></li>
           </ul>
         </nav>
       </div>
@@ -95,88 +96,67 @@
       </ul>
       <!-- Slide bar Left  -->
 
-      <!-- Quản lý nội dung trang  -->
+      <!-- Quản lý người dùng  -->
 
-      <div class="change-table-4">
-        <h1>Quản lý Nội dung Trang</h1>
+      <div class="change-table-3">
+        <h1>Quản lý Người dùng</h1>
 
-        <div class="content-manager">
-          <!-- Quản lý các trang -->
-          <h2>Quản lý Các Trang</h2>
+        <div class="user-manager">
+          <!-- Bảng hiển thị danh sách người dùng -->
           <table>
             <thead>
               <tr>
-                <th>Tên Trang</th>
+                <th>Tên</th>
+                <th>Email</th>
+                <th>Số điện thoại</th>
+                <th>Phân quyền</th>
                 <th>Thao tác</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Giới thiệu</td>
+                <td>Nguyễn Văn A</td>
+                <td>nguyenvana@example.com</td>
+                <td>0123456789</td>
                 <td>
-                  <button class="btn btn-edit-1">Chỉnh sửa</button>
-                  <button class="btn btn-delete-1">Xóa</button>
+                  <select>
+                    <option value="admin">Admin</option>
+                    <option value="sales">Nhân viên bán hàng</option>
+                    <option value="customer" selected>Khách hàng</option>
+                  </select>
+                </td>
+                <td>
+                  <button class="btn-1">Lưu</button>
                 </td>
               </tr>
               <tr>
-                <td>Khuyến mãi</td>
+                <td>Trần Thị B</td>
+                <td>tranthib@example.com</td>
+                <td>0987654321</td>
                 <td>
-                  <button class="btn btn-edit-1">Chỉnh sửa</button>
-                  <button class="btn btn-delete-1">Xóa</button>
+                  <select>
+                    <option value="admin">Admin</option>
+                    <option value="sales" selected>Nhân viên bán hàng</option>
+                    <option value="customer">Khách hàng</option>
+                  </select>
+                </td>
+                <td>
+                  <button class="btn-1">Lưu</button>
                 </td>
               </tr>
               <tr>
-                <td>Tin tức</td>
+                <td>Phạm Văn C</td>
+                <td>phamvanc@example.com</td>
+                <td>0234567890</td>
                 <td>
-                  <button class="btn btn-edit-1">Chỉnh sửa</button>
-                  <button class="btn btn-delete-1">Xóa</button>
+                  <select>
+                    <option value="admin">Admin</option>
+                    <option value="sales">Nhân viên bán hàng</option>
+                    <option value="customer" selected>Khách hàng</option>
+                  </select>
                 </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <!-- Quản lý banner và hình ảnh -->
-          <h2>Quản lý Banner và Hình ảnh Trang chủ</h2>
-          <div class="upload-section">
-            <label for="banner-upload">Chọn banner:</label>
-            <input type="file" id="banner-upload" />
-            <button class="btn btn-upload-1">Tải lên</button>
-          </div>
-          <div class="upload-section">
-            <label for="image-upload">Chọn hình ảnh:</label>
-            <input type="file" id="image-upload" />
-            <button class="btn btn-upload-1">Tải lên</button>
-          </div>
-
-          <!-- Công cụ quản lý bài viết, tin tức hoặc blog -->
-          <h2>Quản lý Bài viết/Tin tức/Blog</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Tiêu đề Bài viết</th>
-                <th>Thao tác</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Khuyến mãi mùa hè</td>
                 <td>
-                  <button class="btn btn-edit-1">Chỉnh sửa</button>
-                  <button class="btn btn-delete-1">Xóa</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Cách chăm sóc giày thể thao</td>
-                <td>
-                  <button class="btn btn-edit-1">Chỉnh sửa</button>
-                  <button class="btn btn-delete-1">Xóa</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Top sản phẩm bán chạy nhất</td>
-                <td>
-                  <button class="btn btn-edit-1">Chỉnh sửa</button>
-                  <button class="btn btn-delete-1">Xóa</button>
+                  <button class="btn-1">Lưu</button>
                 </td>
               </tr>
             </tbody>
@@ -186,7 +166,7 @@
     </div>
     <!-- Inner Wrap -->
 
-    <!-- Quản lý nội dung trang  -->
+    <!-- Quản lý người dùng  -->
 
     <!-- Footer  -->
     <footer class="footer">
@@ -221,6 +201,30 @@
           </div>
         </div>
       </div>
+      <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+  // Lấy tất cả các nút "Lưu"
+  const buttons = document.querySelectorAll(".btn-1");
+
+  // Gắn sự kiện click cho từng nút
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      // Lấy thông tin từ hàng tương ứng
+      const row = this.closest("tr");
+      const name = row.children[0].textContent.trim();
+      const email = row.children[1].textContent.trim();
+      const phone = row.children[2].textContent.trim();
+      const role = row.querySelector("select").value;
+
+      // Hiển thị thông báo
+      alert(
+        `Đã lưu thành công!\nThông tin người dùng:\nTên: ${name}\nEmail: ${email}\nSố điện thoại: ${phone}\nPhân quyền: ${role}`
+      );
+    });
+  });
+});
+
+      </script>
     </footer>
 
     <!-- Footer  -->

@@ -6,17 +6,11 @@
     <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/slick-theme.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./css/owl.carousel.min.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -24,7 +18,6 @@
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/cs.script.js"></script>
   </head>
-
   <body>
     <header>
       <div class="header">
@@ -34,14 +27,10 @@
               <div class="col-md-8 col-sm-7 left-infor">
                 <ul class="ul-inform">
                   <li>
-                    <i class="fa fa-phone" aria-hidden="true"></i> Hotline:
-                    <a href="tel:0123456789">0123 456 789</a>
+                    <i class="fa fa-phone" aria-hidden="true"></i> Hotline: <a href="tel:0123456789">0123 456 789</a>
                   </li>
                   <li class="hidden-xs">
-                    <i class="fa fa-envelope" aria-hidden="true"></i> Email:
-                    <a href="mailto:acquy666@gmail.com"
-                      >acquy666@gmail.com</a
-                    >
+                    <i class="fa fa-envelope" aria-hidden="true"></i> Email: <a href="mailto:acquy666@gmail.com">acquy666@gmail.com</a>
                   </li>
                 </ul>
               </div>
@@ -79,44 +68,23 @@
         </div>
         <div class="container">
           <div class="header-main" style="max-width: 1150px; margin: auto">
-            <div
-              class="row"
-              style="
+            <div class="row" style="
                 display: flex;
                 max-width: 1150px;
                 margin: auto;
                 justify-content: space-between;
-              "
-            >
+              ">
               <div class="col-md-3 col-100-h">
-                <button
-                  type="button"
-                  class="navbar-toggle collapsed visible-sm visible-xs"
-                  id="trigger-mobile"
-                  style="display: none; border: none"
-                >
-                  <i
-                    class="fa fa-bars"
-                    aria-hidden="true"
-                    onclick="shownav()"
-                  ></i>
+                <button type="button" class="navbar-toggle collapsed visible-sm visible-xs" id="trigger-mobile" style="display: none; border: none">
+                  <i class="fa fa-bars" aria-hidden="true" onclick="shownav()"></i>
                 </button>
                 <div class="logo">
-                  <a
-                    href="index.html"
-                    class="logo-wrapper"
-                  >
+                  <a href="index.html" class="logo-wrapper">
                     <img src="./img/logo.png" alt="logo SGU Sport" />
                   </a>
                 </div>
-                <div
-                  class="mobile-cart visible-sm visible-xs"
-                  style="display: none"S
-                >
-                  <a
-                    href="cart.html"
-                    title="Cart"
-                  >
+                <div class="mobile-cart visible-sm visible-xs" style="display: none" S>
+                  <a href="cart.html" title="Cart">
                     <i class="fa fa-cart-plus"></i>
                   </a>
                 </div>
@@ -124,20 +92,8 @@
               <div class="search-forms">
                 <div class="search-header">
                   <div class="header_search search_form">
-                    <form
-                      class="input-group search-bar search_form"
-                      action="product-caterogy.html"
-                      method="get"
-                      role="search"
-                    >
-                      <input
-                        type="search"
-                        name="query"
-                        value=""
-                        placeholder="Tìm kiếm sản phẩm... "
-                        class="input-group-field st-default-search-input search-text"
-                        autocomplete="off"
-                      />
+                    <form class="input-group search-bar search_form" action="product.html" method="get" role="search">
+                      <input type="search" name="query" value="" placeholder="Tìm kiếm sản phẩm... " class="input-group-field st-default-search-input search-text" autocomplete="off" />
                       <span class="input-group-btn">
                         <button type="submit" class="btn icon-fallback-text">
                           <i class="fa fa-search"></i>
@@ -151,68 +107,166 @@
                 <div class="index-cart cart-wishlist">
                   <ul class="clearfix">
                     <li>
-                      <a
-                        href="cart.html"
-                        class="header-cart"
-                      >
-                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ
-                        hàng
-                        <span class="cart-wishlist-number cartCount">0</span>
+                      <a href="cart.html" class="header-cart">
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ hàng <span class="cart-wishlist-number cartCount">8</span>
                       </a>
                     </li>
                   </ul>
                 </div>
+                <style>
+                  /* CSS để đưa số lên trên icon */
+                  .header-cart {
+                    position: relative;
+                    /* Thiết lập để vị trí tuyệt đối của số không ảnh hưởng đến phần tử cha */
+                  }
+
+                  .header-main .cart-wishlist .header-cart i {
+                    font-size: 18px;
+                    left: 0px;
+                    top: 30px;
+                    position: absolute;
+                    color: #333;
+                  }
+
+                  .cart-wishlist-number {
+                    position: absolute;
+                    top: 5px;
+                    /* Di chuyển số lên trên một chút */
+                    left: 15px;
+                    transform: translateX(-50%);
+                    background-color: #f00;
+                    /* Màu nền của số */
+                    color: black;
+                    /* Màu chữ */
+                    border-radius: 50%;
+                    padding: 5px 10px;
+                    font-size: 14px;
+                  }
+
+                  .fa-cart-plus {
+                    font-size: 24px;
+                    /* Kích thước của icon giỏ hàng */
+                  }
+                </style>
                 <div class="account-sign">
                   <a href="#" class="account-header">
                     <i class="fa fa-user" aria-hidden="true"></i>
-                    <div class="a-text">
-                      Đăng nhập<span>Tài khoản và đơn hàng</span>
+                    <div class="a-text"> Đăng nhập <span>Tài khoản và đơn hàng</span>
                     </div>
                     <div class="Sub-1">
                       <ul class="Sub-menu">
                         <li>
-                          <a
-                            href="login.html"
-                            style="display: none"
-                            >Đăng nhập</a
-                          >
+                          <a href="login.html" style="display: none">Đăng nhập</a>
                         </li>
                         <li>
-                          <a
-                            href="customer-information.html"
-                            >Quản lý tài khoản</a
-                          >
+                          <a href="customer-information.html">Quản lý tài khoản</a>
                         </li>
                         <li>
-                          <a
-                            href="sodiachi.html"
-                            >Sổ địa chỉ</a
-                          >
+                          <a href="sodiachi.html">Sổ địa chỉ</a>
                         </li>
                         <li>
-                          <a
-                            href="register.html"
-                            >Đăng ký</a
-                          >
+                          <a href="register.html">Đăng ký</a>
                         </li>
                         <li>
-                          <a
-                            href="register.html"
-                            >Đăng xuất</a
-                          >
+                          <a href="register.html">Đăng xuất</a>
                         </li>
                         <li>
-                          <a
-                            href="javascript:;"
-                            data-customer-id="0"
-                            class="smartLogin iWishView"
-                            >Danh sách yêu thích</a
-                          >
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
                         </li>
                       </ul>
                     </div>
                   </a>
                 </div>
+                <script type="text/javascript">
+                  document.addEventListener("DOMContentLoaded", function() {
+                    const accountSign = document.querySelector(".account-sign");
+                    const userName = sessionStorage.getItem("userEmail"); // Lấy tên đăng nhập từ sessionStorage
+                    if (userName) {
+                      // Nếu đã đăng nhập
+                      accountSign.innerHTML = `
+                          
+                  <a href="customer-information.html" class="account-header">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="a-text">
+                                  ${userName} 
+                      <span>Tài khoản và đơn hàng</span>
+                    </div>
+                    <div class="Sub-1">
+                      <ul class="Sub-menu">
+                        <li>
+                          <a href="customer-information.html">Quản lý tài khoản</a>
+                        </li>
+                        <li>
+                          <a href="sodiachi.html">Sổ địa chỉ</a>
+                        </li>
+                        <li>
+                          <a href="#" id="logoutBtn">Đăng xuất</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                      `;
+                      // Xử lý sự kiện Đăng xuất
+                      document.getElementById("logoutBtn").addEventListener("click", function() {
+                        sessionStorage.clear(); // Xóa thông tin đăng nhập
+                        alert("Bạn đã đăng xuất.");
+                        window.location.reload(); // Tải lại trang để cập nhật giao diện
+                      });
+                    } else {
+                      // Nếu chưa đăng nhập
+                      accountSign.innerHTML = `
+                          
+                  <a href="login.html" class="account-header">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="a-text">
+                                  Đăng nhập 
+                      <span>Tài khoản và đơn hàng</span>
+                    </div>
+                    <div class="Sub-1">
+                      <ul class="Sub-menu">
+                        <li>
+                          <a href="login.html">Đăng nhập</a>
+                        </li>
+                        <li>
+                          <a href="register.html">Đăng ký</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" data-customer-id="0" class="smartLogin iWishView">Danh sách yêu thích</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                      `;
+                    }
+                  });
+                </script>
+                <script type="text/javascript">
+                  document.addEventListener("DOMContentLoaded", function () {
+                  // Lấy phần tử nút giỏ hàng
+                  const cartButton = document.querySelector(".header-cart");
+
+                  // Gắn sự kiện click vào nút giỏ hàng
+                  cartButton.addEventListener("click", function (event) {
+                    event.preventDefault(); // Ngăn chuyển trang mặc định
+
+                    // Kiểm tra trạng thái đăng nhập
+                    const isLoggedIn = sessionStorage.getItem("userEmail"); // Kiểm tra nếu có userEmail trong sessionStorage
+
+                    if (isLoggedIn) {
+                      // Nếu đã đăng nhập, chuyển đến cart.html
+                      window.location.href = "cart.html";
+                    } else {
+                      // Nếu chưa đăng nhập, hiển thị thông báo và chuyển đến login.html
+                      alert("Vui lòng đăng nhập để xem giỏ hàng.");
+                      window.location.href = "login.html";
+                    }
+                  });
+                });
+
+                </script>
               </div>
             </div>
           </div>
@@ -224,190 +278,117 @@
                 <div class="col-md-12">
                   <ul id="nav" class="nav">
                     <li class="nav-item active">
-                      <a
-                        class="nav-link"
-                        href="index.html"
-                        >Trang chủ</a
-                      >
+                      <a class="nav-link" href="index.html">Trang chủ</a>
                     </li>
                     <li class="nav-item">
-                      <a
-                        class="nav-link"
-                        href="about.html"
-                        >Giới thiệu</a
-                      >
+                      <a class="nav-link" href="about.html">Giới thiệu</a>
                     </li>
                     <li class="has-mega">
-                      <a
-                        href="product.html"
-                        class="nav-link"
-                        >Sản phẩm
-                        <i class="fa fa-angle-right" data-toggle="dropdown"></i
-                      ></a>
+                      <a href="product.html" class="nav-link">Sản phẩm <i class="fa fa-angle-right" data-toggle="dropdown"></i>
+                      </a>
                       <div class="mega-content">
                         <div class="level0-wrapper2">
                           <div class="nav-block nav-block-center">
                             <ul class="level0">
                               <li class="level1 parent item">
                                 <h2 class="h4">
-                                  <a
-                                    href="product-caterogy.html"
-                                    ><span>Giày</span></a
-                                  >
+                                  <a href="./product.html?query=giày">
+                                    <span>Giày</span>
+                                  </a>
                                 </h2>
                                 <ul class="level1">
                                   <li class="level2">
-                                    <a
-                                      href="product-caterogy.html"
-                                      ><span>Giày Nam</span></a
-                                    >
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày Nam</span>
+                                    </a>
                                   </li>
                                   <li class="level2">
-                                    <a
-                                      href="product-caterogy.html"
-                                      ><span>Giày Nữ</span></a
-                                    >
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày Nữ</span>
+                                    </a>
                                   </li>
                                   <li class="level2">
-                                    <a
-                                      href="/product-caterogy.html"
-                                      ><span>Giày thể thao</span></a
-                                    >
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày thể thao</span>
+                                    </a>
                                   </li>
                                   <li class="level2">
-                                    <a
-                                      href="product-caterogy.html"
-                                      ><span>Giày leo núi</span></a
-                                    >
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày leo núi</span>
+                                    </a>
                                   </li>
                                   <li class="level2">
-                                    <a
-                                      href="product-caterogy.html"
-                                      ><span>Giày chạy bộ</span></a
-                                    >
+                                    <a href="./product.html?query=giày">
+                                      <span>Giày chạy bộ</span>
+                                    </a>
                                   </li>
                                 </ul>
                               </li>
                               <li class="level1 parent item">
                                 <h2 class="h4">
-                                  <a href="/trang-phuc-the-thao"
-                                    ><span>Trang phục thể thao</span></a
-                                  >
+                                  <a href="./product.html?query=áo">
+                                    <span>Trang phục thể thao</span>
+                                  </a>
                                 </h2>
                                 <ul class="level1">
                                   <li class="level2">
-                                    <a
-                                      href="product-caterogy.html"
-                                      ><span>Dành cho Nam</span></a
-                                    >
+                                    <a href="./product.html?query=áo">
+                                      <span>Dành cho Nam</span>
+                                    </a>
                                   </li>
                                   <li class="level2">
-                                    <a
-                                      href="product-caterogy.html"
-                                      ><span>Dành cho Nữ</span></a
-                                    >
+                                    <a href="./product.html?query=áo">
+                                      <span>Dành cho Nữ</span>
+                                    </a>
                                   </li>
                                   <li class="level2">
-                                    <a
-                                      href="product-caterogy.html"
-                                      ><span>Đồ bơi</span></a
-                                    >
+                                    <a href="./product.html?query=áo">
+                                      <span>Đồ bơi</span>
+                                    </a>
                                   </li>
                                   <li class="level2">
-                                    <a
-                                      href="product-caterogy.html"
-                                      ><span>Đấm bốc & Võ thuật</span></a
-                                    >
+                                    <a href="./product.html?query=áo">
+                                      <span>Đấm bốc & Võ thuật</span>
+                                    </a>
                                   </li>
                                   <li class="level2">
-                                    <a
-                                      href="product-caterogy.html"
-                                      ><span>Yoga</span></a
-                                    >
+                                    <a href="./product.html?query=áo">
+                                      <span>Yoga</span>
+                                    </a>
                                   </li>
                                 </ul>
                               </li>
                               <li class="level1 parent item">
                                 <h2 class="h4">
-                                  <a
-                                    href="product-caterogy.html"
-                                    ><span>Dụng cụ thể thao</span></a
-                                  >
+                                  <a href="./product.html?query=phụ+kiện">
+                                    <span>Dụng cụ thể thao</span>
+                                  </a>
                                 </h2>
                                 <ul class="level1">
                                   <li class="level2">
-                                    <a
-                                      href="/01/product-caterogy.html"
-                                      ><span>Yoga, thể hình</span></a
-                                    >
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Yoga, thể hình</span>
+                                    </a>
                                   </li>
                                   <li class="level2">
-                                    <a
-                                      href="product-caterogy.html"
-                                      ><span>Các môn cá nhân</span></a
-                                    >
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Các môn cá nhân</span>
+                                    </a>
                                   </li>
                                   <li class="level2">
-                                    <a
-                                      href="product-caterogy.html"
-                                      ><span>Phụ kiện thể thao</span></a
-                                    >
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Phụ kiện thể thao</span>
+                                    </a>
                                   </li>
                                   <li class="level2">
-                                    <a
-                                      href="product-caterogy.html"
-                                      ><span>Các môn tập thể</span></a
-                                    >
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Các môn tập thể</span>
+                                    </a>
                                   </li>
                                   <li class="level2">
-                                    <a
-                                      href="product-caterogy.html"
-                                      ><span>Đồ dưới nước</span></a
-                                    >
-                                  </li>
-                                </ul>
-                              </li>
-                              <li class="level1 item hkt">
-                                <a
-                                  href="product-caterogy.html"
-                                  ><span>Lều ngủ, Túi ngủ</span></a
-                                >
-                              </li>
-
-                              <li class="level1 parent item">
-                                <h2 class="h4">
-                                  <a href="/"><span>Thương hiệu</span></a>
-                                </h2>
-                                <ul class="level1">
-                                  <li class="level2">
-                                    <a
-                                      href="product-caterogy.html"
-                                      ><span>Nike</span></a
-                                    >
-                                  </li>
-                                  <li class="level2">
-                                    <a
-                                      href="product-caterogy.html"
-                                      ><span>Adidas</span></a
-                                    >
-                                  </li>
-                                  <li class="level2">
-                                    <a
-                                      href="product-caterogy.html"
-                                      ><span>Gofit</span></a
-                                    >
-                                  </li>
-                                  <li class="level2">
-                                    <a
-                                      href="product-caterogy.html"
-                                      ><span>Bitis</span></a
-                                    >
-                                  </li>
-                                  <li class="level2">
-                                    <a
-                                      href="product-caterogy.html"
-                                      ><span>New Nalance</span></a
-                                    >
+                                    <a href="./product.html?query=phụ+kiện">
+                                      <span>Đồ dưới nước</span>
+                                    </a>
                                   </li>
                                 </ul>
                               </li>
@@ -417,70 +398,34 @@
                       </div>
                     </li>
                     <li class="has-mega abc">
-                      <a
-                        href="product-caterogy.html"
-                        class="nav-link"
-                        >THƯƠNG HIỆU
-                        <i class="fa fa-angle-right" data-toggle="dropdown"></i
-                      ></a>
+                      <a href="" class="nav-link">THƯƠNG HIỆU <i class="fa fa-angle-right" data-toggle="dropdown"></i>
+                      </a>
                       <ul class="menu">
                         <li class="nav-item-lv2">
-                          <a
-                            class="nav-link"
-                            href="product-caterogy.html"
-                            >Nike</a
-                          >
+                          <a class="nav-link" href="product.html?query=Fornix">Fornix</a>
                         </li>
                         <li class="nav-item-lv2">
-                          <a
-                            class="nav-link"
-                            href="product-caterogy.html"
-                            >Adidas</a
-                          >
+                          <a class="nav-link" href="product.html?query=Bianchi">Bianchi</a>
                         </li>
                         <li class="nav-item-lv2">
-                          <a
-                            class="nav-link"
-                            href="product-caterogy.html"
-                            >Gofit</a
-                          >
+                          <a class="nav-link" href="product.html?query=DON">DON</a>
                         </li>
                         <li class="nav-item-lv2">
-                          <a
-                            class="nav-link"
-                            href="product-caterogy.html"
-                            >Bitis</a
-                          >
+                          <a class="nav-link" href="product.html?query=JACK">JACK WOLFSKIN</a>
                         </li>
                         <li class="nav-item-lv2">
-                          <a
-                            class="nav-link"
-                            href="product-caterogy.html"
-                            >New Nalance</a
-                          >
+                          <a class="nav-link" href="product.html?query=Khác">Khác</a>
                         </li>
                       </ul>
                     </li>
                     <li class="nav-item">
-                      <a
-                        class="nav-link"
-                        href="product-caterogy.html"
-                        >Khuyến mãi</a
-                      >
+                      <a class="nav-link" href="product.html">Khuyến mãi</a>
                     </li>
                     <li class="nav-item">
-                      <a
-                        class="nav-link"
-                        href="news.html"
-                        >Tin tức</a
-                      >
+                      <a class="nav-link" href="news.html">Tin tức</a>
                     </li>
                     <li class="nav-item">
-                      <a
-                        class="nav-link"
-                        href="lienhe.html"
-                        >Liên hệ</a
-                      >
+                      <a class="nav-link" href="lienhe.html">Liên hệ</a>
                     </li>
                   </ul>
                 </div>
@@ -492,20 +437,16 @@
     </header>
     <div class="slider" id="slider">
       <!-- <div><img src="./img/slider_1.jpg" alt="slider_1" /></div> -->
-      <div><img src="./img/slider_2.jpg" alt="slider_2" /></div>
+      <div>
+        <img src="./img/slider_2.jpg" alt="slider_2" />
+      </div>
       <!-- <div><img src="./img/slider_1.jpg" alt="slider_1" /></div> -->
     </div>
-    <script
-      type="text/javascript"
-      src="http://code.jquery.com/jquery-1.11.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="./js/slick.js" type="text/javascript"></script>
     <script>
-      $(document).ready(function () {
+      $(document).ready(function() {
         $(".slider").slick({
           dots: true,
           arrows: false,
@@ -520,25 +461,25 @@
           <div class="colmn so1" id="so1">
             <img src="./img/index-promo-img-01.jpg" alt="Xe the thao" />
             <div class="DESC">
-              <a href="#">Xe thể thao</a>
+              <a href="product.html?query=xe+đạp">Xe thể thao</a>
             </div>
           </div>
           <div class="colmn recss">
             <img src="./img/index-promo-img-04.jpg" alt="Giày the thao" />
             <div class="DESC">
-              <a href="#">Giày thể thao</a>
+              <a href="product.html?query=giày">Giày thể thao</a>
             </div>
           </div>
           <div class="colmn">
             <img src="./img/index-promo-img-07.jpg" alt="Trang phuc the thao" />
             <div class="DESC">
-              <a href="#">Trang phục thể thao</a>
+              <a href="product.html?query=ao">Trang phục thể thao</a>
             </div>
           </div>
           <div class="colmn recss1">
             <img src="./img/index-promo-img-03.jpg" alt="Balo" />
             <div class="DESC">
-              <a href="#">Balo</a>
+              <a href="product.html?query=balo">Balo</a>
             </div>
           </div>
         </div>
@@ -551,10 +492,7 @@
         <div class="col-md-3 col-sm-6">
           <div class="product-grid">
             <div class="product-image">
-              <a
-                onclick="quickviewprd()"
-                class="fa fa-search product-full-view"
-              ></a>
+              <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
               <a href="product-detail.html">
                 <img class="pic-1" src="./img/gang-tay-1.jpg" />
                 <img class="pic-2" src="./img/gang-tay-2.jpg" />
@@ -574,14 +512,7 @@
               <div class="add-to-card">
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                 <a onclick="cartquick()">ADD TO CARD</a>
-                <a
-                  title="Yêu thích"
-                  class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                  href="javascript:;"
-                  data-customer-id="0"
-                  data-product="11795611"
-                  data-variant="18765268"
-                >
+                <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                   <i class="fa fa-heart-o"></i>
                 </a>
               </div>
@@ -591,10 +522,7 @@
         <div class="col-md-3 col-sm-6">
           <div class="product-grid">
             <div class="product-image">
-              <a
-                onclick="quickviewprd()"
-                class="fa fa-search product-full-view"
-              ></a>
+              <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
               <a href="#">
                 <img class="pic-1" src="./img/product-23.jpg" />
                 <img class="pic-2" src="./img/product-23-02.jpg" />
@@ -614,14 +542,7 @@
               <div class="add-to-card">
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                 <a onclick="cartquick()">ADD TO CARD</a>
-                <a
-                  title="Yêu thích"
-                  class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                  href="javascript:;"
-                  data-customer-id="0"
-                  data-product="11795611"
-                  data-variant="18765268"
-                >
+                <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                   <i class="fa fa-heart-o"></i>
                 </a>
               </div>
@@ -631,10 +552,7 @@
         <div class="col-md-3 col-sm-6">
           <div class="product-grid">
             <div class="product-image">
-              <a
-                onclick="quickviewprd()"
-                class="fa fa-search product-full-view"
-              ></a>
+              <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
               <a href="#">
                 <img class="pic-1" src="./img/product-22.jpg" />
                 <img class="pic-2" src="./img/product-15.jpg" />
@@ -654,14 +572,7 @@
               <div class="add-to-card">
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                 <a onclick="cartquick()">ADD TO CARD</a>
-                <a
-                  title="Yêu thích"
-                  class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                  href="javascript:;"
-                  data-customer-id="0"
-                  data-product="11795611"
-                  data-variant="18765268"
-                >
+                <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                   <i class="fa fa-heart-o"></i>
                 </a>
               </div>
@@ -671,10 +582,7 @@
         <div class="col-md-3 col-sm-6">
           <div class="product-grid">
             <div class="product-image">
-              <a
-                onclick="quickviewprd()"
-                class="fa fa-search product-full-view"
-              ></a>
+              <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
               <a href="#">
                 <img class="pic-1" src="./img/product-25.jpg" />
                 <img class="pic-2" src="./img/product-25-01.jpg" />
@@ -694,14 +602,7 @@
               <div class="add-to-card">
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                 <a onclick="cartquick()">ADD TO CARD</a>
-                <a
-                  title="Yêu thích"
-                  class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                  href="javascript:;"
-                  data-customer-id="0"
-                  data-product="11795611"
-                  data-variant="18765268"
-                >
+                <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                   <i class="fa fa-heart-o"></i>
                 </a>
               </div>
@@ -711,15 +612,9 @@
         <div class="col-md-3 col-sm-6">
           <div class="product-grid">
             <div class="product-image">
-              <a
-                onclick="quickviewprd()"
-                class="fa fa-search product-full-view"
-              ></a>
+              <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
               <a href="#">
-                <img
-                  class="pic-1"
-                  src="./img/product-28-783a00f7-d55e-43f5-b1cf-c5d7dc4c7872.jpg"
-                />
+                <img class="pic-1" src="./img/product-28-783a00f7-d55e-43f5-b1cf-c5d7dc4c7872.jpg" />
                 <img class="pic-2" src="./img/product-28-01.jpg" />
               </a>
             </div>
@@ -734,14 +629,7 @@
               <div class="add-to-card">
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                 <a onclick="cartquick()">ADD TO CARD</a>
-                <a
-                  title="Yêu thích"
-                  class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                  href="javascript:;"
-                  data-customer-id="0"
-                  data-product="11795611"
-                  data-variant="18765268"
-                >
+                <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                   <i class="fa fa-heart-o"></i>
                 </a>
               </div>
@@ -751,10 +639,7 @@
         <div class="col-md-3 col-sm-6">
           <div class="product-grid">
             <div class="product-image">
-              <a
-                onclick="quickviewprd()"
-                class="fa fa-search product-full-view"
-              ></a>
+              <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
               <a href="#">
                 <img class="pic-1" src="./img/product-08.jpg" />
                 <img class="pic-2" src="./img/product-08-02.jpg" />
@@ -774,14 +659,7 @@
               <div class="add-to-card">
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                 <a onclick="cartquick()">ADD TO CARD</a>
-                <a
-                  title="Yêu thích"
-                  class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                  href="javascript:;"
-                  data-customer-id="0"
-                  data-product="11795611"
-                  data-variant="18765268"
-                >
+                <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                   <i class="fa fa-heart-o"></i>
                 </a>
               </div>
@@ -791,10 +669,7 @@
         <div class="col-md-3 col-sm-6">
           <div class="product-grid">
             <div class="product-image">
-              <a
-                onclick="quickviewprd()"
-                class="fa fa-search product-full-view"
-              ></a>
+              <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
               <a href="#">
                 <img class="pic-1" src="./img/product-15.jpg" />
                 <img class="pic-2" src="./img/product-15-01.jpg" />
@@ -814,14 +689,7 @@
               <div class="add-to-card">
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                 <a onclick="cartquick()">ADD TO CARD</a>
-                <a
-                  title="Yêu thích"
-                  class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                  href="javascript:;"
-                  data-customer-id="0"
-                  data-product="11795611"
-                  data-variant="18765268"
-                >
+                <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                   <i class="fa fa-heart-o"></i>
                 </a>
               </div>
@@ -831,10 +699,7 @@
         <div class="col-md-3 col-sm-6">
           <div class="product-grid">
             <div class="product-image">
-              <a
-                onclick="quickviewprd()"
-                class="fa fa-search product-full-view"
-              ></a>
+              <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
               <a href="#">
                 <img class="pic-1" src="./img/product-14.jpg" />
                 <img class="pic-2" src="./img/product-14-01.jpg" />
@@ -854,14 +719,7 @@
               <div class="add-to-card">
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                 <a onclick="cartquick()">ADD TO CARD</a>
-                <a
-                  title="Yêu thích"
-                  class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                  href="javascript:;"
-                  data-customer-id="0"
-                  data-product="11795611"
-                  data-variant="18765268"
-                >
+                <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                   <i class="fa fa-heart-o"></i>
                 </a>
               </div>
@@ -872,10 +730,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a href="#">
                   <img class="pic-1" src="./img/product-13.jpg" />
                   <img class="pic-2" src="./img/product-13-01.jpg" />
@@ -895,14 +750,7 @@
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                   <a onclick="cartquick()">ADD TO CARD</a>
-                  <a
-                    title="Yêu thích"
-                    class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                    href="javascript:;"
-                    data-customer-id="0"
-                    data-product="11795611"
-                    data-variant="18765268"
-                  >
+                  <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
                 </div>
@@ -912,10 +760,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a href="#">
                   <img class="pic-1" src="./img/product-01.jpg" />
                   <img class="pic-2" src="./img/product-01-02.jpg" />
@@ -926,9 +771,7 @@
               </div>
               <div class="product-content">
                 <h3 class="title">
-                  <a href="product-detail.html"
-                    >Balo thể thao Cabinzero CLASSIC 28L CZ081309 Backpack</a
-                  >
+                  <a href="product-detail.html">Balo thể thao Cabinzero CLASSIC 28L CZ081309 Backpack</a>
                 </h3>
                 <div class="tt-price">
                   <span class="new-price">450.000₫</span>
@@ -937,14 +780,7 @@
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                   <a onclick="cartquick()">ADD TO CARD</a>
-                  <a
-                    title="Yêu thích"
-                    class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                    href="javascript:;"
-                    data-customer-id="0"
-                    data-product="11795611"
-                    data-variant="18765268"
-                  >
+                  <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
                 </div>
@@ -954,10 +790,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a href="#">
                   <img class="pic-1" src="./img/product-05.jpg" />
                   <img class="pic-2" src="./img/product-05-02.jpg" />
@@ -977,14 +810,7 @@
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                   <a href="#">VIEW PRODUCTS</a>
-                  <a
-                    title="Yêu thích"
-                    class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                    href="javascript:;"
-                    data-customer-id="0"
-                    data-product="11795611"
-                    data-variant="18765268"
-                  >
+                  <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
                 </div>
@@ -994,10 +820,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a href="#">
                   <img class="pic-1" src="./img/product-10.jpg" />
                   <img class="pic-2" src="./img/product-10-02.jpg" />
@@ -1017,14 +840,7 @@
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                   <a onclick="cartquick()">ADD TO CARD</a>
-                  <a
-                    title="Yêu thích"
-                    class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                    href="javascript:;"
-                    data-customer-id="0"
-                    data-product="11795611"
-                    data-variant="18765268"
-                  >
+                  <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
                 </div>
@@ -1034,10 +850,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a href="#">
                   <img class="pic-1" src="./img/product-09.jpg" />
                   <img class="pic-2" src="./img/product-09-02.jpg" />
@@ -1057,14 +870,7 @@
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                   <a onclick="cartquick()">ADD TO CARD</a>
-                  <a
-                    title="Yêu thích"
-                    class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                    href="javascript:;"
-                    data-customer-id="0"
-                    data-product="11795611"
-                    data-variant="18765268"
-                  >
+                  <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
                 </div>
@@ -1074,9 +880,9 @@
         </div>
         <div class="col-md-12 col-sm-12 col-xs-12 text-center jaxx-more">
           <div class="pagination">
-            <a onclick="showproduct()" id="xemthem"
-              ><strong>Xem thêm</strong></a
-            >
+            <a onclick="showproduct()" id="xemthem">
+              <strong>Xem thêm</strong>
+            </a>
           </div>
         </div>
       </div>
@@ -1103,7 +909,7 @@
       var container = document.getElementById("showprd");
       var btns = container.getElementsByClassName("row");
       for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
+        btns[i].addEventListener("click", function() {
           var current = document.getElementsByClassName("row");
           current[0].className = current[0].className.replace("row", "");
           this.className += "row";
@@ -1132,7 +938,7 @@
       var container = document.getElementById("quickview");
       var btns = container.getElementsByClassName("row");
       for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
+        btns[i].addEventListener("click", function() {
           var current = document.getElementsByClassName("row");
           current[0].className = current[0].className.replace("row", "");
           this.className += "row";
@@ -1160,12 +966,9 @@
       var container = document.getElementById("cmenushow");
       var btns = container.getElementsByClassName("c-menu--slide-left");
       for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
+        btns[i].addEventListener("click", function() {
           var current = document.getElementsByClassName("c-menu--slide-left");
-          current[0].className = current[0].className.replace(
-            "c-menu--slide-left",
-            ""
-          );
+          current[0].className = current[0].className.replace("c-menu--slide-left", "");
           this.className += "c-menu--slide-left";
         });
       }
@@ -1184,12 +987,9 @@
       var container = document.getElementById("cmenushow");
       var btns = container.getElementsByClassName("c-menu--slide-left");
       for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
+        btns[i].addEventListener("click", function() {
           var current = document.getElementsByClassName("c-menu--slide-left");
-          current[0].className = current[0].className.replace(
-            "c-menu--slide-left",
-            ""
-          );
+          current[0].className = current[0].className.replace("c-menu--slide-left", "");
           this.className += "c-menu--slide-left";
         });
       }
@@ -1201,22 +1001,14 @@
             <div class="col-md-6 col-sm-6 col-xs-6 col-100p">
               <div class="image-effect">
                 <a href="#">
-                  <img
-                    src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/sec_module_product_banner_1.jpg?1556002489878"
-                    data-lazyload="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/sec_module_product_banner_1.jpg?1556002489878"
-                    class="img-responsive center-block"
-                  />
+                  <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/sec_module_product_banner_1.jpg?1556002489878" data-lazyload="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/sec_module_product_banner_1.jpg?1556002489878" class="img-responsive center-block" />
                 </a>
               </div>
             </div>
             <div class="col-md-6 col-sm-6 col-xs-6 col-100p">
               <div class="image-effect">
                 <a href="#">
-                  <img
-                    src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/sec_module_product_banner_2.jpg?1556002489878"
-                    data-lazyload="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/sec_module_product_banner_2.jpg?1556002489878"
-                    class="img-responsive center-block"
-                  />
+                  <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/sec_module_product_banner_2.jpg?1556002489878" data-lazyload="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/sec_module_product_banner_2.jpg?1556002489878" class="img-responsive center-block" />
                 </a>
               </div>
             </div>
@@ -1224,30 +1016,16 @@
         </div>
       </div>
     </section>
-    <div
-      id="popup-cart"
-      class="modal fade in"
-      role="dialog"
-      style="display: none; padding-right: 15px"
-    >
+    <div id="popup-cart" class="modal fade in" role="dialog" style="display: none; padding-right: 15px">
       <div id="popup-cart-desktop" class="clearfix">
         <div class="title-popup-cart">
-          <i class="fa fa-check" aria-hidden="true"></i> Bạn đã thêm
-          <span class="cart-popup-name"
-            ><a
-              href="https://ghi-dong-xe-dap-truvativ-25-4mm-x-580mm-160g"
-              style="color: red"
-              title="Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G"
-              >Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G</a
-            >
-          </span>
-          vào giỏ hàng
+          <i class="fa fa-check" aria-hidden="true"></i> Bạn đã thêm <span class="cart-popup-name">
+            <a href="https://ghi-dong-xe-dap-truvativ-25-4mm-x-580mm-160g" style="color: red" title="Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G">Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G</a>
+          </span> vào giỏ hàng
         </div>
         <div class="title-quantity-popup">
           <a href="/cart">
-            <i class="ion ion-md-basket fa-shopping-cart"></i> Giỏ hàng của bạn
-            (<span class="cart-popup-count">1</span> sản phẩm)
-            <i class="fa fa-caret-right" aria-hidden="true"></i>
+            <i class="ion ion-md-basket fa-shopping-cart"></i> Giỏ hàng của bạn ( <span class="cart-popup-count">1</span> sản phẩm) <i class="fa fa-caret-right" aria-hidden="true"></i>
           </a>
         </div>
         <div class="content-popup-cart">
@@ -1261,45 +1039,22 @@
             <div class="item-popup productid-18765235">
               <div style="width: 55%" class="text-left">
                 <div class="item-image">
-                  <a
-                    class="product-image"
-                    href="/ghi-dong-xe-dap-truvativ-25-4mm-x-580mm-160g"
-                    title="Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G"
-                    ><img
-                      alt="Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G"
-                      src="https://bizweb.dktcdn.net/thumb/small/100/315/907/products/product-08.jpg"
-                      width="80"
-                  /></a>
+                  <a class="product-image" href="/ghi-dong-xe-dap-truvativ-25-4mm-x-580mm-160g" title="Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G">
+                    <img alt="Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G" src="https://bizweb.dktcdn.net/thumb/small/100/315/907/products/product-08.jpg" width="80" />
+                  </a>
                 </div>
                 <div class="item-info">
                   <p class="item-name">
-                    <a
-                      href="/ghi-dong-xe-dap-truvativ-25-4mm-x-580mm-160g"
-                      title="Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G"
-                      >Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G</a
-                    >
+                    <a href="/ghi-dong-xe-dap-truvativ-25-4mm-x-580mm-160g" title="Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G">Ghi đông xe đạp TRUVATIV 25.4MM X 580MM - 160G</a>
                   </p>
-                  <p class="variant-title-popup" style="display: none">
-                    Default Title
-                  </p>
+                  <p class="variant-title-popup" style="display: none"> Default Title </p>
                   <p class="item-remove">
-                    <a
-                      href="javascript:;"
-                      class="remove-item-cart"
-                      title="Xóa"
-                      data-id="18765235"
-                      ><i class="fa fa-close"></i> Bỏ sản phẩm</a
-                    >
+                    <a href="javascript:;" class="remove-item-cart" title="Xóa" data-id="18765235">
+                      <i class="fa fa-close"></i> Bỏ sản phẩm </a>
                   </p>
                   <p class="addpass" style="color: #fff">
-                    <span class="add_sus" style="color: #898989"
-                      ><i
-                        style="margin-right: 5px; color: red; font-size: 13px"
-                        class="fa fa-check"
-                        aria-hidden="true"
-                      ></i
-                      >Sản phẩm vừa thêm!</span
-                    >
+                    <span class="add_sus" style="color: #898989">
+                      <i style="margin-right: 5px; color: red; font-size: 13px" class="fa fa-check" aria-hidden="true"></i>Sản phẩm vừa thêm! </span>
                   </p>
                 </div>
               </div>
@@ -1309,38 +1064,13 @@
                 </div>
               </div>
               <div style="width: 15%" class="text-center">
-                <input
-                  class="variantID"
-                  type="hidden"
-                  name="variantId"
-                  value="18765235"
-                /><button
-                  onclick="var result = document.getElementById('qtyItem18765235'); 
+                <input class="variantID" type="hidden" name="variantId" value="18765235" />
+                <button onclick="var result = document.getElementById('qtyItem18765235'); 
                 var qtyItem18765235 = parseInt(result.value, 10); 
                 if( !isNaN(qtyItem18765235) && qtyItem18765235 > 1 ) result.value--; 
-                return false;"
-                  disabled=""
-                  class="reduced items-count btn-minus"
-                  type="button"
-                >
-                  –</button
-                ><input
-                  type="text"
-                  maxlength="12"
-                  min="0"
-                  class="input-text number-sidebar qtyItem18765235"
-                  id="qtyItem18765235"
-                  name="Lines"
-                  size="4"
-                  value="1"
-                />
-                <button
-                  onclick="var result = document.getElementById('qtyItem18765235'); var qtyItem18765235 = result.value; if( !isNaN( qtyItem18765235 )) result.value++;return false;"
-                  class="increase items-count btn-plus"
-                  type="button"
-                >
-                  +
-                </button>
+                return false;" class="reduced items-count btn-minus" type="button"> –</button>
+                <input type="text" maxlength="12" min="0" class="input-text number-sidebar qtyItem18765235" id="qtyItem18765235" name="Lines" size="4" value="1" />
+                <button onclick="var result = document.getElementById('qtyItem18765235'); var qtyItem18765235 = result.value; if( !isNaN( qtyItem18765235 )) result.value++;return false;" class="increase items-count btn-plus" type="button"> + </button>
               </div>
               <div style="width: 15%" class="text-right">
                 <span class="cart-price">
@@ -1355,52 +1085,31 @@
                 <p>Giao hàng trên toàn quốc</p>
               </div>
               <div class="pull-right popup-total">
-                <p>Thành tiền: <span class="total-price">750.000₫</span></p>
+                <p>Thành tiền: <span class="total-price">750.000₫</span>
+                </p>
               </div>
             </div>
             <div class="tfoot-popup-2 clearfix">
-              <a
-                class="button btn-proceed-checkout"
-                title="Tiến hành đặt hàng"
-                href="checkout.html"
-                ><span
-                  >Tiến hành đặt hàng
-                  <i
-                    class="fa fa-long-arrow-right"
-                    aria-hidden="true"
-                  ></i></span
-              ></a>
-              <a
-                class="button btn-continue"
-                title="Tiếp tục mua hàng"
-                id="continute"
-                onclick="continute()"
-                ><span
-                  ><span
-                    ><i class="fa fa-caret-left" aria-hidden="true"></i> Chọn
-                    sản phẩm khác</span
-                  ></span
-                ></a
-              >
+              <a class="button btn-proceed-checkout" title="Tiến hành đặt hàng" href="checkout.html">
+                <span>Tiến hành đặt hàng <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                </span>
+              </a>
+              <a class="button btn-continue" title="Tiếp tục mua hàng" id="continute" onclick="continute()">
+                <span>
+                  <span>
+                    <i class="fa fa-caret-left" aria-hidden="true"></i> Chọn sản phẩm khác </span>
+                </span>
+              </a>
             </div>
           </div>
         </div>
-        <a
-          title="Close"
-          class="quickview-close close-window"
-          id="hide-modal"
-          onclick="hidenmodal()"
-          ><i class="fa fa-close"></i
-        ></a>
+        <a title="Close" class="quickview-close close-window" id="hide-modal" onclick="hidenmodal()">
+          <i class="fa fa-close"></i>
+        </a>
       </div>
     </div>
     <!-- quickview -->
-    <div
-      id="quickview"
-      class="modal fade in"
-      role="dialog"
-      style="display: none"
-    >
+    <div id="quickview" class="modal fade in" role="dialog" style="display: none">
       <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
@@ -1408,69 +1117,30 @@
             <div class="row">
               <div class="col-sm-6" style="width: 50%">
                 <div class="image margin-bottom-15">
-                  <a
-                    class="img-product clearfix mySlides"
-                    title=""
-                    href="javascript:;"
-                  >
-                    <img
-                      id="product-featured-image-quickview"
-                      class="center-block img-responsive product-featured-image-quickview"
-                      src="https://bizweb.dktcdn.net/100/315/907/products/product-23.jpg?v=1527432902510"
-                      alt="quickview"
-                    />
+                  <a class="img-product clearfix mySlides" title="" href="javascript:;">
+                    <img id="product-featured-image-quickview" class="center-block img-responsive product-featured-image-quickview" src="https://bizweb.dktcdn.net/100/315/907/products/product-23.jpg?v=1527432902510" alt="quickview" />
                   </a>
-                  <a
-                    class="img-product clearfix mySlides"
-                    title=""
-                    href="javascript:;"
-                  >
-                    <img
-                      id="product-featured-image-quickview"
-                      class="center-block img-responsive product-featured-image-quickview"
-                      src="https://bizweb.dktcdn.net/thumb/grande/100/315/907/products/product-23-02.jpg"
-                      alt="quickview"
-                    />
+                  <a class="img-product clearfix mySlides" title="" href="javascript:;">
+                    <img id="product-featured-image-quickview" class="center-block img-responsive product-featured-image-quickview" src="https://bizweb.dktcdn.net/thumb/grande/100/315/907/products/product-23-02.jpg" alt="quickview" />
                   </a>
                 </div>
                 <div id="thumbnail_quickview" class="op1">
                   <div class="thumblist">
-                    <div
-                      class="thumblist_carousel owl-carousel owl-loaded owl-drag"
-                    >
+                    <div class="thumblist_carousel owl-carousel owl-loaded owl-drag">
                       <div class="owl-stage-outer">
-                        <div
-                          class="owl-stage"
-                          style="
+                        <div class="owl-stage" style="
                             transform: translate3d(0px, 0px, 0px);
                             transition: all 0s ease 0s;
                             width: 220px;
-                          "
-                        >
-                          <div
-                            class="owl-item active"
-                            style="width: 95px; margin-right: 15px"
-                          >
+                          ">
+                          <div class="owl-item active" style="width: 95px; margin-right: 15px">
                             <div class="item">
-                              <img
-                                data-image="https://bizweb.dktcdn.net/thumb/grande/100/315/907/products/product-23.jpg"
-                                src="https://bizweb.dktcdn.net/thumb/compact/100/315/907/products/product-23.jpg"
-                                alt="Proimage"
-                                onclick="currentSlide(1)"
-                              />
+                              <img data-image="https://bizweb.dktcdn.net/thumb/grande/100/315/907/products/product-23.jpg" src="https://bizweb.dktcdn.net/thumb/compact/100/315/907/products/product-23.jpg" alt="Proimage" onclick="currentSlide(1)" />
                             </div>
                           </div>
-                          <div
-                            class="owl-item active"
-                            style="width: 95px; margin-right: 15px"
-                          >
+                          <div class="owl-item active" style="width: 95px; margin-right: 15px">
                             <div class="item">
-                              <img
-                                data-image="https://bizweb.dktcdn.net/thumb/grande/100/315/907/products/product-23-02.jpg"
-                                src="https://bizweb.dktcdn.net/thumb/compact/100/315/907/products/product-23-02.jpg"
-                                alt="Proimage"
-                                onclick="currentSlide(2)"
-                              />
+                              <img data-image="https://bizweb.dktcdn.net/thumb/grande/100/315/907/products/product-23-02.jpg" src="https://bizweb.dktcdn.net/thumb/compact/100/315/907/products/product-23-02.jpg" alt="Proimage" onclick="currentSlide(2)" />
                             </div>
                           </div>
                         </div>
@@ -1491,12 +1161,9 @@
               <div class="col-sm-6" style="width: 50%">
                 <div class="content">
                   <h3 class="product-name">
-                    <a href="/xe-dap-gap-dong-dia-hinh-fornix-f3"
-                      >Xe đạp gấp dòng địa hình Fornix F3</a
-                    >
+                    <a href="/xe-dap-gap-dong-dia-hinh-fornix-f3">Xe đạp gấp dòng địa hình Fornix F3</a>
                   </h3>
-                  <div class="status clearfix">
-                    Trạng thái: <span class="inventory">Còn hàng</span>
+                  <div class="status clearfix"> Trạng thái: <span class="inventory">Còn hàng</span>
                   </div>
                   <div class="clearfix"></div>
                   <div class="info-other" style="display: block">
@@ -1513,11 +1180,7 @@
                       <span class="price product-price">10.500.000₫</span>
                     </div>
                     <div class="old-price">
-                      <span
-                        class="price product-price-old"
-                        style="display: none"
-                      >
-                      </span>
+                      <span class="price product-price-old" style="display: none"></span>
                     </div>
                   </div>
                   <div class="product-description rte">
@@ -1529,72 +1192,28 @@
                       <li>Bàn đạp/Pedals Aluminum CAGE</li>
                     </ul>
                   </div>
-                  <a
-                    href="/xe-dap-gap-dong-dia-hinh-fornix-f3"
-                    class="view-more hidden"
-                    >Xem chi tiết</a
-                  >
+                  <a href="/xe-dap-gap-dong-dia-hinh-fornix-f3" class="view-more hidden">Xem chi tiết</a>
                   <div class="clearfix"></div>
-                  <form
-                    action=""
-                    method="post"
-                    enctype="multipart/form-data"
-                    class="margin-top-20 variants form-ajaxtocart hasswatch"
-                  >
-                    <span
-                      class="price-product-detail hidden"
-                      style="opacity: 0"
-                    >
+                  <form action="" method="post" enctype="multipart/form-data" class="margin-top-20 variants form-ajaxtocart hasswatch">
+                    <span class="price-product-detail hidden" style="opacity: 0">
                       <span class=""></span>
                     </span>
-                    <select
-                      name="variantId"
-                      class="hidden"
-                      style="display: none"
-                      id="product-select-11795655"
-                    ></select>
+                    <select name="variantId" class="hidden" style="display: none" id="product-select-11795655"></select>
                     <div class="clearfix"></div>
                     <div class="quantity_wanted_p">
-                      <label for="quantity-detail" class="quantity-selector"
-                        >Số lượng</label
-                      >
-                      <input
-                        type="text"
-                        onchange="if(this.value == 0)this.value=1;"
-                        onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"
-                        id="quantity-detail"
-                        name="quantity"
-                        value="1"
-                        class="quantity-selector text-center"
-                      />
-                      <button
-                        type="submit"
-                        name="add"
-                        class="btn btn-primary add_to_cart_detail ajax_addtocart"
-                        onclick="hidemdr()"
-                      >
-                        Thêm vào giỏ hàng
-                      </button>
+                      <label for="quantity-detail" class="quantity-selector">Số lượng</label>
+                      <input type="text" onchange="if(this.value == 0)this.value=1;" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;" id="quantity-detail" name="quantity" value="1" class="quantity-selector text-center" />
+                      <button type="submit" name="add" class="btn btn-primary add_to_cart_detail ajax_addtocart" onclick="hidemdr()"> Thêm vào giỏ hàng </button>
                     </div>
-                    <div class="total-price" style="display: none">
-                      750.000₫
-                    </div>
-                    <input type="hidden" name="id" value="11795655" /><input
-                      type="hidden"
-                      name="variantId"
-                      value="18765326"
-                    />
+                    <div class="total-price" style="display: none"> 750.000₫ </div>
+                    <input type="hidden" name="id" value="11795655" />
+                    <input type="hidden" name="variantId" value="18765326" />
                   </form>
                 </div>
               </div>
             </div>
           </div>
-          <button
-            type="button"
-            class="btn btn-close btn-default"
-            data-dismiss="modal"
-            onclick="hidemd()"
-          >
+          <button type="button" class="btn btn-close btn-default" data-dismiss="modal" onclick="hidemd()">
             <i class="fa fa-close"></i>
           </button>
         </div>
@@ -1636,31 +1255,36 @@
     </div>
     <script>
       var elements = document.getElementsByClassName("product-grid");
-      var i;
+var i;
 
-      function cartquick() {
-        const temp = document.getElementById("popup-cart");
-        if (temp.style.display == "none") {
-          temp.style.display = "block";
-          document.getElementById("popup-cart").style.display = "block";
-        } else {
-          if ((document.getElementById("popup-cart").style.display = "none")) {
-            temp.style.display = "block";
-          } else {
-            temp.style.display = "none";
-            document.getElementById("popup-cart").style.display = "none";
-          }
-        }
+function cartquick() {
+  // Kiểm tra xem người dùng đã đăng nhập hay chưa
+  if (sessionStorage.getItem("isLoggedIn") === "true") {
+    const temp = document.getElementById("popup-cart");
+    if (temp.style.display == "none") {
+      temp.style.display = "block";
+      document.getElementById("popup-cart").style.display = "block";
+    } else {
+      if ((document.getElementById("popup-cart").style.display = "none")) {
+        temp.style.display = "block";
+      } else {
+        temp.style.display = "none";
+        document.getElementById("popup-cart").style.display = "none";
       }
+    }
+  } else {
+    // Thông báo và chuyển hướng nếu chưa đăng nhập
+    alert("Vui lòng đăng nhập để sử dụng chức năng này.");
+    window.location.href = "login.html";
+  }
+}
+
       var container = document.getElementById("popup-cart");
       var btns = container.getElementsByClassName("product-grid");
       for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
+        btns[i].addEventListener("click", function() {
           var current = document.getElementsByClassName("product-grid");
-          current[0].className = current[0].className.replace(
-            "product-grid",
-            ""
-          );
+          current[0].className = current[0].className.replace("product-grid", "");
           this.className += "product-grid";
         });
       }
@@ -1686,7 +1310,7 @@
       var container = document.getElementById("popup-cart");
       var btns = container.getElementsByClassName("modal");
       for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
+        btns[i].addEventListener("click", function() {
           var current = document.getElementsByClassName("modal");
           current[0].className = current[0].className.replace("modal", "");
           this.className += "modal";
@@ -1714,7 +1338,7 @@
       var container = document.getElementById("popup-cart");
       var btns = container.getElementsByClassName("modal");
       for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
+        btns[i].addEventListener("click", function() {
           var current = document.getElementsByClassName("modal");
           current[0].className = current[0].className.replace("modal", "");
           this.className += "modal";
@@ -1742,7 +1366,7 @@
       var container = document.getElementById("quickview");
       var btns = container.getElementsByClassName("modal");
       for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
+        btns[i].addEventListener("click", function() {
           var current = document.getElementsByClassName("modal");
           current[0].className = current[0].className.replace("modal", "");
           this.className += "modal";
@@ -1771,7 +1395,7 @@
       var container = document.getElementById("quickview");
       var btns = container.getElementsByClassName("modal");
       for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
+        btns[i].addEventListener("click", function() {
           var current = document.getElementsByClassName("modal");
           current[0].className = current[0].className.replace("modal", "");
           this.className += "modal";
@@ -1785,69 +1409,30 @@
             <div class="col-md-12">
               <div class="section_new_product_title text-center">
                 <h2>Sản phẩm nổi bật</h2>
-                <div class="section_new_product_description">
-                  Thời trang - Giá rẻ - Deal sốc
-                </div>
-                <ul
-                  class="tabs tabs-title tab-mobile clearfix hidden-sm hidden-md hidden-lg"
-                >
-                  <li class="prev current"><i class="fa fa-angle-left"></i></li>
-                  <li
-                    class="tab-link tab-title hidden-sm hidden-md hidden-lg current tab-titlexs"
-                    data-tab="pill"
-                  >
+                <div class="section_new_product_description"> Thời trang - Giá rẻ - Deal sốc </div>
+                <ul class="tabs tabs-title tab-mobile clearfix hidden-sm hidden-md hidden-lg">
+                  <li class="prev current">
+                    <i class="fa fa-angle-left"></i>
+                  </li>
+                  <li class="tab-link tab-title hidden-sm hidden-md hidden-lg current tab-titlexs" data-tab="pill">
                     <span>Giày</span>
                   </li>
-                  <li class="next"><i class="fa fa-angle-right"></i></li>
+                  <li class="next">
+                    <i class="fa fa-angle-right"></i>
+                  </li>
                 </ul>
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                   <li class="nav-item">
-                    <a
-                      class="nav-link active"
-                      id="pills-giay-tab"
-                      data-toggle="pill"
-                      href="#pills-giay"
-                      role="tab"
-                      aria-controls="pills-giay"
-                      aria-selected="true"
-                      >Giày</a
-                    >
+                    <a class="nav-link active" id="pills-giay-tab" data-toggle="pill" href="#pills-giay" role="tab" aria-controls="pills-giay" aria-selected="true">Giày</a>
                   </li>
                   <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      id="pills-trangphucthethao-tab"
-                      data-toggle="pill"
-                      href="#pills-trangphucthethao"
-                      role="tab"
-                      aria-controls="pills-trangphucthethao"
-                      aria-selected="false"
-                      >Trang phục thể thao</a
-                    >
+                    <a class="nav-link" id="pills-trangphucthethao-tab" data-toggle="pill" href="#pills-trangphucthethao" role="tab" aria-controls="pills-trangphucthethao" aria-selected="false">Trang phục thể thao</a>
                   </li>
                   <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      id="pills-dungcuthethao-tab"
-                      data-toggle="pill"
-                      href="#pills-dungcuthethao"
-                      role="tab"
-                      aria-controls="pills-dungcuthethao"
-                      aria-selected="false"
-                      >Dụng cụ thể thao</a
-                    >
+                    <a class="nav-link" id="pills-dungcuthethao-tab" data-toggle="pill" href="#pills-dungcuthethao" role="tab" aria-controls="pills-dungcuthethao" aria-selected="false">Dụng cụ thể thao</a>
                   </li>
                   <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      id="pills-leungutuingu-tab"
-                      data-toggle="pill"
-                      href="#pills-leungutuingu"
-                      role="tab"
-                      aria-controls="pills-leungutuingu"
-                      aria-selected="false"
-                      >Lều ngủ, túi ngủ</a
-                    >
+                    <a class="nav-link" id="pills-leungutuingu-tab" data-toggle="pill" href="#pills-leungutuingu" role="tab" aria-controls="pills-leungutuingu" aria-selected="false">Lều ngủ, túi ngủ</a>
                   </li>
                 </ul>
               </div>
@@ -1856,19 +1441,11 @@
         </div>
       </div>
       <div class="tab-content" id="pills-tabContent">
-        <div
-          class="tab-pane fade show active"
-          id="pills-giay"
-          role="tabpanel"
-          aria-labelledby="pills-home-tab"
-        >
+        <div class="tab-pane fade show active" id="pills-giay" role="tabpanel" aria-labelledby="pills-home-tab">
           <div class="col-md-3 col-sm-6">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a>
                   <img class="pic-1" src="./img/giay-co-cao-cho-nu-keen-jasper-mid-wp-xam-3_0062623_4811276f18a64dcc9273aa059583d1a8_1024x1024-removebg-preview.png" />
                   <img class="pic-2" src="./img/giay-co-cao-cho-nu-keen-jasper-mid-wp-xam-6_0062626_609be811f67c42a5baa44706ca3aca11_1024x1024-removebg-preview.png" />
@@ -1888,14 +1465,7 @@
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                   <a onclick="cartquick()">ADD TO CARD</a>
-                  <a
-                    title="Yêu thích"
-                    class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                    href="javascript:;"
-                    data-customer-id="0"
-                    data-product="11795611"
-                    data-variant="18765268"
-                  >
+                  <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
                 </div>
@@ -1905,10 +1475,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a>
                   <img class="pic-1" src="./img/giay-leo-nui-jack-wolfskin-co-thap_0059411_cc2c1796c6df4bfeb8e9a01cf77b322f_1024x1024-removebg-preview.png" />
                   <img class="pic-2" src="./img/giay-leo-nui-jack-wolfskin-co-thap-back_0059409_a1367296ce794d3f9beab89631818a1b_1024x1024-removebg-preview.png" />
@@ -1928,14 +1495,7 @@
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                   <a onclick="cartquick()">ADD TO CARD</a>
-                  <a
-                    title="Yêu thích"
-                    class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                    href="javascript:;"
-                    data-customer-id="0"
-                    data-product="11795611"
-                    data-variant="18765268"
-                  >
+                  <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
                 </div>
@@ -1945,10 +1505,7 @@
           <div class="col-md-3 col-sm-6 noibat">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a href="#">
                   <img class="pic-1" src="./img/giay-nhanh-kho-thoat-nuoc-hanagal-swift-9_0062899_40eeef86a54a4530b1fcebe1a3607d10_1024x1024-removebg-preview.png" />
                   <img class="pic-2" src="./img/giay-nhanh-kho-thoat-nuoc-hanagal-swift-5_0062918_17853218f7694ec2b09b05f0d4770641_1024x1024-removebg-preview.png" />
@@ -1968,14 +1525,7 @@
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                   <a>VIEW PRODUCTS</a>
-                  <a
-                    title="Yêu thích"
-                    class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                    href="javascript:;"
-                    data-customer-id="0"
-                    data-product="11795611"
-                    data-variant="18765268"
-                  >
+                  <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
                 </div>
@@ -1985,10 +1535,7 @@
           <div class="col-md-3 col-sm-6 noibat">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a href="#">
                   <img class="pic-1" src="./img/giay-leo-nui-co-thap-hanagal-horizon-10_0066249_9df2444293944efea73bbf2fffafb58b_1024x1024-removebg-preview.png" />
                   <img class="pic-2" src="./img/giay-leo-nui-co-thap-hanagal-horizon-09_0066254_3086640469284d65ae26c0a6c88af4bd_1024x1024-removebg-preview.png" />
@@ -2008,14 +1555,7 @@
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                   <a onclick="cartquick()">ADD TO CARD</a>
-                  <a
-                    title="Yêu thích"
-                    class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                    href="javascript:;"
-                    data-customer-id="0"
-                    data-product="11795611"
-                    data-variant="18765268"
-                  >
+                  <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
                 </div>
@@ -2023,19 +1563,11 @@
             </div>
           </div>
         </div>
-        <div
-          class="tab-pane fade"
-          id="pills-trangphucthethao"
-          role="tabpanel"
-          aria-labelledby="pills-profile-tab"
-        >
+        <div class="tab-pane fade" id="pills-trangphucthethao" role="tabpanel" aria-labelledby="pills-profile-tab">
           <div class="col-md-3 col-sm-6">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a href="#">
                   <img class="pic-1" src="./img/artboard_3_f34c4714529c4800992f3405716b995a_master.jpg" />
                   <img class="pic-2" src="./img/artboard_2_edadf20145944c84a7154a191056a2b1_master.jpg" />
@@ -2055,14 +1587,7 @@
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                   <a onclick="cartquick()">ADD TO CARD</a>
-                  <a
-                    title="Yêu thích"
-                    class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                    href="javascript:;"
-                    data-customer-id="0"
-                    data-product="11795611"
-                    data-variant="18765268"
-                  >
+                  <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
                 </div>
@@ -2072,10 +1597,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a href="#">
                   <img class="pic-1" src="./img/artboard_7_ed40389b0aa34bcdb821625ed3d1d955_master.jpg" />
                   <img class="pic-2" src="./img/artboard_9_074788739fcb4175bddf81f05cfad064_master.jpg" />
@@ -2095,14 +1617,7 @@
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                   <a onclick="cartquick()">ADD TO CARD</a>
-                  <a
-                    title="Yêu thích"
-                    class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                    href="javascript:;"
-                    data-customer-id="0"
-                    data-product="11795611"
-                    data-variant="18765268"
-                  >
+                  <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
                 </div>
@@ -2112,10 +1627,7 @@
           <div class="col-md-3 col-sm-6 noibat">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a href="#">
                   <img class="pic-1" src="./img/hana-05_2c0a89c1eeb04cc6a39e64ef7d2f6a8e_master.jpg" />
                   <img class="pic-2" src="./img/hanabi-18_9f6f390978ad4e7989595fac0cd47c6e_master.jpg " />
@@ -2135,14 +1647,7 @@
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                   <a onclick="cartquick()">ADD TO CARD</a>
-                  <a
-                    title="Yêu thích"
-                    class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                    href="javascript:;"
-                    data-customer-id="0"
-                    data-product="11795611"
-                    data-variant="18765268"
-                  >
+                  <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
                 </div>
@@ -2152,10 +1657,7 @@
           <div class="col-md-3 col-sm-6 noibat">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a href="#">
                   <img class="pic-1" src="./img/hana-04_a4d85de2c8454ab4a6b211ebec7f5fc7_master.jpg" />
                   <img class="pic-2" src="./img/hanabi-13_4b4b0dc3f4564651a11ceec42b859b50_master (1).jpg" />
@@ -2175,14 +1677,7 @@
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                   <a onclick="cartquick()">ADD TO CARD</a>
-                  <a
-                    title="Yêu thích"
-                    class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                    href="javascript:;"
-                    data-customer-id="0"
-                    data-product="11795611"
-                    data-variant="18765268"
-                  >
+                  <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
                 </div>
@@ -2190,19 +1685,11 @@
             </div>
           </div>
         </div>
-        <div
-          class="tab-pane fade"
-          id="pills-dungcuthethao"
-          role="tabpanel"
-          aria-labelledby="pills-contact-tab"
-        >
+        <div class="tab-pane fade" id="pills-dungcuthethao" role="tabpanel" aria-labelledby="pills-contact-tab">
           <div class="col-md-3 col-sm-6">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a href="#">
                   <img class="pic-1" src="./img/ba-lo-tac-chien-511-tactical-rush12-24l-black-10_4f11f19a4cd14ae085e591737495b79f_1024x1024-removebg-preview.png" />
                   <img class="pic-2" src="./img/ba-lo-tac-chien-511-tactical-rush12-24l-black-07_58bb03dc9b2b4a92a548b99918c0ab62_1024x1024-removebg-preview.png " />
@@ -2222,14 +1709,7 @@
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                   <a onclick="cartquick()">ADD TO CARD</a>
-                  <a
-                    title="Yêu thích"
-                    class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                    href="javascript:;"
-                    data-customer-id="0"
-                    data-product="11795611"
-                    data-variant="18765268"
-                  >
+                  <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
                 </div>
@@ -2239,10 +1719,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a href="#">
                   <img class="pic-1" src="./img/ba-lo-tac-chien-511-tactical-rush24-37l-multicam-11_7864e642fcd54b8590759789e2ff9b0f_1024x1024-removebg-preview.png" />
                   <img class="pic-2" src="./img/ba-lo-tac-chien-511-tactical-rush24-37l-multicam-05_5e4fa09fa2bf42ac8a01a487287c7bcc_1024x1024-removebg-preview.png" />
@@ -2262,14 +1739,7 @@
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                   <a onclick="cartquick()">ADD TO CARD</a>
-                  <a
-                    title="Yêu thích"
-                    class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                    href="javascript:;"
-                    data-customer-id="0"
-                    data-product="11795611"
-                    data-variant="18765268"
-                  >
+                  <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
                 </div>
@@ -2279,10 +1749,7 @@
           <div class="col-md-3 col-sm-6 noibat">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a href="#">
                   <img class="pic-1" src="./img/binh-nuoc-nalgene-camo-wide-mouth-1000ml-__1__4479dd93da2c4a85b082ab9ae948bdb0_1024x1024-removebg-preview.png" />
                   <img class="pic-2" src="./img/binh-nuoc-nalgene-camo-wide-mouth-1000ml-__2__d3ff2cd4d7584a1391ac098482494b6f_1024x1024-removebg-preview.png" />
@@ -2302,14 +1769,7 @@
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                   <a onclick="cartquick()">ADD TO CARD</a>
-                  <a
-                    title="Yêu thích"
-                    class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                    href="javascript:;"
-                    data-customer-id="0"
-                    data-product="11795611"
-                    data-variant="18765268"
-                  >
+                  <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
                 </div>
@@ -2319,10 +1779,7 @@
           <div class="col-md-3 col-sm-6 noibat">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a href="#">
                   <img class="pic-1" src="./img/kinh-chong-bui-tifosi-crit-matte-black-10_0065721_2c35f5b0e40a42aeb6ee2fce1b49f004_1024x1024-removebg-preview.png" />
                   <img class="pic-2" src="./img/mat-kinh-the-thao-tifosi-crit-matt-black-1-px_8xwreveyimms20tiqrg_28fb05ec09134e9fa44153c4cce5ad65_1024x1024-removebg-preview.png" />
@@ -2347,19 +1804,11 @@
             </div>
           </div>
         </div>
-        <div
-          class="tab-pane fade"
-          id="pills-leungutuingu"
-          role="tabpanel"
-          aria-labelledby="pills-contact-tab"
-        >
+        <div class="tab-pane fade" id="pills-leungutuingu" role="tabpanel" aria-labelledby="pills-contact-tab">
           <div class="col-md-3 col-sm-6">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a href="#">
                   <img class="pic-1" src="./img/leu-6-nguoi-madfox-woodsman-6-2023-__2__06cdc7a81a94454b842799855cf2291a_1024x1024-removebg-preview.png" />
                   <img class="pic-2" src="./img/leu-6-nguoi-madfox-woodsman-6-2023-__3__88d607ba037f4ea788d700ca87bdcf97_1024x1024-removebg-preview.png" />
@@ -2379,14 +1828,7 @@
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                   <a onclick="cartquick()">ADD TO CARD</a>
-                  <a
-                    title="Yêu thích"
-                    class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                    href="javascript:;"
-                    data-customer-id="0"
-                    data-product="11795611"
-                    data-variant="18765268"
-                  >
+                  <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
                 </div>
@@ -2396,10 +1838,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a href="#">
                   <img class="pic-1" src="./img/leu-tu-bung-glamping-3-4-nguoi-naturehike-ango-nh21zp010-__3__d6d9528557394623ac5f27b8f4807456_1024x1024-removebg-preview.png" />
                   <img class="pic-2" src="./img/leu-tu-bung-glamping-3-4-nguoi-naturehike-ango-nh21zp010-__5__8b2d79855aba41a78dd9f0de92bf9cd5_1024x1024-removebg-preview.png" />
@@ -2419,14 +1858,7 @@
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                   <a onclick="cartquick()">ADD TO CARD</a>
-                  <a
-                    title="Yêu thích"
-                    class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                    href="javascript:;"
-                    data-customer-id="0"
-                    data-product="11795611"
-                    data-variant="18765268"
-                  >
+                  <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
                 </div>
@@ -2436,10 +1868,7 @@
           <div class="col-md-3 col-sm-6 noibat">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a href="#">
                   <img class="pic-1" src="./img/tui-ngu-mua-dong-co-non-y150l-naturehike-nh21msd08-__2__af93d610e1164cb9974644fcefab22a6_1024x1024-removebg-preview.png" />
                   <img class="pic-2" src="./img/tui-ngu-mua-dong-co-non-y150l-naturehike-nh21msd08-__7__7a6c5649134442779c1fcf9bea5ca360_1024x1024-removebg-preview.png" />
@@ -2459,14 +1888,7 @@
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                   <a onclick="cartquick()">ADD TO CARD</a>
-                  <a
-                    title="Yêu thích"
-                    class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                    href="javascript:;"
-                    data-customer-id="0"
-                    data-product="11795611"
-                    data-variant="18765268"
-                  >
+                  <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
                 </div>
@@ -2476,10 +1898,7 @@
           <div class="col-md-3 col-sm-6 noibat">
             <div class="product-grid hover">
               <div class="product-image">
-                <a
-                  onclick="quickviewprd()"
-                  class="fa fa-search product-full-view"
-                ></a>
+                <a onclick="quickviewprd()" class="fa fa-search product-full-view"></a>
                 <a href="#">
                   <img class="pic-1" src="./img/tui-ngu-madfox-c140w-orange_1f64d68f5cac4d64bc97d559a84ec79d_1024x1024-removebg-preview.png" />
                   <img class="pic-2" src="./img/tui-ngu-madfox-c140w-orange-rolled_9f2224f15bee4331b8465de212aed345_1024x1024-removebg-preview.png" />
@@ -2499,14 +1918,7 @@
                 <div class="add-to-card">
                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                   <a onclick="cartquick()">ADD TO CARD</a>
-                  <a
-                    title="Yêu thích"
-                    class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper"
-                    href="javascript:;"
-                    data-customer-id="0"
-                    data-product="11795611"
-                    data-variant="18765268"
-                  >
+                  <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                     <i class="fa fa-heart-o"></i>
                   </a>
                 </div>
@@ -2523,62 +1935,37 @@
             <div class="col-md-12">
               <div class="section_new_product_title text-center">
                 <h2>Cẩm nang luyện tập</h2>
-                <div class="section_new_product_description">
-                  Luyện tập và giảm cân hiệu quả
-                </div>
+                <div class="section_new_product_description"> Luyện tập và giảm cân hiệu quả </div>
               </div>
             </div>
           </div>
           <div class="list-blogs-link">
             <div class="news-owl owl-carousel not-dqowl owl-loaded owl-drag">
               <div class="owl-stage-outer">
-                <div
-                  class="owl-stage"
-                  style="
+                <div class="owl-stage" style="
                     transform: translate3d(0px, 0px, 0px);
                     transition: all 0s ease 0s;
                     width: 1150px;
-                  "
-                >
-                  <div
-                    class="owl-item active"
-                    style="width: 360.667px; margin-right: 10px"
-                  >
+                  ">
+                  <div class="owl-item active" style="width: 360.667px; margin-right: 10px">
                     <div class="item">
                       <div class="tt-blog-thumb">
                         <div class="tt-img">
                           <a href="https://vnexpress.net/ten-hag-truyen-thong-theu-det-chuyen-co-tich-ve-toi-4805915.html" target="_blank">
-                            <img
-                              src="https://i1-thethao.vnecdn.net/2024/10/19/Ten-Hag-9905-1729292031.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=_hN4X6VbKut_QSjmZvba2w"
-                              data-lazyload="https://i1-thethao.vnecdn.net/2024/10/19/Ten-Hag-9905-1729292031.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=_hN4X6VbKut_QSjmZvba2w"
-                              alt="Ten Hag: 'Truyền thông thêu dệt chuyện cổ tích về tôi'"
-                              class="img-responsive center-block"
-                            />
+                            <img src="https://i1-thethao.vnecdn.net/2024/10/19/Ten-Hag-9905-1729292031.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=_hN4X6VbKut_QSjmZvba2w" data-lazyload="https://i1-thethao.vnecdn.net/2024/10/19/Ten-Hag-9905-1729292031.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=_hN4X6VbKut_QSjmZvba2w" alt="Ten Hag: 'Truyền thông thêu dệt chuyện cổ tích về tôi'" class="img-responsive center-block" />
                           </a>
                         </div>
                         <div class="tt-title-description">
                           <div class="tt-background">
                             <div class="tt-title">
                               <h3>
-                                <a
-                                  class="line-clamp2"
-                                  href="https://vnexpress.net/ten-hag-truyen-thong-theu-det-chuyen-co-tich-ve-toi-4805915.html"
-                                  title="Ten Hag: 'Truyền thông thêu dệt chuyện cổ tích về tôi'"
-                                  target="_blank"
-                                  >Ten Hag: 'Truyền thông thêu dệt chuyện cổ
-                                  tích về tôi'</a
-                                >
+                                <a class="line-clamp2" href="https://vnexpress.net/ten-hag-truyen-thong-theu-det-chuyen-co-tich-ve-toi-4805915.html" title="Ten Hag: 'Truyền thông thêu dệt chuyện cổ tích về tôi'" target="_blank">Ten Hag: 'Truyền thông thêu dệt chuyện cổ tích về tôi'</a>
                               </h3>
-                              <p>
-                                Ten Hag chịu nhiều áp lực khi Man Utd khởi đầu
-                                tệ nhất kể từ mùa 1989-1990, khi rơi xuống thứ
-                                14 Ngoại hạng Anh sau bảy vòng.
-                              </p>
+                              <p> Ten Hag chịu nhiều áp lực khi Man Utd khởi đầu tệ nhất kể từ mùa 1989-1990, khi rơi xuống thứ 14 Ngoại hạng Anh sau bảy vòng. </p>
                             </div>
                             <div class="tt-meta">
                               <div class="tt-autor">
-                                <i class="fa fa-calendar-check-o"></i>
-                                19/10/2024
+                                <i class="fa fa-calendar-check-o"></i> 19/10/2024
                               </div>
                               <div class="tt-comments">
                                 <i class="fa fa-comments"></i> 999+
@@ -2590,54 +1977,30 @@
                     </div>
                   </div>
                 </div>
-                <div
-                  class="owl-stage"
-                  id="mobileRP"
-                  style="
+                <div class="owl-stage" id="mobileRP" style="
                     transform: translate3d(0px, 0px, 0px);
                     transition: all 0s ease 0s;
                     width: 1150px;
-                  "
-                >
-                  <div
-                    class="owl-item active"
-                    style="width: 360.667px; margin-right: 10px"
-                  >
+                  ">
+                  <div class="owl-item active" style="width: 360.667px; margin-right: 10px">
                     <div class="item">
                       <div class="tt-blog-thumb">
                         <div class="tt-img">
                           <a href="https://vnexpress.net/quoc-hoang-giup-chau-a-thang-dam-chau-au-o-reyes-cup-4805902.html" target="_blank">
-                            <img
-                              src="https://i1-thethao.vnecdn.net/2024/10/18/du-o-ng-quo-c-hoa-ng-reyes-cup-2803-5327-1729270752.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=MECfV3yI04UkA16DpHI21A"
-                              data-lazyload="https://i1-thethao.vnecdn.net/2024/10/18/du-o-ng-quo-c-hoa-ng-reyes-cup-2803-5327-1729270752.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=MECfV3yI04UkA16DpHI21A"
-                              alt="Quốc Hoàng giúp châu Á thắng đậm châu Âu ở Reyes Cup"
-                              class="img-responsive center-block"
-                            />
+                            <img src="https://i1-thethao.vnecdn.net/2024/10/18/du-o-ng-quo-c-hoa-ng-reyes-cup-2803-5327-1729270752.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=MECfV3yI04UkA16DpHI21A" data-lazyload="https://i1-thethao.vnecdn.net/2024/10/18/du-o-ng-quo-c-hoa-ng-reyes-cup-2803-5327-1729270752.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=MECfV3yI04UkA16DpHI21A" alt="Quốc Hoàng giúp châu Á thắng đậm châu Âu ở Reyes Cup" class="img-responsive center-block" />
                           </a>
                         </div>
                         <div class="tt-title-description">
                           <div class="tt-background">
                             <div class="tt-title">
                               <h3>
-                                <a
-                                  class="line-clamp2"
-                                  href="https://vnexpress.net/quoc-hoang-giup-chau-a-thang-dam-chau-au-o-reyes-cup-4805902.html"
-                                  title="Quốc Hoàng giúp châu Á thắng đậm châu Âu ở Reyes Cup"
-                                  target="_blank"
-                                  >Quốc Hoàng giúp châu Á thắng đậm châu Âu ở
-                                  Reyes Cup</a
-                                >
+                                <a class="line-clamp2" href="https://vnexpress.net/quoc-hoang-giup-chau-a-thang-dam-chau-au-o-reyes-cup-4805902.html" title="Quốc Hoàng giúp châu Á thắng đậm châu Âu ở Reyes Cup" target="_blank">Quốc Hoàng giúp châu Á thắng đậm châu Âu ở Reyes Cup</a>
                               </h3>
-                              <p>
-                                Cơ thủ số một Việt Nam, Dương Quốc Hoàng góp
-                                công khi đội tuyển châu Á hạ gục châu Âu 11-6
-                                tại giải pool 9 bi Reyes Cup 2024.
-                              </p>
+                              <p> Cơ thủ số một Việt Nam, Dương Quốc Hoàng góp công khi đội tuyển châu Á hạ gục châu Âu 11-6 tại giải pool 9 bi Reyes Cup 2024. </p>
                             </div>
                             <div class="tt-meta">
                               <div class="tt-autor">
-                                <i class="fa fa-calendar-check-o"></i>
-                                19/10/2024
+                                <i class="fa fa-calendar-check-o"></i> 19/10/2024
                               </div>
                               <div class="tt-comments">
                                 <i class="fa fa-comments"></i> 999+
@@ -2649,54 +2012,30 @@
                     </div>
                   </div>
                 </div>
-                <div
-                  class="owl-stage hidecnn"
-                  id="hidecn"
-                  style="
+                <div class="owl-stage hidecnn" id="hidecn" style="
                     transform: translate3d(0px, 0px, 0px);
                     transition: all 0s ease 0s;
                     width: 1150px;
-                  "
-                >
-                  <div
-                    class="owl-item active"
-                    style="width: 360.667px; margin-right: 10px"
-                  >
+                  ">
+                  <div class="owl-item active" style="width: 360.667px; margin-right: 10px">
                     <div class="item">
                       <div class="tt-blog-thumb">
                         <div class="tt-img">
                           <a href="https://vnexpress.net/chuong-cuoi-cua-cuoc-chien-nadal-djokovic-4805998.html" target="_blank">
-                            <img
-                              src="https://i1-thethao.vnecdn.net/2024/10/19/rafael-nadal-and-novak-djokovi-8384-3136-1729306574.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=ONmrYkHxKNwwXeQETgEvBQ"
-                              data-lazyload="https://i1-thethao.vnecdn.net/2024/10/19/rafael-nadal-and-novak-djokovi-8384-3136-1729306574.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=ONmrYkHxKNwwXeQETgEvBQ"
-                              alt="Chương cuối của cuộc chiến Nadal i Djokovic"
-                              class="img-responsive center-block"
-                            />
+                            <img src="https://i1-thethao.vnecdn.net/2024/10/19/rafael-nadal-and-novak-djokovi-8384-3136-1729306574.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=ONmrYkHxKNwwXeQETgEvBQ" data-lazyload="https://i1-thethao.vnecdn.net/2024/10/19/rafael-nadal-and-novak-djokovi-8384-3136-1729306574.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=ONmrYkHxKNwwXeQETgEvBQ" alt="Chương cuối của cuộc chiến Nadal i Djokovic" class="img-responsive center-block" />
                           </a>
                         </div>
                         <div class="tt-title-description">
                           <div class="tt-background">
                             <div class="tt-title">
                               <h3>
-                                <a
-                                  class="line-clamp2"
-                                  href="https://vnexpress.net/chuong-cuoi-cua-cuoc-chien-nadal-djokovic-4805998.html"
-                                  title="Chương cuối của cuộc chiến Nadal - Djokovic"
-                                  target="_blank"
-                                  >Chương cuối của cuộc chiến Nadal -
-                                  Djokovic</a
-                                >
+                                <a class="line-clamp2" href="https://vnexpress.net/chuong-cuoi-cua-cuoc-chien-nadal-djokovic-4805998.html" title="Chương cuối của cuộc chiến Nadal - Djokovic" target="_blank">Chương cuối của cuộc chiến Nadal - Djokovic</a>
                               </h3>
-                              <p>
-                                Novak Djokovic sẽ là đối thủ cuối trong sự
-                                nghiệp đánh đơn của Rafael Nadal, khi họ đối đầu
-                                ở Six Kings Slam hôm nay.
-                              </p>
+                              <p> Novak Djokovic sẽ là đối thủ cuối trong sự nghiệp đánh đơn của Rafael Nadal, khi họ đối đầu ở Six Kings Slam hôm nay. </p>
                             </div>
                             <div class="tt-meta">
                               <div class="tt-autor">
-                                <i class="fa fa-calendar-check-o"></i>
-                                19/10/2024
+                                <i class="fa fa-calendar-check-o"></i> 19/10/2024
                               </div>
                               <div class="tt-comments">
                                 <i class="fa fa-comments"></i> 999+
@@ -2714,318 +2053,79 @@
         </div>
       </section>
     </section>
-    <div
-      class="c-menu--slide-left active modal fade in"
-      style="display: none"
-      id="cmenushow"
-    >
+    <div class="c-menu--slide-left active modal fade in" style="display: none" id="cmenushow">
       <div class="la-nav-top-login">
         <div class="la-avatar-nav p-relative text-center">
           <a href="https://ant-sport.bizwebvietnam.net/account">
             <i class="fa fa-user-circle"></i>
           </a>
           <div class="la-hello-user-nav ng-scope">Xin chào</div>
-          <img
-            id="close-nav"
-            class="c-menu__close"
-            src="./img/ic-close-menu.png"
-            alt="close nav"
-            onclick="hidemenu()"
-          />
+          <img id="close-nav" class="c-menu__close" src="./img/ic-close-menu.png" alt="close nav" onclick="hidemenu()" />
         </div>
         <div class="la-action-link-nav text-center">
-          <a
-            href="login.html"
-            class="uppercase"
-            >ĐĂNG NHẬP</a
-          >
-          <a
-            href="register.html"
-            class="uppercase"
-            >ĐĂNG KÝ</a
-          >
+          <a href="login.html" class="uppercase">ĐĂNG NHẬP</a>
+          <a href="register.html" class="uppercase">ĐĂNG KÝ</a>
         </div>
       </div>
+      <script type="text/javascript">
+        window.onload = function() {
+          // Kiểm tra xem người dùng đã đăng nhập chưa (dùng sessionStorage)
+          var isLoggedIn = sessionStorage.getItem('isLoggedIn'); // Lấy trạng thái đăng nhập từ sessionStorage
+          var username = sessionStorage.getItem('userEmail'); // Lấy tên người dùng từ sessionStorage
+          // Lấy các phần tử cần thay đổi
+          var loginSection = document.querySelector('.la-nav-top-login');
+          var helloUser = document.querySelector('.la-hello-user-nav');
+          var avatarImage = document.querySelector('.la-avatar-nav img');
+          var actionLinks = document.querySelector('.la-action-link-nav');
+          if (isLoggedIn === 'true') {
+            // Nếu đã đăng nhập, ẩn các liên kết Đăng nhập, Đăng ký
+            actionLinks.style.display = 'none';
+            // Hiển thị thông tin người dùng
+            helloUser.innerHTML = 'Xin chào, ' + username;
+            // Nếu có URL ảnh đại diện, hiển thị ảnh
+            if (avatarUrl) {
+              avatarImage.src = avatarUrl;
+            } else {
+              avatarImage.style.display = 'none'; // Ẩn ảnh nếu không có
+            }
+            // Cập nhật liên kết tài khoản
+            var accountLink = document.querySelector('.la-avatar-nav a');
+            accountLink.href = "https://ant-sport.bizwebvietnam.net/account";
+          } else {
+            // Nếu chưa đăng nhập, hiển thị các liên kết Đăng nhập, Đăng ký
+            actionLinks.style.display = 'block';
+            // Ẩn thông tin người dùng
+            helloUser.innerHTML = 'Xin chào';
+            avatarImage.style.display = 'none'; // Ẩn ảnh đại diện nếu chưa đăng nhập
+          }
+        }
+      </script>
       <aside class="aside-item collection-category">
         <div class="aside-title">
-          <h3 class="title-head margin-top-0"><span>Danh mục</span></h3>
+          <h3 class="title-head margin-top-0">
+            <span>Danh mục</span>
+          </h3>
         </div>
         <div class="aside-content">
           <nav class="nav-category navbar-toggleable-md">
             <ul class="nav navbar-pills">
               <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="index.html"
-                  >Trang chủ</a
-                >
+                <a class="nav-link" href="./index.html">Trang chủ</a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="about.html"
-                  >Giới thiệu</a
-                >
+                <a class="nav-link" href="./about.html">Giới thiệu</a>
               </li>
               <li class="nav-item">
-                <a
-                  href="product.html"
-                  class="nav-link"
-                  >Sản phẩm</a
-                >
-                <i class="fa fa-angle-down"></i>
-                <ul class="dropdown-menu">
-                  <li class="dropdown-submenu nav-item active">
-                    <a
-                      class="nav-link"
-                      href="product-caterogy.html"
-                      >Giày
-                    </a>
-
-                    <i class="fa fa-angle-down"></i>
-                    <ul class="dropdown-menu">
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="product-caterogy.html"
-                          >Giày Nam</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="product-caterogy.html"
-                          >Giày Nữ</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="product-caterogy.html"
-                          >Giày thể thao</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="product-caterogy.html"
-                          >Giày leo núi</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="product-caterogy.html"
-                          >Giày chạy bộ</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown-submenu nav-item">
-                    <a
-                      class="nav-link"
-                      href="product-caterogy.html"
-                      >Trang phục thể thao</a
-                    >
-                    <i class="fa fa-angle-down"></i>
-                    <ul class="dropdown-menu">
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="product-caterogy.html"
-                          >Dành cho Nam</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="product-caterogy.html"
-                          >Dành cho Nữ</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="product-caterogy.html"
-                          >Đồ bơi</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="product-caterogy.html"
-                          >Đấm bốc &amp; Võ thuật</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="product-caterogy.html"
-                          >Yoga</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown-submenu nav-item">
-                    <a
-                      class="nav-link"
-                      href="product-caterogy.html"
-                      >Dụng cụ thể thao</a
-                    >
-                    <i class="fa fa-angle-down"></i>
-                    <ul class="dropdown-menu">
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="product-caterogy.html"
-                          >Yoga, thể hình</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="product-caterogy.html"
-                          >Các môn cá nhân</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="product-caterogy.html"
-                          >Phụ kiện thể thao</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="product-caterogy.html"
-                          >Các môn tập thể</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="product-caterogy.html"
-                          >Đồ dưới nước</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="product-caterogy.html"
-                      >Lều ngủ, Túi ngủ</a
-                    >
-                  </li>
-                  <li class="dropdown-submenu nav-item">
-                    <a class="nav-link" href="/">Thương hiệu</a>
-                    <i class="fa fa-angle-down"></i>
-                    <ul class="dropdown-menu">
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="product-caterogy.html"
-                          >Nike</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="product-caterogy.html"
-                          >Adidas</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="product-caterogy.html"
-                          >Gofit</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="product-caterogy.html"
-                          >Bitis</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="product-caterogy.html"
-                          >New Nalance</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
+                <a href="./product.html" class="nav-link">Sản phẩm</a>
               </li>
               <li class="nav-item">
-                <a
-                  href="product-caterogy.html"
-                  class="nav-link"
-                  >Thương hiệu</a
-                >
-                <i class="fa fa-angle-down"></i>
-                <ul class="dropdown-menu">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="product-caterogy.html"
-                      >Nike</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="product-caterogy.html"
-                      >Adidas</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="product-caterogy.html"
-                      >Gofit</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="product-caterogy.html"
-                      >Bitis</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="product-caterogy.html"
-                      >New Nalance</a
-                    >
-                  </li>
-                </ul>
+                <a class="nav-link" href="./product.html">Khuyến mãi</a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="product-caterogy.html"
-                  >Khuyến mãi</a
-                >
+                <a class="nav-link" href="product.html">Tin tức</a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="product-caterogy.html"
-                  >Tin tức</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="product-caterogy.html"
-                  >Liên hệ</a
-                >
+                <a class="nav-link" href="./lienhe.html">Liên hệ</a>
               </li>
             </ul>
           </nav>
@@ -3037,14 +2137,9 @@
         <div class="row">
           <div class="tt-services-listing clearfix">
             <div class="col-md-4 col-sm-4 col-xs-12">
-              <a href="/lien-he" class="tt-services-block">
+              <a href="./product.html" class="tt-services-block">
                 <div class="tt-col-icon">
-                  <img
-                    src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_1.png?1556002489878"
-                    alt="Miễn phí vận chuyển"
-                    class="img-responsive"
-                    style="height: auto"
-                  />
+                  <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_1.png?1556002489878" alt="Miễn phí vận chuyển" class="img-responsive" style="height: auto" />
                 </div>
                 <div class="tt-col-description">
                   <h4 class="tt-title">Miễn phí vận chuyển</h4>
@@ -3053,14 +2148,9 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12">
-              <a href="/lien-he" class="tt-services-block">
+              <a href="./lienhe.html" class="tt-services-block">
                 <div class="tt-col-icon">
-                  <img
-                    src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_2.png?1556002489878"
-                    alt="Hỗ trợ 24/7"
-                    class="img-responsive"
-                    style="height: auto"
-                  />
+                  <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_2.png?1556002489878" alt="Hỗ trợ 24/7" class="img-responsive" style="height: auto" />
                 </div>
                 <div class="tt-col-description">
                   <h4 class="tt-title">Hỗ trợ 24/7</h4>
@@ -3069,14 +2159,9 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12">
-              <a href="/lien-he" class="tt-services-block">
+              <a href="./lienhe.html" class="tt-services-block">
                 <div class="tt-col-icon">
-                  <img
-                    src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_3.png?1556002489878"
-                    alt="30 ngày trả hàng"
-                    class="img-responsive"
-                    style="height: auto"
-                  />
+                  <img src="https://bizweb.dktcdn.net/100/315/907/themes/663622/assets/fot_policy_image_3.png?1556002489878" alt="30 ngày trả hàng" class="img-responsive" style="height: auto" />
                 </div>
                 <div class="tt-col-description">
                   <h4 class="tt-title">30 ngày trả hàng</h4>
@@ -3100,11 +2185,21 @@
                     <i class="fa fa-caret-down" aria-hidden="true"></i>
                   </h3>
                   <ul class="list-menu" id="F1">
-                    <li><a href="about.html">Giới thiệu công ty</a></li>
-                    <li><a href="index.html">Tiêu chí bán hàng</a></li>
-                    <li><a href="index.html">Đối tác chiến lược</a></li>
-                    <li><a href="index.html">Hệ thống trung tâm</a></li>
-                    <li><a href="index.html">Tuyển dụng</a></li>
+                    <li>
+                      <a href="about.html">Giới thiệu công ty</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Tiêu chí bán hàng</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Đối tác chiến lược</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Hệ thống trung tâm</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Tuyển dụng</a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -3115,11 +2210,21 @@
                     <i class="fa fa-caret-down" aria-hidden="true"></i>
                   </h3>
                   <ul class="list-menu" id="F2">
-                    <li><a href="index.html">Giao nhận - lắp đặt</a></li>
-                    <li><a href="index.html">Dùng thử sản phẩm</a></li>
-                    <li><a href="index.html">Khu vực giao nhận</a></li>
-                    <li><a href="index.html">Khách hàng thành viên</a></li>
-                    <li><a href="index.html">Trả góp</a></li>
+                    <li>
+                      <a href="index.html">Giao nhận - lắp đặt</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Dùng thử sản phẩm</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Khu vực giao nhận</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Khách hàng thành viên</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Trả góp</a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -3130,27 +2235,33 @@
                     <i class="fa fa-caret-down" aria-hidden="true"></i>
                   </h3>
                   <ul class="list-menu" id="F3">
-                    <li><a href="index.html">Hướng dẫn mua hàng</a></li>
-                    <li><a href="index.html">Hình thức thanh toán</a></li>
-                    <li><a href="index.html">Chăm sóc khách hàng</a></li>
-                    <li><a href="index.html">Quy định đổi sản phẩm</a></li>
-                    <li><a href="index.html">Tra cứu thẻ thành viên</a></li>
+                    <li>
+                      <a href="index.html">Hướng dẫn mua hàng</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Hình thức thanh toán</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Chăm sóc khách hàng</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Quy định đổi sản phẩm</a>
+                    </li>
+                    <li>
+                      <a href="index.html">Tra cứu thẻ thành viên</a>
+                    </li>
                   </ul>
                 </div>
               </div>
               <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                 <div class="footer-widget no-border">
-                  <h3
-                    style="display: flex; justify-content: space-between"
-                    onclick="F4('F4')"
-                  >
-                    <span>Liên hệ</span
-                    ><i class="fa fa-caret-down" aria-hidden="true"></i>
+                  <h3 style="display: flex; justify-content: space-between" onclick="F4('F4')">
+                    <span>Liên hệ</span>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
                   </h3>
                   <ul class="list-menu ul-footer-contact" id="F4">
                     <li>
-                      <i class="fa fa-map-marker" aria-hidden="true"></i> 273 Đ.
-                      An Dương Vương, Phường 3, Quận 5, Hồ Chí Minh
+                      <i class="fa fa-map-marker" aria-hidden="true"></i> 273 Đ. An Dương Vương, Phường 3, Quận 5, Hồ Chí Minh
                     </li>
                     <li>
                       <i class="fa fa-phone" aria-hidden="true"></i>
@@ -3158,9 +2269,7 @@
                     </li>
                     <li>
                       <i class="fa fa-envelope" aria-hidden="true"></i>
-                      <a href="mailto:baotrung304@gmail.com"></a>
-                        acquy666@gmail.com</a
-                      >
+                      <a href="mailto:baotrung304@gmail.com"></a> acquy666@gmail.com </a>
                     </li>
                   </ul>
                 </div>
@@ -3174,17 +2283,9 @@
           <div class="inner clearfix">
             <div class="row">
               <div class="col-sm-12 text-center">
-                <span
-                  >© Bản quyền thuộc về <b>Nhóm 21</b>
-                  <span class="s480-f">|</span> Cung cấp bởi
-                  <a
-                    href="https://fit.sgu.edu.vn/site/"
-                    title="SGU IT"
-                    target="_blank"
-                    rel="nofollow"
-                    >SGU IT</a
-                  ></span
-                >
+                <span>© Bản quyền thuộc về <b>Nhóm 21</b>
+                  <span class="s480-f">|</span> Cung cấp bởi <a href="https://fit.sgu.edu.vn/site/" title="SGU IT" target="_blank" rel="nofollow">SGU IT</a>
+                </span>
               </div>
             </div>
           </div>
@@ -3200,7 +2301,7 @@
       var modal1 = document.getElementById("popup-cart");
       var modal2 = document.getElementById("cmenushow");
       // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function (event) {
+      window.onclick = function(event) {
         if (event.target.id == "cmenushow") {
           modal2.style.display = "none";
         }
@@ -3232,12 +2333,9 @@
       }
       var btns = container.getElementsByClassName("footer-widget");
       for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
+        btns[i].addEventListener("click", function() {
           var current = document.getElementsByClassName("footer-widget");
-          current[0].className = current[0].className.replace(
-            "footer-widget",
-            ""
-          );
+          current[0].className = current[0].className.replace("footer-widget", "");
           this.className += "footer-widget";
         });
       }
