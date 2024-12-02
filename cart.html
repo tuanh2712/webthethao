@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Home</title>
+    <title>Giỏ hàng</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
     <link rel="stylesheet" href="./css/slick.css" />
@@ -961,6 +961,22 @@
                     modal1.style.display = "none";
                 }
             }
+
+            // Hàm kiểm tra xem người dùng đã đăng nhập chưa
+            function checkLogin() {
+              // Giả sử thông tin đăng nhập được lưu trong localStorage (ví dụ: 'isLoggedIn' có giá trị 'true' khi người dùng đã đăng nhập)
+              var isLoggedIn = localStorage.getItem('isLoggedIn');
+
+              // Kiểm tra nếu chưa đăng nhập
+              if (isLoggedIn !== 'true') {
+                // Nếu chưa đăng nhập, chuyển hướng đến trang đăng nhập
+                window.location.href = 'login.html';
+              }
+            }
+
+            // Gọi hàm kiểm tra đăng nhập khi trang được tải
+            checkLogin();
+
         </script>
 </body>
 

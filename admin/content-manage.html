@@ -35,6 +35,7 @@
         </div>
         <nav>
           <ul>
+            
             <li><a href="./admin.html">TỔNG QUAN</a></li>
             <li><a href="./product-manage.html">SẢN PHẨM</a></li>
             <li><a href="./manage-category.html">DANH MỤC</a></li>
@@ -114,34 +115,22 @@
               <tr>
                 <td>Giới thiệu</td>
                 <td>
-                  <button class="btn btn-edit-1" onclick="editRow(this)">
-                    Chỉnh sửa
-                  </button>
-                  <button class="btn btn-delete-1" onclick="deleteRow(this)">
-                    Xóa
-                  </button>
+                  <button class="btn btn-edit-1" onclick="editRow(this)">Chỉnh sửa</button>
+                  <button class="btn btn-delete-1" onclick="deleteRow(this)">Xóa</button>
                 </td>
               </tr>
               <tr>
                 <td>Khuyến mãi</td>
                 <td>
-                  <button class="btn btn-edit-1" onclick="editRow(this)">
-                    Chỉnh sửa
-                  </button>
-                  <button class="btn btn-delete-1" onclick="deleteRow(this)">
-                    Xóa
-                  </button>
+                  <button class="btn btn-edit-1" onclick="editRow(this)">Chỉnh sửa</button>
+                  <button class="btn btn-delete-1" onclick="deleteRow(this)">Xóa</button>
                 </td>
               </tr>
               <tr>
                 <td>Tin tức</td>
                 <td>
-                  <button class="btn btn-edit-1" onclick="editRow(this)">
-                    Chỉnh sửa
-                  </button>
-                  <button class="btn btn-delete-1" onclick="deleteRow(this)">
-                    Xóa
-                  </button>
+                  <button class="btn btn-edit-1" onclick="editRow(this)">Chỉnh sửa</button>
+                  <button class="btn btn-delete-1" onclick="deleteRow(this)">Xóa</button>
                 </td>
               </tr>
             </tbody>
@@ -173,34 +162,22 @@
               <tr>
                 <td>Khuyến mãi mùa hè</td>
                 <td>
-                  <button class="btn btn-edit-1" onclick="editRow(this)">
-                    Chỉnh sửa
-                  </button>
-                  <button class="btn btn-delete-1" onclick="deleteRow(this)">
-                    Xóa
-                  </button>
+                  <button class="btn btn-edit-1"  onclick="editRow(this)">Chỉnh sửa</button>
+                  <button class="btn btn-delete-1" onclick="deleteRow(this)">Xóa</button>
                 </td>
               </tr>
               <tr>
                 <td>Cách chăm sóc giày thể thao</td>
                 <td>
-                  <button class="btn btn-edit-1" onclick="editRow(this)">
-                    Chỉnh sửa
-                  </button>
-                  <button class="btn btn-delete-1" onclick="deleteRow(this)">
-                    Xóa
-                  </button>
+                  <button class="btn btn-edit-1" onclick="editRow(this)">Chỉnh sửa</button>
+                  <button class="btn btn-delete-1" onclick="deleteRow(this)">Xóa</button>
                 </td>
               </tr>
               <tr>
                 <td>Top sản phẩm bán chạy nhất</td>
                 <td>
-                  <button class="btn btn-edit-1" onclick="editRow(this)">
-                    Chỉnh sửa
-                  </button>
-                  <button class="btn btn-delete-1" onclick="deleteRow(this)">
-                    Xóa
-                  </button>
+                  <button class="btn btn-edit-1" onclick="editRow(this)">Chỉnh sửa</button>
+                  <button class="btn btn-delete-1" onclick="deleteRow(this)">Xóa</button>
                 </td>
               </tr>
             </tbody>
@@ -246,79 +223,79 @@
         </div>
       </div>
     </footer>
-    <script type="text/javascript">
-      // Xóa hàng khi nhấn vào nút Xóa
-      function deleteRow(btn) {
-        // Xóa hàng (tr element) của nút Xóa
-        var row = btn.closest("tr"); // Tìm hàng chứa nút Xóa
-        row.remove(); // Xóa hàng
-      }
-
-      // Chỉnh sửa hàng khi nhấn vào nút Chỉnh sửa
-      function editRow(btn) {
-        var row = btn.closest("tr"); // Tìm hàng chứa nút Chỉnh sửa
-        var cells = row.getElementsByTagName("td"); // Lấy các ô trong hàng
-
-        // Cho phép chỉnh sửa các ô dữ liệu
-        for (var i = 0; i < cells.length - 1; i++) {
-          // Không cần chỉnh sửa ô cuối (nút Chỉnh sửa và Xóa)
-          var currentText = cells[i].innerText; // Lấy nội dung của ô
-          var input = document.createElement("input"); // Tạo phần tử input
-          input.type = "text"; // Đặt kiểu input là text
-          input.value = currentText; // Gán giá trị cho input từ ô hiện tại
-          cells[i].innerHTML = ""; // Xóa nội dung cũ trong ô
-          cells[i].appendChild(input); // Thêm input vào ô
-        }
-
-        // Thêm nút Lưu
-        var saveBtn = document.createElement("button");
-        saveBtn.innerText = "Lưu";
-        saveBtn.classList.add("btn", "btn-save-1");
-        saveBtn.onclick = function () {
-          saveRow(saveBtn); // Gọi hàm lưu hàng
-        };
-
-        // Thêm nút Lưu vào ô cuối cùng (nút Xóa)
-        var actionsCell = cells[cells.length - 1]; // Lấy ô cuối (nút Xóa và Chỉnh sửa)
-        actionsCell.innerHTML = ""; // Xóa nội dung hiện tại
-        actionsCell.appendChild(saveBtn); // Thêm nút Lưu vào ô
-      }
-
-      // Lưu các thay đổi khi nhấn vào nút Lưu
-      function saveRow(btn) {
-        var row = btn.closest("tr"); // Tìm hàng chứa nút Lưu
-        var cells = row.getElementsByTagName("td"); // Lấy các ô trong hàng
-
-        // Lưu các thay đổi từ input vào các ô
-        for (var i = 0; i < cells.length - 1; i++) {
-          var input = cells[i].querySelector("input"); // Lấy phần tử input
-          if (input) {
-            cells[i].innerText = input.value; // Lưu giá trị từ input vào ô
+      <script type="text/javascript">
+            // Xóa hàng khi nhấn vào nút Xóa
+          function deleteRow(btn) {
+            // Xóa hàng (tr element) của nút Xóa
+            var row = btn.closest("tr"); // Tìm hàng chứa nút Xóa
+            row.remove(); // Xóa hàng
           }
-        }
 
-        // Thêm lại các nút Chỉnh sửa và Xóa
-        var editBtn = document.createElement("button");
-        editBtn.innerText = "Chỉnh sửa";
-        editBtn.classList.add("btn", "btn-edit-1");
-        editBtn.onclick = function () {
-          editRow(editBtn); // Gọi hàm chỉnh sửa hàng
-        };
+          // Chỉnh sửa hàng khi nhấn vào nút Chỉnh sửa
+          function editRow(btn) {
+            var row = btn.closest("tr"); // Tìm hàng chứa nút Chỉnh sửa
+            var cells = row.getElementsByTagName("td"); // Lấy các ô trong hàng
 
-        var deleteBtn = document.createElement("button");
-        deleteBtn.innerText = "Xóa";
-        deleteBtn.classList.add("btn", "btn-delete-1");
-        deleteBtn.onclick = function () {
-          deleteRow(deleteBtn); // Gọi hàm xóa hàng
-        };
+            // Cho phép chỉnh sửa các ô dữ liệu
+            for (var i = 0; i < cells.length - 1; i++) { // Không cần chỉnh sửa ô cuối (nút Chỉnh sửa và Xóa)
+              var currentText = cells[i].innerText; // Lấy nội dung của ô
+              var input = document.createElement("input"); // Tạo phần tử input
+              input.type = "text"; // Đặt kiểu input là text
+              input.value = currentText; // Gán giá trị cho input từ ô hiện tại
+              cells[i].innerHTML = ""; // Xóa nội dung cũ trong ô
+              cells[i].appendChild(input); // Thêm input vào ô
+            }
 
-        // Thêm lại các nút vào ô cuối cùng
-        var actionsCell = cells[cells.length - 1]; // Lấy ô cuối
-        actionsCell.innerHTML = ""; // Xóa nội dung ô cũ
-        actionsCell.appendChild(editBtn); // Thêm nút Chỉnh sửa vào ô
-        actionsCell.appendChild(deleteBtn); // Thêm nút Xóa vào ô
-      }
-    </script>
+            // Thêm nút Lưu
+            var saveBtn = document.createElement("button");
+            saveBtn.innerText = "Lưu";
+            saveBtn.classList.add("btn", "btn-save-1");
+            saveBtn.onclick = function () {
+              saveRow(saveBtn); // Gọi hàm lưu hàng
+            };
+
+            // Thêm nút Lưu vào ô cuối cùng (nút Xóa)
+            var actionsCell = cells[cells.length - 1]; // Lấy ô cuối (nút Xóa và Chỉnh sửa)
+            actionsCell.innerHTML = ""; // Xóa nội dung hiện tại
+            actionsCell.appendChild(saveBtn); // Thêm nút Lưu vào ô
+          }
+
+          // Lưu các thay đổi khi nhấn vào nút Lưu
+          function saveRow(btn) {
+            var row = btn.closest("tr"); // Tìm hàng chứa nút Lưu
+            var cells = row.getElementsByTagName("td"); // Lấy các ô trong hàng
+
+            // Lưu các thay đổi từ input vào các ô
+            for (var i = 0; i < cells.length - 1; i++) {
+              var input = cells[i].querySelector("input"); // Lấy phần tử input
+              if (input) {
+                cells[i].innerText = input.value; // Lưu giá trị từ input vào ô
+              }
+            }
+
+            // Thêm lại các nút Chỉnh sửa và Xóa
+            var editBtn = document.createElement("button");
+            editBtn.innerText = "Chỉnh sửa";
+            editBtn.classList.add("btn", "btn-edit-1");
+            editBtn.onclick = function () {
+              editRow(editBtn); // Gọi hàm chỉnh sửa hàng
+            };
+
+            var deleteBtn = document.createElement("button");
+            deleteBtn.innerText = "Xóa";
+            deleteBtn.classList.add("btn", "btn-delete-1");
+            deleteBtn.onclick = function () {
+              deleteRow(deleteBtn); // Gọi hàm xóa hàng
+            };
+
+            // Thêm lại các nút vào ô cuối cùng
+            var actionsCell = cells[cells.length - 1]; // Lấy ô cuối
+            actionsCell.innerHTML = ""; // Xóa nội dung ô cũ
+            actionsCell.appendChild(editBtn); // Thêm nút Chỉnh sửa vào ô
+            actionsCell.appendChild(deleteBtn); // Thêm nút Xóa vào ô
+          }
+
+      </script>
     <!-- Footer  -->
   </body>
 </html>

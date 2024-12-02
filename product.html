@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Home</title>
+    <title>Sản phẩm</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
     <link rel="stylesheet" href="./css/slick.css" />
@@ -607,6 +607,7 @@
                 }
 
                 function filterProducts() {
+
                   // Lấy danh sách các bộ lọc đã chọn
                   const selectedBrands = $('.filter-brand:checked').map(function() {
                     return $(this).val().toLowerCase();
@@ -645,9 +646,11 @@
                     // Hiển thị hoặc ẩn sản phẩm dựa trên sự khớp
                     if (brandMatch && typeMatch && priceMatch && keywordMatch) {
                       $(this).show();
+
                       visibleProductsCount++; // Tăng số lượng sản phẩm hiển thị
                     } else {
                       $(this).hide();
+
                     }
                   });
                   // Kiểm tra nếu không có sản phẩm nào hiển thị
@@ -655,6 +658,7 @@
                     $('#noProductsMessage').show();
                   } else {
                     $('#noProductsMessage').hide();
+
                   }
                 }
                 // Gọi hàm lọc ngay khi trang được tải (để áp dụng từ khóa query nếu có)
@@ -1108,7 +1112,7 @@
                       </div>
                       <div class="add-to-card">
                         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <a href="#">ADD TO CARD</a>
+                        <a href="#">VIEW PRODUCTS</a>
                         <a title="Yêu thích" class="btn-cart btn btn-gray btn_df btnProduct iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11795611" data-variant="18765268">
                           <i class="fa fa-heart-o"></i>
                         </a>
@@ -1618,6 +1622,83 @@
                   </div>
                 </div>
               </div>
+              
+              <div id="pagination" style="display:none; text-align: center;">
+                <button class="btn btn-gray" style="border: 1px solid; background: gray; color: white;" id="prev" > 1 </button>
+                <button class="btn  btn-gray" style="border: 1px solid; background: gray; color: white;"   id="next"> 2 </button>
+              </div>
+
+<script type="text/javascript">
+  const products = document.querySelectorAll(".product-grid"); // Lấy tất cả các sản phẩm
+  const productsPerPage = 15; // Mỗi trang sẽ hiển thị 6 sản phẩm
+  let currentPage = 1; // Trang hiện tại bắt đầu từ 1
+
+  // Nếu số lượng sản phẩm hiển thị lớn hơn 6, mới thực hiện phân trang
+  if (products.length > productsPerPage) {
+    // Ẩn tất cả các sản phẩm trước khi phân trang
+    products.forEach(product => product.style.display = 'none');
+
+    // Lọc ra nửa số sản phẩm để hiển thị khi trang đầu tiên được load
+    const halfProducts = Math.floor(products.length / 2);
+    for (let i = 0; i < halfProducts; i++) {
+      products[i].style.display = 'none'; // Ẩn nửa đầu
+    }
+
+    // Hiển thị phần còn lại (nửa thứ hai)
+    for (let i = halfProducts; i < products.length; i++) {
+      products[i].style.display = 'block'; // Hiển thị nửa sau
+    }
+
+    // Hiển thị phân trang
+    const paginationContainer = document.getElementById("pagination");
+    if (paginationContainer) {
+      paginationContainer.style.display = 'block';
+    }
+
+    // Lắng nghe sự kiện click trên nút Previous
+    document.getElementById("prev").addEventListener("click", function() {
+      if (currentPage > 1) {
+        currentPage--;
+        showPage(currentPage);
+      }
+    });
+
+    // Lắng nghe sự kiện click trên nút Next
+    document.getElementById("next").addEventListener("click", function() {
+      if (currentPage * productsPerPage < products.length) {
+        currentPage++;
+        showPage(currentPage);
+      }
+    });
+
+    // Hiển thị trang đầu tiên khi tải trang
+    showPage(currentPage);
+  } else {
+    // Nếu số lượng sản phẩm <= 6, không cần phân trang, hiển thị tất cả
+    products.forEach(product => product.style.display = 'block');
+  }
+
+
+  // Hàm hiển thị sản phẩm theo trang
+  function showPage(page) {
+    // Tính toán chỉ số bắt đầu và kết thúc của sản phẩm trên trang hiện tại
+    const start = (page - 1) * productsPerPage;
+    const end = start + productsPerPage;
+
+    // Ẩn tất cả các sản phẩm
+    products.forEach(product => product.style.display = 'none');
+
+    // Hiển thị các sản phẩm của trang hiện tại
+    for (let i = start; i < end && i < products.length; i++) {
+      products[i].style.display = 'block';
+    }
+
+    
+  }
+
+window.onload = function() {document.getElementById("next").click();};
+
+</script>
             </div>
           </div>
       </div>
