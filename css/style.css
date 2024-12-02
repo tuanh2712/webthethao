@@ -777,7 +777,7 @@ ul {
 
 .selection-new-product .row img {
   width: 100%;
-  height: auto;
+  height: 200px;
   position: relative;
   top: 0;
   bottom: 0;
