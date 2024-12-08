@@ -51,15 +51,15 @@
     <div class="inner-wrap">
       <!-- Slide bar Left  -->
       <ul class="sider">
-        <li class="active">
+        <li class="">
           <div class="inner-icon">
-            <i class="fa-solid fa-gauge-high"></i>
+            <i class="fa-solid fa-list"></i>
           </div>
           <a href="./admin.html">Tổng quan</a>
         </li>
-        <li>
+        <li class="active">
           <div class="inner-icon">
-            <i class="fa-solid fa-people-group"></i>
+            <i class="fa-solid fa-list"></i>
           </div>
           <a href="./product-manage.html">Quản lý sản phẩm</a>
         </li>
@@ -71,28 +71,23 @@
         </li>
         <li>
           <div class="inner-icon">
-            <i class="fa-brands fa-product-hunt"></i>
+            <i class="fa-solid fa-list"></i>
           </div>
           <a href="./order-manage.html">Quản lý đơn hàng</a>
         </li>
         <li>
           <div class="inner-icon">
-            <i class="fa-solid fa-clipboard-list"></i>
+            <i class="fa-solid fa-list"></i>
           </div>
           <a href="./user-manage.html">Quản lý người dùng</a>
         </li>
         <li>
           <div class="inner-icon">
-            <i class="fa-solid fa-chart-line"></i>
+            <i class="fa-solid fa-list"></i>
           </div>
           <a href="./content-manage.html">Quản lý nội dung trang</a>
         </li>
-        <!-- <li>
-                <div class="inner-icon">
-                <i class="fa-solid fa-chart-line"></i>
-                </div>
-                <a href="./statistic.html">Thống kê và báo cáo</a>
-            </li> -->
+        <!-- <li><div class="inner-icon"><i class="fa-solid fa-chart-line"></i></div><a href="./statistic.html">Thống kê và báo cáo</a></li> -->
       </ul>
       <!-- Slide bar Left  -->
 
@@ -127,7 +122,6 @@
             <div class="form-item">
               <label for="productCategory">Danh mục</label>
               <select id="productCategory" required>
-                <option value="">Chọn danh mục</option>
                 <option value="Giày">Giày</option>
                 <option value="Trang phục thể thao">Trang phục thể thao</option>
                 <option value="Dụng cụ thể thao">Dụng cụ thể thao</option>
@@ -167,9 +161,11 @@
               />
             </div>
 
-            <div class="form-item">
-              <label for="productImage">Hình ảnh</label>
-              <input type="file" id="productImage" accept="image/*" />
+            <div class="form-item" >
+                <label for="productImage">Hình ảnh</label>
+                <input type="file" id="productImage" accept="image/*" />
+                <!-- Vùng hiển thị ảnh cũ khi sửa -->
+                <div id="productImagePreview" style="margin-top: 10px; margin-bottom: 10px;"></div>
             </div>
           </div>
 
@@ -185,7 +181,7 @@
             <img src=".././img/giay-co-cao-cho-nu-keen-jasper-mid-wp-xam-3_0062623_4811276f18a64dcc9273aa059583d1a8_1024x1024-removebg-preview.png" alt="Product Image" />
             <div class="product-info">
               <h3>Giày Nike Air Force 1 '07</h3>
-              <p>Giá: 2.000.000₫</p>
+              <p>Giá: 2000000₫</p>
               <p>Trạng thái: Còn hàng</p>
               <p>Giảm giá: 25%</p>
             </div>
@@ -233,123 +229,178 @@
           </div>
         </div>
       </div>
-      <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", function () {
-  const productForm = document.getElementById("productForm");
-  const productNameInput = document.getElementById("productName");
-  const productPriceInput = document.getElementById("productPrice");
-  const productCategorySelect = document.getElementById("productCategory");
-  const productStatusSelect = document.getElementById("productStatus");
-  const productDiscountInput = document.getElementById("productDiscount");
-  const productImageInput = document.getElementById("productImage");
-  const productList = document.getElementById("productList");
-  const formTitle = productForm.querySelector("h2");
+     <script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function () {
+    const productForm = document.getElementById("productForm");
+    const productNameInput = document.getElementById("productName");
+    const productPriceInput = document.getElementById("productPrice");
+    const productCategorySelect = document.getElementById("productCategory");
+    const productStatusSelect = document.getElementById("productStatus");
+    const productDiscountInput = document.getElementById("productDiscount");
+    const productImageInput = document.getElementById("productImage");
+    const productList = document.getElementById("productList");
+    const formTitle = productForm.querySelector("h2");
 
-  let isEditing = false; // Trạng thái sửa
-  let currentEditProduct = null; // Sản phẩm đang sửa
+    let isEditing = false; // Trạng thái sửa
+    let currentEditProduct = null; // Sản phẩm đang sửa
+    let productImage = "../img/default-product.jpg"; // Ảnh mặc định
 
-  // Xử lý lưu sản phẩm
-  productForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+    // Xử lý lưu sản phẩm
+    productForm.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-    const productName = productNameInput.value;
-    const productPrice = productPriceInput.value;
-    const productCategory = productCategorySelect.value;
-    const productStatus = productStatusSelect.value;
-    const productDiscount = productDiscountInput.value;
-    const productImage = productImageInput.files[0]
-      ? URL.createObjectURL(productImageInput.files[0])
-      : "img/default-product.png";
+        const productName = productNameInput.value;
+        const productPrice = productPriceInput.value;
+        const productCategory = productCategorySelect.value;
+        const productStatus = productStatusSelect.value;
+        const productDiscount = productDiscountInput.value;
 
-    if (isEditing && currentEditProduct) {
-      // Chỉnh sửa sản phẩm
-      currentEditProduct.querySelector(".product-info h3").textContent =
-        productName;
-      currentEditProduct.querySelector(".product-info p:nth-child(2)").textContent =
-        `Giá: ${productPrice}₫`;
-      currentEditProduct.querySelector(".product-info p:nth-child(3)").textContent =
-        `Trạng thái: ${productStatus}`;
-      currentEditProduct.querySelector(".product-info p:nth-child(4)").textContent =
-        `Giảm giá: ${productDiscount}%`;
-      currentEditProduct.querySelector("img").src = productImage;
+        // Nếu có thay đổi ảnh thì sử dụng ảnh mới, nếu không sẽ giữ ảnh cũ hoặc ảnh mặc định
+        const newProductImage = productImageInput.files[0]
+            ? URL.createObjectURL(productImageInput.files[0])
+            : currentEditProduct && currentEditProduct.querySelector("img")
+            ? currentEditProduct.querySelector("img").src
+            : productImage; // Ảnh mặc định khi không có ảnh
 
-      alert("Sản phẩm đã được sửa thành công!");
-    } else {
-      // Thêm sản phẩm mới
-      const productHTML = `
-        <div class="product">
-          <img src="${productImage}" alt="${productName}" />
-          <div class="product-info">
-            <h3>${productName}</h3>
-            <p>Giá: ${productPrice}₫</p>
-            <p>Trạng thái: ${productStatus}</p>
-            <p>Giảm giá: ${productDiscount}%</p>
-          </div>
-          <div class="product-actions">
-            <button class="edit-btn">Sửa</button>
-            <button class="delete-btn">Xóa</button>
-          </div>
-        </div>
-      `;
-      productList.insertAdjacentHTML("beforeend", productHTML);
-      alert("Sản phẩm đã được thêm thành công!");
+        if (isEditing && currentEditProduct) {
+            // Chỉnh sửa sản phẩm
+            currentEditProduct.querySelector(".product-info h3").textContent = productName;
+            currentEditProduct.querySelector(".product-info p:nth-child(2)").textContent = `Giá: ${productPrice}₫`;
+            currentEditProduct.querySelector(".product-info p:nth-child(3)").textContent = `Trạng thái: ${productStatus}`;
+            currentEditProduct.querySelector(".product-info p:nth-child(4)").textContent = `Giảm giá: ${productDiscount}%`;
+            currentEditProduct.querySelector("img").src = newProductImage;
+
+            alert("Sản phẩm đã được sửa thành công!");
+        } else {
+            // Thêm sản phẩm mới
+            const productHTML = `
+                <div class="product">
+                    <img src="${newProductImage}" alt="${productName}" />
+                    <div class="product-info">
+                        <h3>${productName}</h3>
+                        <p>Giá: ${productPrice}₫</p>
+                        <p>Trạng thái: ${productStatus}</p>
+                        <p>Giảm giá: ${productDiscount}%</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="edit-btn">Sửa</button>
+                        <button class="delete-btn">Xóa</button>
+                    </div>
+                </div>
+            `;
+            productList.insertAdjacentHTML("beforeend", productHTML);
+            alert("Sản phẩm đã được thêm thành công!");
+        }
+
+        resetForm();
+    });
+
+    productList.addEventListener("click", function (e) {
+        if (e.target.classList.contains("edit-btn")) {
+            const product = e.target.closest(".product");
+            currentEditProduct = product;
+
+            const productName = product.querySelector(".product-info h3").textContent;
+            const productPriceText = product.querySelector(".product-info p:nth-child(2)").textContent.replace("Giá: ", "").replace("₫", "").trim();
+            const productStatus = product.querySelector(".product-info p:nth-child(3)").textContent.replace("Trạng thái: ", "");
+            const productDiscount = product.querySelector(".product-info p:nth-child(4)").textContent.replace("Giảm giá: ", "").replace("%", "").trim();
+            let productImage = product.querySelector("img").src;
+
+            // Gán ảnh mặc định nếu không có ảnh
+            if (!productImage) {
+                productImage = "../img/default-product.jpg"; // Gán ảnh mặc định nếu không có ảnh
+            }
+
+            // Cập nhật giá trị vào form
+            productNameInput.value = productName;
+            productPriceInput.value = productPriceText;  // Đảm bảo giá trị giá là một chuỗi số hợp lệ
+            productStatusSelect.value = productStatus;
+            productDiscountInput.value = productDiscount;
+
+            // Hiển thị ảnh cũ hoặc mới khi sửa
+            const imgElement = document.createElement("img");
+            imgElement.src = productImage;
+            imgElement.width = 100;  // Gán kích thước hiển thị ảnh
+            document.getElementById("productImagePreview").innerHTML = ""; // Xóa ảnh cũ
+            document.getElementById("productImagePreview").appendChild(imgElement);
+
+            // Thêm dấu X để xóa ảnh
+            const deleteImageBtn = document.createElement("button");
+            deleteImageBtn.textContent = "X";
+            deleteImageBtn.classList.add("delete-image-btn");
+            document.getElementById("productImagePreview").appendChild(deleteImageBtn);
+
+            deleteImageBtn.addEventListener("click", function () {
+                document.getElementById("productImagePreview").innerHTML = ""; // Xóa ảnh khi nhấn nút X
+                productImageInput.value = ""; // Reset input file
+                // Cập nhật ảnh mặc định vào biến productImage
+                productImage = "../img/default-product.jpg";
+
+                // Cập nhật ảnh trong form và ở sản phẩm đang sửa
+                if (currentEditProduct) {
+                    currentEditProduct.querySelector("img").src = productImage; // Cập nhật ảnh trong sản phẩm đang sửa
+                }
+            });
+
+            isEditing = true;
+            formTitle.textContent = "Sửa sản phẩm";
+        }
+    });
+
+    // Xử lý sự kiện xóa
+    productList.addEventListener("click", function (e) {
+        if (e.target.classList.contains("delete-btn")) {
+            const product = e.target.closest(".product");
+            const confirmDelete = confirm("Bạn có chắc chắn muốn xóa sản phẩm này?");
+            if (confirmDelete) {
+                product.remove();
+                alert("Sản phẩm đã được xóa!");
+            }
+        }
+    });
+
+    // Reset form
+    function resetForm() {
+        productForm.reset();
+        isEditing = false;
+        currentEditProduct = null;
+        formTitle.textContent = "Thêm/Sửa sản phẩm";
+        document.getElementById("productImagePreview").innerHTML = ""; // Xóa ảnh cũ khi reset
     }
 
-    resetForm();
-  });
+    // Xử lý sự kiện thay đổi ảnh
+    productImageInput.addEventListener("change", function () {
+        const previewContainer = document.getElementById("productImagePreview");
+        previewContainer.innerHTML = ""; // Xóa ảnh cũ
 
-  // Xử lý sự kiện sửa
-  productList.addEventListener("click", function (e) {
-    if (e.target.classList.contains("edit-btn")) {
-      const product = e.target.closest(".product");
-      currentEditProduct = product;
+        if (productImageInput.files && productImageInput.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const imgElement = document.createElement("img");
+                imgElement.src = e.target.result;
+                imgElement.width = 100;  // Kích thước ảnh preview
+                previewContainer.appendChild(imgElement);
 
-      const productName = product.querySelector(".product-info h3").textContent;
-      const productPrice = product
-        .querySelector(".product-info p:nth-child(2)")
-        .textContent.replace("Giá: ", "")
-        .replace("₫", "");
-      const productStatus = product
-        .querySelector(".product-info p:nth-child(3)")
-        .textContent.replace("Trạng thái: ", "");
-      const productDiscount = product
-        .querySelector(".product-info p:nth-child(4)")
-        .textContent.replace("Giảm giá: ", "")
-        .replace("%", "");
+                // Thêm nút xóa ảnh
+                const deleteImageBtn = document.createElement("button");
+                deleteImageBtn.textContent = "X";
+                deleteImageBtn.classList.add("delete-image-btn");
+                previewContainer.appendChild(deleteImageBtn);
 
-      productNameInput.value = productName;
-      productPriceInput.value = productPrice;
-      productStatusSelect.value = productStatus;
-      productDiscountInput.value = productDiscount;
-
-      isEditing = true;
-      formTitle.textContent = "Sửa sản phẩm";
-    }
-  });
-
-  // Xử lý sự kiện xóa
-  productList.addEventListener("click", function (e) {
-    if (e.target.classList.contains("delete-btn")) {
-      const product = e.target.closest(".product");
-      const confirmDelete = confirm("Bạn có chắc chắn muốn xóa sản phẩm này?");
-      if (confirmDelete) {
-        product.remove();
-        alert("Sản phẩm đã được xóa!");
-      }
-    }
-  });
-
-  // Reset form
-  function resetForm() {
-    productForm.reset();
-    isEditing = false;
-    currentEditProduct = null;
-    formTitle.textContent = "Thêm/Sửa sản phẩm";
-  }
+                deleteImageBtn.addEventListener("click", function () {
+                    previewContainer.innerHTML = ""; // Xóa ảnh khi nhấn nút X
+                    productImageInput.value = ""; // Reset input file
+                });
+            };
+            reader.readAsDataURL(productImageInput.files[0]);
+        }
+    });
 });
 
-      </script>
-    </footer>
+
+
+</script>
+
 
     <!-- Footer  -->
   </body>

@@ -658,7 +658,14 @@
                     $('#noProductsMessage').show();
                   } else {
                     $('#noProductsMessage').hide();
-
+                    
+                    // Cập nhật thông báo nếu không tìm thấy sản phẩm
+                    if (queryValue) {
+                        const messageDiv1 = document.getElementById('ti-title');
+                        messageDiv1.innerHTML = `
+                           Sản phẩm cho từ khoá '<strong>${queryValue}</strong>'.
+                        `;
+                    }
                   }
                 }
                 // Gọi hàm lọc ngay khi trang được tải (để áp dụng từ khóa query nếu có)
@@ -755,7 +762,7 @@
         </aside>
         <section class="main_container collection col-md-9 col-sm-12 col-xs-12">
           <div class="pottion">
-            <h1 class="title-head margin-top-0">Sản phẩm</h1>
+            <h1 class="title-head margin-top-0" id="ti-title">Sản phẩm</h1>
             <div class="category-products products clearfix">
               <div class="sort-cate clearfix" style="display: none;">
                 <div class="sort-cate-left hidden-xs">
@@ -810,8 +817,30 @@
               <div id="noProductsMessage" class="alert alert-warning alert-dismissible fade in margin-top-15" role="alert" style="display: none;">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">×</span>
-                </button> Sản phẩm đang được cập nhật. Vui lòng quay lại sau.
+                </button> Sản phẩm đang được cập nhật. Vui lòng quay lại sau. 
               </div>
+              <script type="text/javascript">
+                // Hàm lấy giá trị của tham số query từ URL
+                function getQueryParam(param) {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    return urlParams.get(param);
+                }
+
+                // Lấy giá trị của query
+                const queryValue = getQueryParam('query');
+
+                // Cập nhật thông báo nếu không tìm thấy sản phẩm
+                if (queryValue) {
+                    const messageDiv = document.getElementById('noProductsMessage');
+                    messageDiv.style.display = 'block'; // Hiển thị thông báo
+                    messageDiv.innerHTML = `
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        Không tìm thấy sản phẩm cho từ khoá '<strong>${queryValue}</strong>'.
+                    `;
+                }
+              </script>
               <div class="selection-new-product">
                 <div class="row">
                   <div class="product-grid col-md-3 col-sm-6" data-brand="DON" data-type="Găng tay" data-key="Găng Tay Xe Đạp DON Chống Trượt POPO" data-price="500000">
@@ -1632,6 +1661,21 @@
   const products = document.querySelectorAll(".product-grid"); // Lấy tất cả các sản phẩm
   const productsPerPage = 15; // Mỗi trang sẽ hiển thị 6 sản phẩm
   let currentPage = 1; // Trang hiện tại bắt đầu từ 1
+  function getQueryParam(param) {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    return urlParams.get(param);
+                }
+
+                // Lấy giá trị của query
+                const queryValue = getQueryParam('query');
+
+                // Cập nhật thông báo nếu không tìm thấy sản phẩm
+                if (queryValue) {
+                    const messageDiv = document.getElementById('noProductsMessage');
+                    const pagiHide = document.getElementById('pagination');
+                     pagiHide.style.display = 'none'; 
+                
+                }
 
   // Nếu số lượng sản phẩm hiển thị lớn hơn 6, mới thực hiện phân trang
   if (products.length > productsPerPage) {
@@ -1693,7 +1737,8 @@
       products[i].style.display = 'block';
     }
 
-    
+  
+
   }
 
 window.onload = function() {document.getElementById("next").click();};

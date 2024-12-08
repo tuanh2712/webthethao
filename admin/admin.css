@@ -19,6 +19,9 @@
   }
 }
 
+.inner-wrap {
+  min-height: 800px;
+}
 
 .fa-caret-down {
   display: none !important;
@@ -38,6 +41,7 @@ html {
   margin-left: auto;
   margin-right: auto;
 }
+
 
 h3.h3 {
   text-align: center;
@@ -6878,6 +6882,18 @@ nav ul li a.active {
 
 /* Nút icon login\logout admin   */
 
+.order-detail {
+  margin:30px;
+}
+
+.btn-save-1 {
+  background: orange !important;
+}
+
+.product-stats-table {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 .login-button a {
   border: 2px solid white;
   padding: 8px 12px;
@@ -6920,3 +6936,12 @@ nav ul li a.active {
 }
 
 /* Nút icon login\logout admin   */
+.delete-image-btn {
+    top: -45px;
+    position: relative;
+    left: -15px;
+    background: none;
+    font-weight: bold;
+    border: none;
+    font-size: 20px;
+}

@@ -485,51 +485,66 @@
             <div id="login">
               <h3 class="title-head">Gửi thông tin</h3>
               <span class="margin-bottom-10 block">Bạn hãy điền nội dung tin nhắn vào form dưới đây và gửi cho chúng tôi. Chúng tôi sẽ trả lời bạn sau khi nhận được.</span>
-              <form accept-charset="UTF-8" action="./lienhe.html" id="contact" method="post" class="has-validation-callback">
-                <input name="FormType" type="hidden" value="contact" />
-                <input name="utf8" type="hidden" value="true" />
-                <input type="hidden" id="Token-033fbf0d8df74c25b09f58a3d7118bfa" name="Token" value="03AOLTBLR1EU43fOOWOTkPiKO6M4dYdrbVymxbNueM9QmMrGEcAjiGCayRVKvGNszNXJWY5lZH14KzAUvPIVIYKcQMxWnBmnvc3D9ATJN9CpMK-W_h2aEkyIwF52Y6k0nOy3CcP3k9-6HMyAh_fVsSZTPRRudvf7oPXng48w7GmCeFpYF6POrX7H4h9HVJ-Ngv4aJDdR5i-JLMkaDaRuDoKanGd_q5ZUuQT2xM8LpxRDnWQARM-iflGg_sYwXBRy30ZYW2L4-Mj_P7uPzZsdfM4F6dRYYuFULgZw5-B6KhOGvjHktps7lPn42cYurP8IG3YkyMJM4Msfb_2PGgDj9AqF27qz5Z3btY1yBO7loIp9KP_o2r2HBjoCtZ1k18nBiIJkgR0Yko8BVMAvx7DpJNxJlHnURIuQmmlw" />
-                <!-- <script
-                                src="https://www.google.com/recaptcha/api.js?render=6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK"></script><script>
-                                grecaptcha.ready(function () {
-                                    grecaptcha.execute("6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK", {
-                                            action: "/contact"
-                                        })
-                                        .then(function (token) {
-                                            document.getElementById(
-                                                "Token-033fbf0d8df74c25b09f58a3d7118bfa").value = token
-                                        });
-                                });
-                            </script> -->
-                <div class="form-signup clearfix">
-                  <div class="row" id="lienherow1">
-                    <div class="col-sm-6 col-xs-12">
-                      <fieldset class="form-group">
-                        <label>Họ tên <span class="required">*</span>
-                        </label>
-                        <input type="text" name="contact[name]" id="name" class="form-control form-control-lg" data-validation-error-msg="Không được để trống" data-validation="required" required="" />
-                      </fieldset>
-                    </div>
-                    <div class="col-sm-6 col-xs-12">
-                      <fieldset class="form-group">
-                        <label>Email <span class="required">*</span>
-                        </label>
-                        <input type="email" name="contact[email]" data-validation="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" data-validation-error-msg="Email sai định dạng" id="email" class="form-control form-control-lg" required="" />
-                      </fieldset>
-                    </div>
-                    <div class="col-sm-12 col-xs-12" id="contacts-end">
-                      <fieldset class="form-group">
-                        <label>Nội dung <span class="required">*</span>
-                        </label>
-                        <textarea name="contact[body]" id="comment" class="form-control form-control-lg" rows="5" data-validation-error-msg="Không được để trống" data-validation="required" required=""></textarea>
-                      </fieldset>
-                      <div class="pull-xs-left" style="margin-top: 20px">
-                        <button type="submit" class="btn btn-blues btn-style btn-style-active"> Gửi tin nhắn </button>
-                      </div>
-                    </div>
-                  </div>
+              <div>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            const submitButton = document.querySelector("#sumit-contac");
+
+            if (submitButton) {
+                submitButton.addEventListener("click", function (event) {
+                    // Ngăn không cho biểu mẫu gửi đi ngay lập tức
+                    event.preventDefault();
+
+                    // Lấy giá trị từ các trường nhập liệu
+                    const name = document.querySelector("#name").value.trim();
+                    const contact = document.querySelector("#contact-info").value.trim(); // Lấy giá trị từ trường thông tin liên hệ
+                    const comment = document.querySelector("#comment").value.trim();
+
+                    // Kiểm tra nếu có trường nào trống
+                    if (!name || !contact || !comment) {
+                        alert("Vui lòng điền đầy đủ thông tin vào tất cả các trường.");
+                        return; // Dừng xử lý nếu có trường trống
+                    }
+
+                    // Hiển thị thông báo
+                    alert("Cảm ơn Quý khách đã phản hồi. Chúng tôi sẽ liên hệ lại với Quý khách trong thời gian sớm nhất. Trân trọng!");
+
+                    // Chuyển hướng về trang index (hoặc trang chủ của bạn)
+                    window.location.href = './index.html'; // Hoặc thay thế bằng URL trang của bạn
+                });
+            }
+        });
+    </script>
+
+    <div class="form-signup clearfix">
+        <div class="row" id="lienherow1">
+            <div class="col-sm-6 col-xs-12">
+                <fieldset class="form-group">
+                    <label>Họ tên <span class="required">*</span></label>
+                    <input type="text" name="contact[name]" id="name" class="form-control form-control-lg" required />
+                </fieldset>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <fieldset class="form-group">
+                    <label>Thông tin liên hệ <span class="required">*</span></label>
+                    <input type="text" name="contact[info]" id="contact-info" class="form-control form-control-lg" required />
+                </fieldset>
+            </div>
+            <div class="col-sm-12 col-xs-12" id="contacts-end">
+                <fieldset class="form-group">
+                    <label>Nội dung <span class="required">*</span></label>
+                    <textarea name="contact[body]" id="comment" class="form-control form-control-lg" rows="5" required></textarea>
+                </fieldset>
+                <div class="pull-xs-left" style="margin-top: 20px">
+                    <button id="sumit-contac" type="button" class="btn btn-blues btn-style btn-style-active">Gửi tin nhắn</button>
                 </div>
-              </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
             </div>
           </div>
         </div>

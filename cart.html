@@ -180,8 +180,9 @@
                 <script type="text/javascript">
                   document.addEventListener("DOMContentLoaded", function() {
                     const accountSign = document.querySelector(".account-sign");
-                    const userName = sessionStorage.getItem("userEmail"); // Lấy tên đăng nhập từ sessionStorage
-                    if (userName) {
+                    const isLogined = sessionStorage.getItem('isLoggedIn'); // Kiểm tra trạng thái đăng nhập trong sessionStorage
+
+                                    if (isLogined === "true") {
                       // Nếu đã đăng nhập
                       accountSign.innerHTML = `
                           
@@ -964,11 +965,9 @@
 
             // Hàm kiểm tra xem người dùng đã đăng nhập chưa
             function checkLogin() {
-              // Giả sử thông tin đăng nhập được lưu trong localStorage (ví dụ: 'isLoggedIn' có giá trị 'true' khi người dùng đã đăng nhập)
-              var isLoggedIn = localStorage.getItem('isLoggedIn');
+             const isLogined = sessionStorage.getItem('isLoggedIn'); // Kiểm tra trạng thái đăng nhập trong sessionStorage
 
-              // Kiểm tra nếu chưa đăng nhập
-              if (isLoggedIn !== 'true') {
+              if (isLogined != "true") {
                 // Nếu chưa đăng nhập, chuyển hướng đến trang đăng nhập
                 window.location.href = 'login.html';
               }

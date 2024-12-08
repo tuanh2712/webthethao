@@ -4646,14 +4646,68 @@ ul.disc,
 
 #btnnewreview {
   padding: 10px;
-  width: 14%;
   margin-top: 10px;
   border: 0;
   background: #53a1cc;
   color: #fff;
-  float: right;
   display: flex;
+  float: right;
   justify-content: center;
+}
+
+.bizweb-product-reviews {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.bizweb-product-reviews h4 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.review-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.review-rating {
+  color: #f39c12;
+  font-size: 16px;
+}
+
+.review-title h5 {
+  font-size: 18px;
+  color: #2c3e50;
+  margin: 5px 0;
+}
+
+.review-body p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.review-item:hover {
+  background-color: #f1f1f1;
+  border-color: #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /*gio hang*/
@@ -4688,6 +4742,9 @@ ul.disc,
   font-size: 15px;
 }
 
+.collection-category {
+  display: none !important;
+}
 .lbl-shopping-cart-gio-hang.lbl-shopping-cart {
   color: #333;
   font-size: 18px;

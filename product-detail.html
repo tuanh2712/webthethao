@@ -506,10 +506,32 @@
                         <a title="Yêu thích" class="button_wh_40  iWishAdd iwishAddWrapper" href="javascript:;" data-customer-id="0" data-product="11864618" data-variant="18931574">
                           <i class="fa fa-heart-o"></i>
                         </a>
-                        <a title="Bỏ thích" class="button_wh_40  iWishAdded iwishAddWrapper iWishHidden" href="javascript:;" data-customer-id="0" data-product="11864618" data-variant="18931574">
+                        <a title="Bỏ thích" style="display: none;" class="button_wh_40  iWishAdded iwishAddWrapper iWishHidden" href="javascript:;" data-customer-id="0" data-product="11864618" data-variant="18931574">
                           <i class="fa fa-heart"></i>
                         </a>
                       </div>
+                      <script type="text/javascript">
+                      document.addEventListener("DOMContentLoaded", function () {
+    // Tìm tất cả các nút yêu thích và bỏ thích
+    document.querySelectorAll(".iwishAddWrapper").forEach(button => {
+        button.addEventListener("click", function () {
+            // Lấy nút khác (anh em) trong cùng phần tử cha
+            const siblingButton = this.parentElement.querySelector(
+                this.classList.contains("iWishAdd") ? ".iWishAdded" : ".iWishAdd"
+            );
+
+            // Ẩn nút hiện tại
+            this.style.display = "none";
+
+            // Hiện nút còn lại
+            siblingButton.style.display = "block";
+        });
+    });
+});
+
+
+
+                      </script>
                       <div id="gallery_01" class="owl-carousel owl-theme thumbnail-product margin-top-15 owl-loaded owl-drag" data-md-items="4" data-sm-items="4" data-xs-items="4" data-xss-items="3" data-margin="10" data-nav="true">
                         <div class="owl-stage-outer">
                           <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0.25s ease 0s; width: 352px;">
@@ -563,9 +585,6 @@
                         <i class="fa fa-star-o" aria-hidden="true"></i>
                         <i class="fa fa-star-o" aria-hidden="true"></i>
                         <i class="fa fa-star-o" aria-hidden="true"></i>
-                      </div>
-                      <div class="iddanhgia" onclick="review();">
-                        <span>Viết đánh giá</span>
                       </div>
                     </div>
                     <div class="divider-full-1"></div>
@@ -645,16 +664,7 @@
                         <div class="form-group">
                           <div class="custom custom-btn-number form-control"></div>
                           <div class="clearfix margin-bottom-20"></div>
-                          <div class="clearfix">
-                            <button type="submit" data-role="addtocart" class="btn btn-lg btn-danger btn-cart add_to_cart btn_buy add_to_cart">
-                              <span class="txt-main">MUA NGAY</span>
-                              <span class="txt-sub">Giao hàng tận nơi</span>
-                            </button>
-                            <a class="btn btn_traGop btn-tra-gop-click s-flag" href="tel:0123456789">
-                              <span class="txt-main"> Hãy gọi </span>
-                              <span class="txt-sub">Liên hệ 0123 456 789</span>
-                            </a>
-                          </div>
+                          
                         </div>
                       </form>
                     </div>
@@ -666,14 +676,7 @@
                     <h1 class="title-head">Găng Tay Xe Đạp DON Chống Trượt POPO Gangtay-DON-Yellow - Vàng</h1>
                     <div class="panel-product-line panel-product-rating clearfix">
                       <div class="bizweb-product-reviews-badge" style="color: #F1B722; font-size: 14px">
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                      </div>
-                      <div class="iddanhgia" onclick="scrollToxx();">
-                        <span>Viết đánh giá</span>
+                        <span class="review-rating">★★★☆☆</span>
                       </div>
                     </div>
                     <div class="divider-full-1"></div>
@@ -682,7 +685,7 @@
                         <strong>Tình trạng:</strong>
                       </span>
                       <span class="a-stock" itemprop="supersededBy">
-                        <span class="a-stock" style="color: red">Hết hàng</span>
+                        <span class="a-stock" style="color: green">CÒN HÀNG</span>
                       </span>
                     </div>
                     <div class="price-box" itemscope="" itemtype="http://schema.org/Offer">
@@ -753,9 +756,9 @@
                           <div class="custom custom-btn-number form-control">
                             <label>Số lượng</label>
                             <div class="quantity-counter" style="display: flex !important;">
-                              <a id="counter-increment" style="width: 40px; text-align: center; font-size: 30px;" class="increment">+</a>
-                              <input id="counter-value" style="width: 40px; text-align: center; padding: unset;" class="value" type="number" value="1">
                               <a id="counter-decrement" style="width: 40px; text-align: center; font-size: 30px;" class="decrement">-</a>
+                              <input id="counter-value" style="width: 40px; text-align: center; padding: unset;" class="value" type="number" value="1">
+                              <a id="counter-increment" style="width: 40px; text-align: center; font-size: 30px;" class="increment">+</a>
                             </div>
                             <script type="text/javascript">
                               document.addEventListener("DOMContentLoaded", function() {
@@ -776,9 +779,8 @@
                                     inputField.value = currentValue - 1; // Giảm giá trị của input đi 1
                                   }
                                 });
-                              });
-                              document.addEventListener("DOMContentLoaded", function () {
-                                const muaNgayButton = document.getElementById('id-mua-ngay');
+
+                                 const muaNgayButton = document.getElementById('id-mua-ngay');
 
                                 muaNgayButton.addEventListener('click', function (event) {
                                     event.preventDefault(); // Ngăn chặn hành vi mặc định của nút
@@ -792,7 +794,8 @@
                                         window.location.href = "login.html"; // Nếu chưa đăng nhập, chuyển sang trang login.html
                                     }
                                 });
-                            });
+                              });
+                               
 
                             </script>
                           </div>
@@ -904,16 +907,7 @@
                         <div class="form-group" style="display: none">
                           <div class="custom custom-btn-number form-control"></div>
                           <div class="clearfix margin-bottom-20"></div>
-                          <div class="clearfix">
-                            <button type="submit" data-role="addtocart" class="btn btn-lg btn-danger btn-cart add_to_cart btn_buy add_to_cart">
-                              <span class="txt-main">MUA NGAY</span>
-                              <span class="txt-sub">Giao hàng tận nơi</span>
-                            </button>
-                            <a class="btn btn_traGop btn-tra-gop-click s-flag" href="tel:0982362509">
-                              <span class="txt-main"> Hãy gọi </span>
-                              <span class="txt-sub">Liên hệ 0982 362 509</span>
-                            </a>
-                          </div>
+                          
                         </div>
                       </form>
                     </div>
@@ -924,6 +918,26 @@
                 </div>
               </div>
             </div>
+            <script type="text/javascript">
+              document.addEventListener("DOMContentLoaded", function () {
+                // Lấy tất cả các ảnh thumbnail
+                const thumbnails = document.querySelectorAll(".thumb-link");
+                const mainImage = document.querySelector("#myimage");
+
+                thumbnails.forEach(thumbnail => {
+                    thumbnail.addEventListener("click", function (e) {
+                        e.preventDefault(); // Ngăn chặn hành động mặc định của thẻ <a>
+                        const newImage = thumbnail.getAttribute("data-image"); // Lấy URL ảnh từ data-image
+                        const zoomImage = thumbnail.getAttribute("data-zoom-image"); // Lấy URL ảnh zoom từ data-zoom-image
+
+                        // Cập nhật ảnh chính
+                        mainImage.setAttribute("src", newImage);
+                        mainImage.parentElement.style.backgroundImage = `url('${zoomImage}')`;
+                    });
+                });
+            });
+
+            </script>
             <div class="row margin-top-20" id="prđetal">
               <div class="col-md-9">
                 <div class="border-bg clearfix">
@@ -938,14 +952,10 @@
                         </li>
                         <li class="tab-link" data-tab="tab-2" id="2" onclick="changestt2()">
                           <h3>
-                            <span>Tab tùy chỉnh</span>
-                          </h3>
-                        </li>
-                        <li class="tab-link" data-tab="tab-3" id="3" onclick="changestt3()">
-                          <h3>
                             <span>Đánh giá</span>
                           </h3>
                         </li>
+                        
                       </ul>
                       <div id="tab-1" class="tab-content current">
                         <div class="rte" id="tab1">
@@ -965,54 +975,58 @@
                           </ul>
                         </div>
                       </div>
-                      <div id="tab-2" class="tab-content" style="display: none"> Các nội dung Hướng dẫn mua hàng viết ở đây </div>
-                      <div id="tab-3" class="tab-content" style="display: none">
+                      <div id="tab-3" class="tab-content" style="display: none"> Các nội dung Hướng dẫn mua hàng viết ở đây </div>
+                      <div id="tab-2" class="tab-content" style="display: none">
                         <div id="bizweb-product-reviews" class="bizweb-product-reviews" data-id="11864618">
                           <div>
                             <div class="title-bl">
                               <h4>Đánh giá sản phẩm</h4>
                             </div>
                             <div id="bizweb-product-reviews-sub">
-                              <span class="product-reviews-summary-actions">
-                                <input type="button" onclick="review();" id="btnnewreview" value="Viết đánh giá">
-                              </span>
-                              <div class="bizweb-product-reviews-form" id="bpr-form_11864618" style="display:none;">
-                                <form method="post" id="bizweb-product-reviews-frm" name="bizweb-product-reviews-frm">
-                                  <input type="hidden" name="productId" id="review_product_id" value="11864618">
-                                  <h4>Đánh giá sản phẩm</h4>
-                                  <fieldset class="bpr-form-rating">
-                                    <div id="dvRating"></div>
-                                    <input type="hidden" name="rating" id="review_rate" value="0">
-                                    <span class="bpr-form-message-error"></span>
-                                  </fieldset>
-                                  <fieldset class="bpr-form-contact">
-                                    <div class="bpr-form-contact-name require">
-                                      <input type="text" maxlength="128" id="review_author" name="author" value="" placeholder="Nhập tên của bạn">
-                                      <span class="bpr-form-message-error"></span>
-                                    </div>
-                                    <div class="bpr-form-contact-email require">
-                                      <input type="text" maxlength="128" id="review_email" name="email" value="" placeholder="nguyenvan@gmail.com">
-                                      <span class="bpr-form-message-error"></span>
-                                    </div>
-                                  </fieldset>
-                                  <fieldset class="bpr-form-review">
-                                    <div class="bpr-form-review-title">
-                                      <input type="text" maxlength="512" id="review_title" name="title" value="" placeholder="Tiêu đề">
-                                      <span class="bpr-form-message-error"></span>
-                                    </div>
-                                    <div class="bpr-form-review-body">
-                                      <textarea maxlength="1500" id="review_body" name="body" rows="5" placeholder="Nội dung"></textarea>
-                                      <span class="bpr-form-message-error"></span>
-                                    </div>
-                                  </fieldset>
-                                  <fieldset class="bpr-form-review-error">
-                                    <p class="error"></p>
-                                  </fieldset>
-                                  <fieldset class="bpr-form-actions">
-                                    <input type="button" onclick="submit()" value="Gửi" class="bpr-button-submit">
-                                  </fieldset>
-                                </form>
+                              <div class="bizweb-product-reviews">
+                                <div class="review-item">
+                                  <div class="review-header">
+                                    <strong>Nguyễn Văn A</strong>
+                                    <span class="review-rating">★★★★★</span>
+                                  </div>
+                                  <div class="review-title">
+                                    <h5>Sản phẩm tuyệt vời</h5>
+                                  </div>
+                                  <div class="review-body">
+                                    <p>Sản phẩm đúng như mô tả, chất lượng rất tốt, giao hàng nhanh. Tôi sẽ tiếp tục ủng hộ.</p>
+                                  </div>
+                                </div>
+
+                                <div class="review-item">
+                                  <div class="review-header">
+                                    <strong>Trần Thị B</strong>
+                                    <span class="review-rating">★★★★☆</span>
+                                  </div>
+                                  <div class="review-title">
+                                    <h5>Hài lòng nhưng vẫn cần cải thiện</h5>
+                                  </div>
+                                  <div class="review-body">
+                                    <p>Chất lượng ổn nhưng thời gian giao hàng hơi chậm. Tuy nhiên, tổng quan thì vẫn rất hài lòng.</p>
+                                  </div>
+                                </div>
+
+                                <div class="review-item">
+                                  <div class="review-header">
+                                    <strong>Phạm Minh C</strong>
+                                    <span class="review-rating">★★★☆☆</span>
+                                  </div>
+                                  <div class="review-title">
+                                    <h5>Sản phẩm trung bình</h5>
+                                  </div>
+                                  <div class="review-body">
+                                    <p>Không đúng kỳ vọng, chất lượng không được như mô tả. Dịch vụ khách hàng cần cải thiện hơn nữa.</p>
+                                  </div>
+                                </div>
                               </div>
+                              <p class="product-reviews-summary-actions">
+                                <input type="button" onclick="review();" id="btnnewreview" value="Viết đánh giá">
+                              </p>
+                              
                               <div style="display:none;" id="bpr-thanks" class="bizweb-product-reviews-form">
                                 <b>Cảm ơn bạn đã đánh giá sản phẩm!</b>
                               </div>

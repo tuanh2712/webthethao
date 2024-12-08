@@ -49,17 +49,17 @@
 
     <!-- Inner Wrap -->
     <div class="inner-wrap">
-      <!-- Slide bar Left  -->
+     <!-- Slide bar Left  -->
       <ul class="sider">
         <li class="active">
           <div class="inner-icon">
-            <i class="fa-solid fa-gauge-high"></i>
+            <i class="fa-solid fa-list"></i>
           </div>
           <a href="./admin.html">Tổng quan</a>
         </li>
         <li>
           <div class="inner-icon">
-            <i class="fa-solid fa-people-group"></i>
+            <i class="fa-solid fa-list"></i>
           </div>
           <a href="./product-manage.html">Quản lý sản phẩm</a>
         </li>
@@ -71,22 +71,24 @@
         </li>
         <li>
           <div class="inner-icon">
-            <i class="fa-brands fa-product-hunt"></i>
+            <i class="fa-solid fa-list"></i>
           </div>
           <a href="./order-manage.html">Quản lý đơn hàng</a>
         </li>
         <li>
           <div class="inner-icon">
-            <i class="fa-solid fa-clipboard-list"></i>
+            <i class="fa-solid fa-list"></i>
           </div>
           <a href="./user-manage.html">Quản lý người dùng</a>
         </li>
         <li>
           <div class="inner-icon">
-            <i class="fa-solid fa-chart-line"></i>
+            <i class="fa-solid fa-list"></i>
           </div>
           <a href="./content-manage.html">Quản lý nội dung trang</a>
         </li>
+        <!-- <li><div class="inner-icon"><i class="fa-solid fa-chart-line"></i></div><a href="./statistic.html">Thống kê và báo cáo</a></li> -->
+      </ul>
         <!-- <li>
                     <div class="inner-icon">
                         <i class="fa-solid fa-chart-line"></i>
@@ -141,12 +143,12 @@
           <div class="upload-section">
             <label for="banner-upload">Chọn banner:</label>
             <input type="file" id="banner-upload" />
-            <button class="btn btn-upload-1">Tải lên</button>
+            <button class="btn btn-upload-1" id="tailen-1">Tải lên</button>
           </div>
           <div class="upload-section">
             <label for="image-upload">Chọn hình ảnh:</label>
             <input type="file" id="image-upload" />
-            <button class="btn btn-upload-1">Tải lên</button>
+            <button class="btn btn-upload-1" id="tailen-2">Tải lên</button>
           </div>
 
           <!-- Công cụ quản lý bài viết, tin tức hoặc blog -->
@@ -294,6 +296,30 @@
             actionsCell.appendChild(editBtn); // Thêm nút Chỉnh sửa vào ô
             actionsCell.appendChild(deleteBtn); // Thêm nút Xóa vào ô
           }
+
+          
+          // Lắng nghe sự kiện click cho nút tải lên
+          document.getElementById("tailen-1").addEventListener("click", function() {
+            var bannerInput = document.getElementById("banner-upload"); // Lấy phần tử input banner
+
+            if (bannerInput.files.length > 0) {
+              alert("Tải banner lên thành công!"); // Nếu có file, hiển thị thông báo thành công
+            } else {
+              alert("Vui lòng chọn file banner để tải lên!"); // Nếu không có file, yêu cầu chọn file
+            }
+          });
+
+          document.getElementById("tailen-2").addEventListener("click", function() {
+            var imageInput = document.getElementById("image-upload"); // Lấy phần tử input hình ảnh
+
+            if (imageInput.files.length > 0) {
+              alert("Tải hình ảnh lên thành công!"); // Nếu có file, hiển thị thông báo thành công
+            } else {
+              alert("Vui lòng chọn file hình ảnh để tải lên!"); // Nếu không có file, yêu cầu chọn file
+            }
+          });
+
+
 
       </script>
     <!-- Footer  -->
