@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="./css/slick-theme.css" />
     <link
       rel="stylesheet"
+      type="text/css"
+      href=".././admin/admin_responsive.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="./css/owl.carousel.min.css" />
@@ -17,8 +22,6 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-
-    <link rel="stylesheet" href=".././admin/icon_font_awesome.css" />
 
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -56,7 +59,7 @@
           </ul>
         </nav>
         <div class="desc-title">
-          <i class="fa fa-user">Admin </i>
+          <i class="fa-regular fa-circle-user">Admin</i>
         </div>
         <div class="login-button">
           <a href="./login-admin.html"> Đăng xuất</a>
@@ -70,13 +73,13 @@
       <ul class="sider">
         <li class="active">
           <div class="inner-icon">
-            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-house"></i>
           </div>
           <a href="./admin.html">Tổng quan</a>
         </li>
         <li>
           <div class="inner-icon">
-            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-boxes-stacked"></i>
           </div>
           <a href="./product-manage.html">Quản lý sản phẩm</a>
         </li>
@@ -88,19 +91,19 @@
         </li>
         <li>
           <div class="inner-icon">
-            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
           </div>
           <a href="./order-manage.html">Quản lý đơn hàng</a>
         </li>
         <li>
           <div class="inner-icon">
-            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-users"></i>
           </div>
           <a href="./user-manage.html">Quản lý người dùng</a>
         </li>
         <li>
           <div class="inner-icon">
-            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-newspaper"></i>
           </div>
           <a href="./content-manage.html">Quản lý nội dung trang</a>
         </li>
@@ -110,10 +113,10 @@
       <!-- Tổng quan trang admin  -->
       <div class="inner-manage">
         <!-- Thanh tìm kiếm -->
-        <div class="search-box">
+        <!-- <div class="search-box">
           <input type="text" placeholder="Tìm kiếm..." />
           <i class="fad fa-search"></i>
-        </div>
+        </div> -->
         <!-- Hàng 1: Số liệu tổng quát -->
         <div class="table-container table-1">
           <h3>Số liệu tổng quát</h3>
@@ -180,111 +183,111 @@
               </tr>
             </tbody>
           </table>
-        </div>
-        <!-- Hàng 3: Quản lý chung -->
-        <div class="table-container table-3">
-          <h3>Quản lý chung</h3>
-          <div class="row">
-            <div class="dashboard-box">
-              <h4>Tài Khoản Người Dùng</h4>
-              <p>Số lượng tài khoản: 150</p>
-              <p>Đang hoạt động: 120</p>
-              <p>Ngừng hoạt động: 30</p>
-            </div>
-            <div class="dashboard-box">
-              <h4>Danh Mục Sản Phẩm</h4>
-              <p>Số lượng danh mục: 20</p>
-              <p>Đang hoạt động: 18</p>
-              <p>Ngừng hoạt động: 2</p>
-            </div>
-            <div class="dashboard-box">
-              <h4>Sản Phẩm</h4>
-              <p>Số lượng sản phẩm: 500</p>
-              <p>Đang hoạt động: 450</p>
-              <p>Hết hàng: 30</p>
-              <p>Ngừng hoạt động: 20</p>
-            </div>
-            <div class="dashboard-box">
-              <h4>Khách Hàng Truy Cập</h4>
-              <p>Số lượng truy cập hiện tại: 25</p>
-              <p>Thời gian truy cập nhiều nhất: 15h</p>
-              <p>
-                Tài khoản vừa truy cập: nguyen@example.com, Nguyễn Văn C,
-                0123456789
-              </p>
+          <!-- Hàng 3: Quản lý chung -->
+          <div class="table-container table-3">
+            <h3>Quản lý chung</h3>
+            <div class="row">
+              <div class="dashboard-box">
+                <h4>Tài Khoản Người Dùng</h4>
+                <p>Số lượng tài khoản: 150</p>
+                <p>Đang hoạt động: 120</p>
+                <p>Ngừng hoạt động: 30</p>
+              </div>
+              <div class="dashboard-box">
+                <h4>Danh Mục Sản Phẩm</h4>
+                <p>Số lượng danh mục: 20</p>
+                <p>Đang hoạt động: 18</p>
+                <p>Ngừng hoạt động: 2</p>
+              </div>
+              <div class="dashboard-box">
+                <h4>Sản Phẩm</h4>
+                <p>Số lượng sản phẩm: 500</p>
+                <p>Đang hoạt động: 450</p>
+                <p>Hết hàng: 30</p>
+                <p>Ngừng hoạt động: 20</p>
+              </div>
+              <div class="dashboard-box">
+                <h4>Khách Hàng Truy Cập</h4>
+                <p>Số lượng truy cập hiện tại: 25</p>
+                <p>Thời gian truy cập nhiều nhất: 15h</p>
+                <p>
+                  Tài khoản vừa truy cập: nguyen@example.com, Nguyễn Văn C,
+                  0123456789
+                </p>
+              </div>
             </div>
           </div>
+          <p>
+            <span
+              >Nhấn nút Thống kê để xem dữ liệu. Vui lòng bỏ trống khoảng thời
+              gian để xem tất cả dữ liệu.</span
+            >
+          </p>
+          <!-- Form Lọc Thống Kê -->
+          <form id="statsForm" onsubmit="filterStats(event)">
+            <label for="statsStartDate">Từ ngày:</label>
+            <input type="date" id="statsStartDate" />
+            <label for="statsEndDate">Đến ngày:</label>
+            <input type="date" id="statsEndDate" />
+            <button type="submit">Thống kê</button>
+          </form>
+          <!-- Thống kê Mặt Hàng -->
+          <h2>Thống kê Mặt Hàng</h2>
+          <table class="product-stats-table">
+            <thead>
+              <tr>
+                <th>Mặt hàng</th>
+                <th>Số lượng bán ra</th>
+                <th>Tổng tiền</th>
+                <th>Xem hóa đơn</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Các dòng dữ liệu sẽ được thêm vào thông qua JavaScript -->
+            </tbody>
+          </table>
+          <table class="product-stats-table">
+            <thead>
+              <tr>
+                <th>Tổng thu:</th>
+                <th style="font-weight: bold; color: green">
+                  Sản phẩm bán chạy nhất
+                </th>
+                <th style="font-weight: bold; color: orange">
+                  Sản phẩm bán ế nhất
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <td>
+                <span id="totalSales">0₫</span>
+              </td>
+              <td>
+                <span id="bestSellingItem">Chưa có dữ liệu</span>
+              </td>
+              <td>
+                <span id="leastSellingItem">Chưa có dữ liệu</span>
+              </td>
+            </tbody>
+          </table>
+          <!-- Thống kê Khách Hàng -->
+          <h2>Thống kê Khách Hàng</h2>
+          <table class="customer-stats-table">
+            <thead>
+              <tr>
+                <th>Khách hàng</th>
+                <th>Tổng số tiền</th>
+                <th>Xem hóa đơn</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Các dòng dữ liệu sẽ được thêm vào thông qua JavaScript -->
+            </tbody>
+          </table>
+          <button onclick="printTables()" class="btn btn-primary">
+            In thống kê
+          </button>
         </div>
-        <p>
-          <span
-            >Nhấn nút Thống kê để xem dữ liệu. Vui lòng bỏ trống khoảng thời
-            gian để xem tất cả dữ liệu.</span
-          >
-        </p>
-        <!-- Form Lọc Thống Kê -->
-        <form id="statsForm" onsubmit="filterStats(event)">
-          <label for="statsStartDate">Từ ngày:</label>
-          <input type="date" id="statsStartDate" />
-          <label for="statsEndDate">Đến ngày:</label>
-          <input type="date" id="statsEndDate" />
-          <button type="submit">Thống kê</button>
-        </form>
-        <!-- Thống kê Mặt Hàng -->
-        <h2>Thống kê Mặt Hàng</h2>
-        <table class="product-stats-table">
-          <thead>
-            <tr>
-              <th>Mặt hàng</th>
-              <th>Số lượng bán ra</th>
-              <th>Tổng tiền</th>
-              <th>Xem hóa đơn</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Các dòng dữ liệu sẽ được thêm vào thông qua JavaScript -->
-          </tbody>
-        </table>
-        <table class="product-stats-table">
-          <thead>
-            <tr>
-              <th>Tổng thu:</th>
-              <th style="font-weight: bold; color: green">
-                Sản phẩm bán chạy nhất
-              </th>
-              <th style="font-weight: bold; color: orange">
-                Sản phẩm bán ế nhất
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <td>
-              <span id="totalSales">0₫</span>
-            </td>
-            <td>
-              <span id="bestSellingItem">Chưa có dữ liệu</span>
-            </td>
-            <td>
-              <span id="leastSellingItem">Chưa có dữ liệu</span>
-            </td>
-          </tbody>
-        </table>
-        <!-- Thống kê Khách Hàng -->
-        <h2>Thống kê Khách Hàng</h2>
-        <table class="customer-stats-table">
-          <thead>
-            <tr>
-              <th>Khách hàng</th>
-              <th>Tổng số tiền</th>
-              <th>Xem hóa đơn</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Các dòng dữ liệu sẽ được thêm vào thông qua JavaScript -->
-          </tbody>
-        </table>
-        <button onclick="printTables()" class="btn btn-primary">
-          In thống kê
-        </button>
         <script>
           // Giả sử chúng ta có dữ liệu mẫu cho mặt hàng và khách hàng
           const orders = [
@@ -538,6 +541,46 @@
           }
         </script>
         <!-- Tổng quan trang admin  -->
+        <script>
+          // Kiểm tra trạng thái đăng nhập từ sessionStorage
+          function checkLogin() {
+            const username = sessionStorage.getItem("username");
+            const loggedIn = sessionStorage.getItem("loggedIn");
+
+            const userTitle = document.querySelector(".fa-user");
+
+            if (loggedIn === "true" && username) {
+              // Nếu đã đăng nhập, hiển thị tên người dùng
+              userTitle.textContent = `Admin (${username})`;
+            } else {
+              // Nếu chưa đăng nhập, hiển thị "Chưa Login" và chuyển hướng
+              userTitle.textContent = "Chưa Login";
+              alert("Bạn chưa đăng nhập. Chuyển hướng về trang đăng nhập.");
+              window.location.href = "login-admin.html";
+            }
+          }
+
+          // Gọi hàm khi tải trang
+          document.addEventListener("DOMContentLoaded", checkLogin);
+        </script>
+        <script>
+          // Tìm liên kết Đăng xuất trong div có class "login-button"
+          const logoutLink = document.querySelector(".login-button a");
+
+          // Thêm sự kiện khi nút Đăng xuất được nhấp
+          logoutLink.addEventListener("click", function (event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+
+            // Xóa thông tin đăng nhập khỏi sessionStorage
+            sessionStorage.removeItem("username");
+            sessionStorage.removeItem("loggedIn");
+
+            alert("Bạn đã đăng xuất thành công!");
+
+            // Chuyển hướng về trang đăng nhập
+            window.location.href = "./login-admin.html";
+          });
+        </script>
       </div>
     </div>
     <!-- Inner Wrap -->
@@ -565,9 +608,6 @@
                       </span>
                     </div>
                   </div>
-                </div>
-                <div class="back-to-top show">
-                  <i class="fa fa-arrow-circle-up"></i>
                 </div>
               </div>
             </div>

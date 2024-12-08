@@ -881,9 +881,6 @@
               </div>
             </div>
           </div>
-          <div class="back-to-top show">
-            <i class="fa fa-arrow-circle-up"></i>
-          </div>
         </div>
       </div>
     </footer>
@@ -999,5 +996,47 @@
         }
       };
     </script>
+     <!-- Tổng quan trang admin  -->
+        <script>
+          // Kiểm tra trạng thái đăng nhập từ sessionStorage
+          function checkLogin() {
+            const username = sessionStorage.getItem("username");
+            const loggedIn = sessionStorage.getItem("loggedIn");
+
+            const userTitle = document.querySelector(".desc-title .fa-user");
+
+            if (loggedIn === "true" && username) {
+              // Nếu đã đăng nhập, hiển thị tên người dùng
+              userTitle.textContent = `Admin (${username})`;
+            } else {
+              // Nếu chưa đăng nhập, hiển thị "Chưa Login" và chuyển hướng
+              userTitle.textContent = "Chưa Login";
+              alert("Bạn chưa đăng nhập. Chuyển hướng về trang đăng nhập.");
+              window.location.href = "login-admin.html";
+            }
+          }
+
+          // Gọi hàm khi tải trang
+          document.addEventListener("DOMContentLoaded", checkLogin);
+        </script>
+        <script>
+          // Tìm liên kết Đăng xuất trong div có class "login-button"
+          const logoutLink = document.querySelector(".login-button a");
+
+          // Thêm sự kiện khi nút Đăng xuất được nhấp
+          logoutLink.addEventListener("click", function (event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+
+            // Xóa thông tin đăng nhập khỏi sessionStorage
+            sessionStorage.removeItem("username");
+            sessionStorage.removeItem("loggedIn");
+
+            alert("Bạn đã đăng xuất thành công!");
+
+            // Chuyển hướng về trang đăng nhập
+            window.location.href = "./login-admin.html";
+          });
+        </script>
+
   </body>
 </html>

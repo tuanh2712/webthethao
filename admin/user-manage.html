@@ -17,6 +17,12 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -35,13 +41,18 @@
         </div>
         <nav>
           <ul>
-            
             <li><a href="./admin.html">TỔNG QUAN</a></li>
             <li><a href="./product-manage.html">SẢN PHẨM</a></li>
             <li><a href="./manage-category.html">DANH MỤC</a></li>
             <li><a href="./user-manage.html">KHÁCH HÀNG</a></li>
           </ul>
         </nav>
+        <div class="desc-title">
+          <i class="fa-regular fa-circle-user">Admin</i>
+        </div>
+        <div class="login-button">
+          <a href="./login-admin.html"> Đăng xuất</a>
+        </div>
       </div>
     </header>
 
@@ -53,13 +64,13 @@
       <ul class="sider">
         <li class="">
           <div class="inner-icon">
-            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-house"></i>
           </div>
           <a href="./admin.html">Tổng quan</a>
         </li>
         <li>
           <div class="inner-icon">
-            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-boxes-stacked"></i>
           </div>
           <a href="./product-manage.html">Quản lý sản phẩm</a>
         </li>
@@ -71,19 +82,19 @@
         </li>
         <li>
           <div class="inner-icon">
-            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
           </div>
           <a href="./order-manage.html">Quản lý đơn hàng</a>
         </li>
         <li class="active">
           <div class="inner-icon">
-            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-users"></i>
           </div>
           <a href="./user-manage.html">Quản lý người dùng</a>
         </li>
         <li>
           <div class="inner-icon">
-            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-newspaper"></i>
           </div>
           <a href="./content-manage.html">Quản lý nội dung trang</a>
         </li>
@@ -105,6 +116,8 @@
                 <th>Email</th>
                 <th>Số điện thoại</th>
                 <th>Phân quyền</th>
+                <th>Trạng thái</th>
+                <th>Khóa</th>
                 <th>Thao tác</th>
               </tr>
             </thead>
@@ -119,6 +132,13 @@
                     <option value="sales">Nhân viên bán hàng</option>
                     <option value="customer" selected>Khách hàng</option>
                   </select>
+                </td>
+                <td><span class="status active">Hoạt động</span></td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider"></span>
+                  </label>
                 </td>
                 <td>
                   <button class="btn-1">Lưu</button>
@@ -135,6 +155,13 @@
                     <option value="customer">Khách hàng</option>
                   </select>
                 </td>
+                <td><span class="status active">Hoạt động</span></td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider"></span>
+                  </label>
+                </td>
                 <td>
                   <button class="btn-1">Lưu</button>
                 </td>
@@ -149,6 +176,13 @@
                     <option value="sales">Nhân viên bán hàng</option>
                     <option value="customer" selected>Khách hàng</option>
                   </select>
+                </td>
+                <td><span class="status inactive">Không hoạt động</span></td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider"></span>
+                  </label>
                 </td>
                 <td>
                   <button class="btn-1">Lưu</button>
@@ -188,9 +222,6 @@
                     </div>
                   </div>
                 </div>
-                <div class="back-to-top show">
-                  <i class="fa fa-arrow-circle-up"></i>
-                </div>
               </div>
             </div>
           </div>
@@ -198,27 +229,65 @@
       </div>
       <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function () {
-  // Lấy tất cả các nút "Lưu"
-  const buttons = document.querySelectorAll(".btn-1");
+          // Lấy tất cả các nút "Lưu"
+          const buttons = document.querySelectorAll(".btn-1");
 
-  // Gắn sự kiện click cho từng nút
-  buttons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      // Lấy thông tin từ hàng tương ứng
-      const row = this.closest("tr");
-      const name = row.children[0].textContent.trim();
-      const email = row.children[1].textContent.trim();
-      const phone = row.children[2].textContent.trim();
-      const role = row.querySelector("select").value;
+          // Gắn sự kiện click cho từng nút
+          buttons.forEach(function (button) {
+            button.addEventListener("click", function () {
+              // Lấy thông tin từ hàng tương ứng
+              const row = this.closest("tr");
+              const name = row.children[0].textContent.trim();
+              const email = row.children[1].textContent.trim();
+              const phone = row.children[2].textContent.trim();
+              const role = row.querySelector("select").value;
 
-      // Hiển thị thông báo
-      alert(
-        `Đã lưu thành công!\nThông tin người dùng:\nTên: ${name}\nEmail: ${email}\nSố điện thoại: ${phone}\nPhân quyền: ${role}`
-      );
-    });
-  });
-});
+              // Hiển thị thông báo
+              alert(
+                `Đã lưu thành công!\nThông tin người dùng:\nTên: ${name}\nEmail: ${email}\nSố điện thoại: ${phone}\nPhân quyền: ${role}`
+              );
+            });
+          });
+        });
+      </script>
+      <!-- Tổng quan trang admin  -->
+      <script>
+        // Kiểm tra trạng thái đăng nhập từ sessionStorage
+        function checkLogin() {
+          const username = sessionStorage.getItem("username");
+          const loggedIn = sessionStorage.getItem("loggedIn");
 
+          const userTitle = document.querySelector(".desc-title .fa-user");
+
+          if (loggedIn === "true" && username) {
+            // Nếu đã đăng nhập, hiển thị tên người dùng
+          } else {
+            // Nếu chưa đăng nhập, hiển thị "Chưa Login" và chuyển hướng
+            alert("Bạn chưa đăng nhập. Chuyển hướng về trang đăng nhập.");
+            window.location.href = "login-admin.html";
+          }
+        }
+
+        // Gọi hàm khi tải trang
+        document.addEventListener("DOMContentLoaded", checkLogin);
+      </script>
+      <script>
+        // Tìm liên kết Đăng xuất trong div có class "login-button"
+        const logoutLink = document.querySelector(".login-button a");
+
+        // Thêm sự kiện khi nút Đăng xuất được nhấp
+        logoutLink.addEventListener("click", function (event) {
+          event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+
+          // Xóa thông tin đăng nhập khỏi sessionStorage
+          sessionStorage.removeItem("username");
+          sessionStorage.removeItem("loggedIn");
+
+          alert("Bạn đã đăng xuất thành công!");
+
+          // Chuyển hướng về trang đăng nhập
+          window.location.href = "./login-admin.html";
+        });
       </script>
     </footer>
 

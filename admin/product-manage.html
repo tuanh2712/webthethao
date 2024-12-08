@@ -17,6 +17,9 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -42,6 +45,12 @@
             <li><a href="./user-manage.html">KHÁCH HÀNG</a></li>
           </ul>
         </nav>
+        <div class="desc-title">
+          <i class="fa-regular fa-circle-user">Admin</i>
+        </div>
+        <div class="login-button">
+          <a href="./login-admin.html"> Đăng xuất</a>
+        </div>
       </div>
     </header>
 
@@ -53,13 +62,13 @@
       <ul class="sider">
         <li class="">
           <div class="inner-icon">
-            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-house"></i>
           </div>
           <a href="./admin.html">Tổng quan</a>
         </li>
         <li class="active">
           <div class="inner-icon">
-            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-boxes-stacked"></i>
           </div>
           <a href="./product-manage.html">Quản lý sản phẩm</a>
         </li>
@@ -71,19 +80,19 @@
         </li>
         <li>
           <div class="inner-icon">
-            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
           </div>
           <a href="./order-manage.html">Quản lý đơn hàng</a>
         </li>
         <li>
           <div class="inner-icon">
-            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-users"></i>
           </div>
           <a href="./user-manage.html">Quản lý người dùng</a>
         </li>
         <li>
           <div class="inner-icon">
-            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-newspaper"></i>
           </div>
           <a href="./content-manage.html">Quản lý nội dung trang</a>
         </li>
@@ -221,9 +230,6 @@
                     >
                   </div>
                 </div>
-              </div>
-              <div class="back-to-top show">
-                <i class="fa fa-arrow-circle-up"></i>
               </div>
             </div>
           </div>
@@ -400,6 +406,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 </script>
+ <!-- Tổng quan trang admin  -->
+        <script>
+          // Kiểm tra trạng thái đăng nhập từ sessionStorage
+          function checkLogin() {
+            const username = sessionStorage.getItem("username");
+            const loggedIn = sessionStorage.getItem("loggedIn");
+
+            const userTitle = document.querySelector(".fa-user");
+
+            if (loggedIn === "true" && username) {
+              // Nếu đã đăng nhập, hiển thị tên người dùng
+            } else {
+              // Nếu chưa đăng nhập, hiển thị "Chưa Login" và chuyển hướng
+              alert("Bạn chưa đăng nhập. Chuyển hướng về trang đăng nhập.");
+              window.location.href = "login-admin.html";
+            }
+          }
+
+          // Gọi hàm khi tải trang
+          document.addEventListener("DOMContentLoaded", checkLogin);
+        </script>
+        <script>
+          // Tìm liên kết Đăng xuất trong div có class "login-button"
+          const logoutLink = document.querySelector(".login-button a");
+
+          // Thêm sự kiện khi nút Đăng xuất được nhấp
+          logoutLink.addEventListener("click", function (event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+
+            // Xóa thông tin đăng nhập khỏi sessionStorage
+            sessionStorage.removeItem("username");
+            sessionStorage.removeItem("loggedIn");
+
+            alert("Bạn đã đăng xuất thành công!");
+
+            // Chuyển hướng về trang đăng nhập
+            window.location.href = "./login-admin.html";
+          });
+        </script>
+
 
 
     <!-- Footer  -->

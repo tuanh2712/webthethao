@@ -2,32 +2,12 @@
 <html>
   <head>
     <title>Admin</title>
-    <link rel="stylesheet" type="text/css" href=".././admin/admin.css" />
-    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
-    <link rel="stylesheet" href="./css/slick.css" />
-    <link rel="stylesheet" href="./css/slick-theme.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <link rel="stylesheet" href=".././admin/admin.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/owl.carousel.min.js"></script>
-    <script src="./js/cs.script.js"></script>
   </head>
-
   <body>
-    <!-- Menu bar  -->
-
+    <!-- Menu bar -->
     <header>
       <div class="container">
         <div class="logo">
@@ -35,7 +15,6 @@
         </div>
         <nav>
           <ul>
-           
             <li><a href="./admin.html">TỔNG QUAN</a></li>
             <li><a href="./product-manage.html">SẢN PHẨM</a></li>
             <li><a href="./manage-category.html">DANH MỤC</a></li>
@@ -45,30 +24,24 @@
       </div>
     </header>
 
-    <!-- // Menu bar  -->
-
     <!-- Inner Wrap -->
     <div class="inner-wrap">
-      <!-- Login Admin  -->
-
       <main>
-        <div class="login-container">
+        <div class="login-container" style="text-align: center">
+          <div class="logo">
+            <img src="../img/logo.png" alt="Logo" />
+          </div>
           <h2>Login</h2>
-          <form action="admin.html" method="get">
+          <form id="login-form">
             <div class="form-group">
-              <label for="test">Tên người dùng hoặc Email</label>
+              <label for="email">Tên người dùng hoặc Email</label>
               <input type="text" id="email" name="email" />
             </div>
             <div class="form-group">
               <label for="password">Mật khẩu</label>
               <input type="password" id="password" name="password" />
             </div>
-            <button type="submit" onclick="myFunction()">Đăng nhập</button>
-            <script>
-              function myFunction() {
-                alert("Account login successful");
-              }
-            </script>
+            <button type="button" onclick="handleLogin()">Đăng nhập</button>
           </form>
           <div class="form-footer">
             <a href="sign_up.html" class="forgot-password">Quên mật khẩu?</a>
@@ -79,36 +52,7 @@
           </div>
         </div>
       </main>
-
-      <style>
-        .login-container {
-          border: 2px solid #ccc;
-          padding: 20px;
-          max-width: 400px;
-          margin: 50px auto;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        main {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          min-height: calc(100vh - 200px);
-          /* Adjust based on header and footer height */
-          margin: auto auto;
-        }
-
-        .form-footer {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin-top: 20px;
-        }
-      </style>
-
-      <!-- Login Admin  -->
     </div>
-    <!-- Inner Wrap -->
 
     <!-- Footer  -->
     <footer class="footer">
@@ -130,13 +74,10 @@
                           rel="nofollow"
                           style="color: white"
                           >SGU IT</a
-                        ></span
-                      >
+                        >
+                      </span>
                     </div>
                   </div>
-                </div>
-                <div class="back-to-top show">
-                  <i class="fa fa-arrow-circle-up"></i>
                 </div>
               </div>
             </div>
@@ -144,7 +85,48 @@
         </div>
       </div>
     </footer>
-
     <!-- Footer  -->
+
+    <script>
+      function handleLogin() {
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        if (email && password) {
+          // Lưu thông tin đăng nhập vào sessionStorage
+          sessionStorage.setItem("username", email);
+          sessionStorage.setItem("loggedIn", "true");
+          alert("Đăng nhập thành công!");
+
+          // Chuyển hướng đến trang admin.html
+          window.location.href = "admin.html";
+        } else {
+          alert("Vui lòng nhập đầy đủ thông tin.");
+        }
+      }
+    </script>
+
+    <style>
+      .login-container {
+        border: 2px solid #ccc;
+        padding: 20px;
+        max-width: 400px;
+        margin: 50px auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: calc(100vh - 200px);
+        margin: auto auto;
+      }
+
+      .form-footer {
+        margin-top: 20px;
+        text-align: center;
+      }
+    </style>
   </body>
 </html>

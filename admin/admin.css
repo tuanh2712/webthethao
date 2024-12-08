@@ -1,4 +1,3 @@
-
 /* Tạo scroll bar cho body khi màn hình nhỏ */
 @media (max-width: 768px) {
   body {
@@ -41,7 +40,6 @@ html {
   margin-left: auto;
   margin-right: auto;
 }
-
 
 h3.h3 {
   text-align: center;
@@ -185,8 +183,8 @@ input[type="number"],
 input[type="tel"],
 textarea,
 select {
-  border: 1px solid #f7f5f5;
-  padding: 0 20px;
+  border: 1px solid #ccc;
+  padding: 8px;
   width: 100%;
   display: block;
 }
@@ -722,8 +720,9 @@ ul {
 }
 
 .slider {
-  width: 1650px;
+  /* width: 1650px; */
   margin: 0 auto;
+  width: 40px;
 }
 
 .slider img {
@@ -3079,8 +3078,9 @@ table > tbody > tr > td,
 .table > thead > tr > th {
   padding: 8px;
   line-height: 1.42857143;
-  vertical-align: top;
+  vertical-align: middle;
   border-top: 1px solid #ddd;
+  text-align: center;
 }
 
 .mr-bottom-20 .col-md-offset-3 {
@@ -6681,7 +6681,7 @@ h1 {
 }
 
 .user-manager {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   background-color: white;
   padding: 20px;
@@ -6883,7 +6883,7 @@ nav ul li a.active {
 /* Nút icon login\logout admin   */
 
 .order-detail {
-  margin:30px;
+  margin: 30px;
 }
 
 .btn-save-1 {
@@ -6937,11 +6937,73 @@ nav ul li a.active {
 
 /* Nút icon login\logout admin   */
 .delete-image-btn {
-    top: -45px;
-    position: relative;
-    left: -15px;
-    background: none;
-    font-weight: bold;
-    border: none;
-    font-size: 20px;
+  top: -45px;
+  position: relative;
+  left: -15px;
+  background: none;
+  font-weight: bold;
+  border: none;
+  font-size: 20px;
+}
+
+/* Nút Lock tk  */
+
+.status {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.status.active {
+  background-color: #28a745; /* Màu xanh */
+}
+
+.status.inactive {
+  background-color: #dc3545; /* Màu đỏ */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #f44336; /* Màu đỏ */
+}
+
+input:checked + .slider:before {
+  transform: translateX(23px);
 }
