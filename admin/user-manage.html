@@ -241,10 +241,14 @@
               const email = row.children[1].textContent.trim();
               const phone = row.children[2].textContent.trim();
               const role = row.querySelector("select").value;
+              const status = row.querySelector(".status").textContent;
+              const locked = row.querySelector("input").checked
+                ? "Đã khóa"
+                : "Mở khóa";
 
               // Hiển thị thông báo
               alert(
-                `Đã lưu thành công!\nThông tin người dùng:\nTên: ${name}\nEmail: ${email}\nSố điện thoại: ${phone}\nPhân quyền: ${role}`
+                `Đã lưu thành công!\nThông tin người dùng:\nTên: ${name}\nEmail: ${email}\nSố điện thoại: ${phone}\nPhân quyền: ${role} \nTrạng thái: ${status} \nKhóa người dùng: ${locked}`
               );
             });
           });
