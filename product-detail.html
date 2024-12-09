@@ -799,16 +799,16 @@
 
                             </script>
                           </div>
-                          <div class="clearfix margin-bottom-20"></div>
-                          <div class="clearfix">
-                            <button type="submit" data-role="addtocart" class="btn btn-lg btn-danger btn-cart add_to_cart btn_buy add_to_cart" style="">
-                              <span class="txt-main" id="id-mua-ngay">MUA NGAY</span>
-                              <span class="txt-sub">Giao hàng tận nơi</span>
+                            <div class="clearfix margin-bottom-20"></div>
+                            <div class="clearfix" style="text-align: left;"></div>
+                            <button type="submit" data-role="addtocart" class="btn btn-lg btn-danger btn-cart add_to_cart btn_buy add_to_cart" style="text-align: left;">
+                              <span class="txt-main" id="id-mua-ngay">Thêm vào giỏ hàng</span>
+                              <!-- <span class="txt-sub">Giao hàng tận nơi</span> -->
                             </button>
-                            <a class="btn btn_traGop btn-tra-gop-click s-flag" href="tel:0123456789">
+                            <!-- <a class="btn btn_traGop btn-tra-gop-click s-flag" href="tel:0123456789">
                               <span class="txt-main" style="text-align: center; padding: 20px;"> Thêm vào giỏ hàng </span>
-                              <!-- <span class="txt-sub">Liên hệ 0123 456 789</span> -->
-                            </a>
+                               <span class="txt-sub">Liên hệ 0123 456 789</span>
+                            </a> -->
                           </div>
                         </div>
                     </div>
@@ -1320,14 +1320,22 @@
                 </div>
                 <div class="product_info_buttons">
                   <button class="btn btn_buyNow btn-buy-now-click">
-                    <span class="txt-main" >MUA NGAY</span>
-                    <span class="txt-sub">Giao hàng tận nơi</span>
+                    <span class="txt-main" >Thêm vào giỏ hàng</span>
+                    <!-- <span class="txt-sub">Giao hàng tận nơi</span> -->
                   </button>
-                  <a class="btn btn_traGop btn-tra-gop-click s-flag" href="tel:0123456789">
+                  <!-- <button class="btn btn_traGop btn-tra-gop-click s-flag">
                     <span class="txt-main hidden-xs" style="text-align: center; padding: 20px;">Thêm vào giỏ hàng</span>
-                    <!-- <span class="txt-sub hidden-xs">Liên hệ 0123 456 789</span> -->
+                     <span class="txt-sub hidden-xs">Liên hệ 0123 456 789</span> 
                     <i class="fa fa-phone visible-xs" aria-hidden="true"></i>
-                  </a>
+                  </button>  -->
+                <script>
+                  document.addEventListener("DOMContentLoaded", function() {
+                    const addToCartButton = document.querySelector(".btn-cart");
+                    addToCartButton.addEventListener("click", function() {
+                      alert("Bạn đã thêm vào giỏ hàng thành công");
+                    });
+                  });
+                </script>
                 </div>
               </div>
             </div>
